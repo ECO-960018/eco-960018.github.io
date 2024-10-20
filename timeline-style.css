@@ -1,0 +1,562 @@
+@font-face {
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 100 900;
+  src: url(https://fonts.gstatic.com/s/leaguespartan/v11/kJEqBuEW6A0lliaV_m88ja5TwvZwLZk.woff2) format('woff2');
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "League Spartan", sans-serif;
+	line-height: normal;
+}
+
+html {
+	min-height:100%;
+	position:relative;
+}
+
+body {
+	margin: 0;
+}
+/*Barra de Título*/
+nav {
+	overflow: hidden;
+	width: auto;
+	height: 200px;
+	background-color: #333333;
+	font-weight: bold;
+	font-size: 30px;
+	transition: 0.4s;
+}
+
+.title {
+	margin-top: 50px;
+	margin-bottom: 0;
+	color: white;
+	font-size: 3.1vw;
+}
+
+.links {
+	position: relative;
+	bottom: -45px;
+}
+
+nav a {
+	text-align: center;
+	padding: 7px 12px 2px 12px;
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #e8c12c;
+	color: #333333;
+	border-radius: 10px;
+}
+
+.lContainer {
+	padding: 0px 10px;
+	margin: 0px 10px;
+	float: right;
+}
+
+.mapButton {
+	float: right;
+	color: #fff;
+	font-size: 2vw;
+	padding: 8px 12px 2px 12px;
+	margin: -20px 15px 0px 0px;
+}
+
+.mapButton:hover {
+	background-color: #e8c12c;
+	color: #333333;
+	border-radius: 10px;
+}
+
+#logo {
+	width:200px;
+	float: left;
+}
+/*-_-_-_-_-_-*/
+
+.flexbox {
+	display: flex;
+	flex-direction: row;
+}
+
+/* -_-_-_-_- Navegação Lateral -_-_-_-_- */
+aside {
+	min-width: 152px;
+	background-color: #3c3c3a;
+	color: #fff;
+}
+
+.side {position: fixed;}
+.side a {text-decoration: none;}
+
+.age-select {
+	display: block;
+	color: #fff;
+	background-color: #3c3c3a;
+	border: 1px solid #fff;
+	padding: 16px 20px 14px;
+	width: 152px;
+	height: 50px;
+	font-size: 16px;
+	margin: auto;
+	text-align: center;
+}
+
+.age-select:hover {color: #fff;	background-color: #303030;}
+.age-select:active {color: #fff;background-color: #999999;}
+
+.active {
+	color: #1d1d1b;
+	background-color: #e1e1df;
+	border: 2px solid #1d1d1b;
+	font-weight: 500;
+}
+
+main {
+	flex: 90%;
+	background-color: #fdf9f3;
+	overflow: hidden;
+}
+
+/* -_-_-_-_- EVENTOS -_-_-_-_- */
+.event {
+	position: relative;
+	top: -33px;
+	font-size: 20px;
+	font-weight: normal;
+	border: 2px solid black;
+	height: 30px;
+	margin: 0px auto -32px 10px;
+	padding: 3px 10px;
+	background-color: white;
+	z-index: 2;
+	cursor:pointer;
+}
+
+.deny {cursor:not-allowed;}
+
+.event:hover{transform: scale(1.01);}
+
+.event0 {grid-column: 048 / 340;}
+.event1 {grid-column: 089 / 340;}
+.event2 {grid-column: 130 / 340;}
+.event3 {grid-column: 171 / 340;}
+.event4 {grid-column: 212 / 340;}
+.event5 {grid-column: 253 / 340;}
+.event6 {grid-column: 294 / 340;}
+
+/* STONE */
+
+.eSA0 {grid-row: 02 / 02;}
+.eSA00 {grid-row: 15 / 15;}
+.eSA1 {grid-row: 12 / 12;}
+.eSA2 {grid-row: 16 / 16;}
+.eMesoS0 {grid-row: 14 / 14;}
+.eLevantS0 {grid-row: 04 / 04;}
+.city01 {grid-area: 5 / 2 / 5 / 6;}
+.tech01 {grid-area: 7 / 2 / 7 / 5;}
+.city02 {grid-area: 11 / 2 / 11 / 6;}
+.tech02 {grid-area: 16 / 2 / 16 / 5;}
+.tech03 {grid-area: 21 / 2 / 21 / 5;}
+
+/* BRONZE */
+.e3150bc {grid-row: 0151 / 0151;}
+.e2600bc {grid-row: 0701 / 0701;}
+.e2025bc {grid-row: 1326 / 1326;}
+.e1750bc {grid-row: 1551 / 1551;}
+.e1650bc {grid-row: 1651 / 1651;}
+.e1595bc {grid-row: 1706 / 1706;}
+.e1363bc {grid-row: 2064 / 2064;}
+.e1353bc {grid-row: 1954 / 1954;}
+.e42ka {grid-row: 1101 / 1101;}
+.eBAC {grid-row: 2101 / 2101;}
+
+/* IRON */
+.eIA0 {grid-row: 010 / 010;}
+.e1100 {grid-row: 0101 / 0101;}
+.eCIx {grid-row: 401 / 401;}
+
+/* ANCIENT */
+.eCA1 {grid-row: 501 / 501;}
+
+.eIranAx {grid-row: 251 / 471;}
+
+.eLevantA0 {grid-row: 081 / 081;}
+.eLevantA1 {grid-row: 201 / 201;}
+.eLevantA2 {grid-area: 285 / 110 / 285 / 200;}
+.eLevantA3 {grid-row: 797 / 797;}
+.eLevantA4 {grid-row: 871 / 871;}
+
+.eRomeA0 {grid-row: 0048 / 0048;}
+.eRomeA1 {grid-row: 0292 / 0292;}
+.eRomeA2 {grid-row: 0771 / 0771;}
+.eRomeA3 {grid-row: 1196 / 1196;}
+.eRomeA4 {grid-row: 1277 / 1277;}
+.eRomeC0 {grid-row: 1107 / 1107;}
+
+.eGreeceAx {grid-row: 571 / 571;}
+.e700bc {grid-row: 0101 / 0101;}
+.e330bc {grid-row: 471 / 471;}
+.e330bcA {grid-area: 471 / 88 / 471 / 93;}
+.e330bc1 {grid-area: 471 / 93 / 471 / 140;}
+
+/* MEDIEVAL */
+.e610 {grid-row: 011 / 011;}
+
+/*.eCA0 {grid-area: 401 / 33 / 401 / 100;}*/
+
+.Civ550 {grid-area: 251 / 5 / 471 / 10;}
+.Civ330 {grid-area: 471 / 5 / 501 / 12;}
+
+.e3300 {grid-area: 2 / 6 / 2 / 10;}
+.ePS600 {grid-area: 2701 / 9 / 2710 / 14;}
+.e331 {grid-area: 2970 / 2 / 2970 / 5;}
+.pThales {grid-area: 2679 / 4 / 2755 / 7;}
+.pAnaximander {grid-area: 2691 / 8 / 2755 / 12;}
+
+/*CÉLULAS*/
+
+.cell {
+	background-color: white;
+	border: 3px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 60px;
+}
+
+.cellBox {
+	padding: 10px 18px;
+	border: 2px solid black;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.tech {border-radius: 20px;	height: 80px;}
+.civ {border-radius: 10px;}
+.person {border-radius: 50px;}
+.group {border-radius: 20px 20px 1px 1px;}
+
+.cell2 {
+	font-size: 30px;
+	line-height: 1.2;
+	font-weight: bold;
+}
+
+/* -_-_-_-_- BARRA LATERAL -_-_-_-_- */
+
+.sidebar {
+	width: 375px;
+	display: block;
+}
+
+.sidebarModal {
+  display: none;
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  border-left: 2px solid #000;
+  color: #000;
+}
+
+/* -_-_-_-_- MODAL -_-_-_-_- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 20%;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  border-left: 2px solid #000;
+  color: #000;
+}
+
+.close {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff0000;
+  cursor: pointer;
+}
+
+#info {
+	text-align: center;
+	padding: 0px 40px 0px 40px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+#info img {
+	width: 300px;
+	cursor: pointer;
+}
+
+.legend {
+	font-size: 14px;
+	margin-top: 0px;
+}
+
+.text {
+	font-size: 18px;
+	text-align: left;
+}
+
+.lbox {
+	display: flex;
+	justify-content: space-around;
+}
+.lbox > legend {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.l0 {
+	border: 1px solid black;
+	padding: 4px 8px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+/* -_-_-_-_- MAPA -_-_-_-_- */
+
+iframe{border:none;}
+
+.mapaModal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: clip;
+  background-color: #3c3c3a;
+  color: #fff;
+  text-align: center;
+}
+
+.mapaModal > img {height: 90vh;}
+.mapaModal > p {height: 800px;}
+
+.flexMap{display:flex; background-color: #3c3c3a; color: #fff;}
+.infobox{width: 300px; position: relative;}
+.map {width: 1340px;height: 900px;}
+.svgMapa {height: 900px;}
+
+.sidetipMap, .sidetipMapC {
+  display: none;
+}
+
+.sidetipMap, .sidetipMap1, .sidetipMap2 {
+	height: auto;
+	width: 220px;
+	text-align: center;
+	margin: auto;
+	margin-top: 30px;
+	padding-bottom: 8px;
+	border: 2px solid white;
+	font-size: 14px;
+}
+
+.sidetipMap2 {
+	padding: 0px 8px;
+	font-size: 16px;
+	text-align: left;
+}
+
+.sidetipMap > h2, .descriptionMap > h2 {margin: auto;margin-top: 10px;}
+.sidetipMap > p, .descriptionMap > p {margin: auto;}
+
+.sidetipMap1 > h2 {margin: auto;margin-top: 10px;}
+.sidetipMap1 > p {margin: auto;}
+
+.descriptionMap {
+  height: auto;
+  width: 260px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 8px;
+  border: 2px solid white;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+}
+
+.land{fill:#fff6d5;stroke:#5f8dd3;}
+.island{fill:#fff6d5;stroke:#5f8dd3;}
+.sea0{fill:#afc6e9;stroke:#5f8dd3;}
+.sea{fill:#afc6e9;stroke:#80b3ff;fill-opacity:0;}
+.river{color:#000000;fill:#5f8dd3;stroke:#ffffff;stroke-width:10;stroke-dasharray:none;stroke-opacity:0;}
+.desert{fill:#ffeba0;stroke:#f4e3a0;}
+.mountain{fill:#aca793;stroke:#917c6f;opacity:0.75;}
+.region{fill:#fff6d5;stroke:#decd87;fill-opacity:0;}
+
+.island:hover{fill:#ffeeaa;stroke:#504416;}
+.river:hover{fill:red;}
+.sea0:hover{fill:#87aade;stroke:#003380;}
+.sea:hover{fill:#87aade;stroke:#003380;fill-opacity:1;}
+.desert:hover{fill:#ffcc00;stroke:#d4aa00;}
+.mountain:hover{fill:#918a6f;stroke:#484537;}
+.region:hover{fill:#e9ddaf;stroke:#decd87;fill-opacity:0.5;}
+
+.island2{fill:#fff6d5;stroke:#5f8dd3;}
+.sea2{fill:#afc6e9;stroke:#5f8dd3;}
+.river2{fill:none;stroke:#5f8dd3;}
+.desert2{fill:#ffeba0;stroke:#f4e3a0;}
+.mountain2{fill:#aca793;stroke:#917c6f;opacity:0.75;}
+
+.civ {fill-opacity:0.75;}
+.civ:hover {fill-opacity:1;}
+.civ2 {fill-opacity:0.75;stroke-dasharray:2, 1;}
+.civ2:hover {fill-opacity:1;}
+
+.civEgypt {fill:#ffc107;stroke:#332701;}
+.civEgypt2 {fill:#ffda6a;stroke:#332701;}
+.civEgypt2:hover {fill:#ffc107;}
+
+.civMeso {fill:#fd7e14;stroke:#331904;}
+.civMeso2 {fill:#fd9843;stroke:#331904;}
+.civMeso2:hover {fill:#fd7e14;}
+
+.civLevant {fill:#0d6efd;stroke:#052c65;}
+.civLevant2 {fill:#3485fd;stroke:#052c65;}
+.civLevant2:hover {fill:#0d6efd;}
+
+.civAnatolia {fill:#6610f2;stroke:#140330;}
+
+.civIran {fill:#198754;stroke:#051b11;}
+.civIranL {fill:none;stroke:#051b11;}
+.civIran2 {fill:#75b798;stroke:#051b11;}
+.civIran2:hover {fill:#198754;}
+.proIran {fill:#198754;stroke:#d1e7dd;stroke-opacity:0.5;}
+.proIran2 {fill:#0f5132;stroke:#d1e7dd;stroke-opacity:0.5;}
+
+.civGreece {fill:#6f42c1;stroke:#2c1a4d;}
+.civGreece2 {fill:#8c68cd;stroke:#2c1a4d;}
+.civGreece2:hover {fill:#6f42c1;}
+
+.civRome {fill:#dc3545;stroke:#2c0b0e;}
+.civRomeL {fill:none;stroke:#2c0b0e;}
+.civRome2 {fill:#e35d6a;stroke:#2c0b0e;}
+.civRome2:hover {fill:#dc3545;}
+.proRome {fill:#dc3545;stroke:#d1e7dd;stroke-opacity:0.5;}
+.proRome text {fill:#fff;stroke:#000;opacity:0;stroke-opacity:0;}
+.proRome:hover text {opacity:1;stroke-opacity:1;}
+
+.city {
+	font-weight:500;
+	font-size:8px;
+	fill:#ffffff;
+	stroke:#000000;
+	paint-order:stroke fill markers;
+}
+.capital {font-weight:600;font-size:13px;paint-order:stroke fill markers;}
+.cityIcon {fill:#ff0000;stroke:#550000;stroke-width:0.1;}
+.cityIconR {fill:#fff;stroke:#000;stroke-width:0.6;paint-order:fill stroke;}
+.cityIran {stroke:#a3cfbb;}
+.cityGreece {stroke:#c5b3e6;}
+.cityRome {stroke:#f1aeb5;font-size:9px}
+
+.map0 {fill:none;stroke:#17280b;stroke-width:2;marker-end:url(#arrow);}
+.map1 {fill:#e5f5f9;stroke:#17280b;}
+.map2 {fill:#ccece6;stroke:#17280b;}
+.map3 {fill:#99d8c9;stroke:#17280b;}
+.map4 {fill:#66c2a4;stroke:#17280b;}
+.map5 {fill:#41ae76;stroke:#17280b;}
+.map6 {fill:#238b45;stroke:#17280b;}
+.map7 {fill:#005824;stroke:#17280b;}
+
+/* -_-_-_-_- TOUR -_-_-_-_- */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  color: #e8c12c;
+}
+
+.tooltip .tt {
+  visibility: hidden;
+  width: auto;
+  background-color: #e8c12c;
+  color: #333;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 0 4px 8px 0 black;
+  border-radius: 6px;
+  padding: 5px;
+  position: fixed;
+  z-index: 1;
+  margin-left: -60px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.tt > h3 {margin: 0;}
+.tt > p {margin: 0;}
+.tt00 {top: 6vw; left: 3.5%;}
+.tt01 {top: 6vw; left: 12%;}
+.tt02 {top: 6vw; left: 26%;}
+.tt03 {top: 5vw; left: 97%;}
+
+.tooltip .tt::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #e8c12c transparent transparent transparent;
+}
+
+.tooltip:hover .tt {
+  visibility: visible;
+}
+
+@media (max-width: 1900px) {
+nav {font-size: 2vw; width: auto;}
+.links {bottom: -65px;}
+.mapButton {margin: -10px 0px 0px 0px;}
+.infobox{width: 14vw;min-width: 14vw;}
+.sidetipMap, .sidetipMap1, .sidetipMap2 {width: 12vw; font-size: 0.8vw;}
+.descriptionMap {width: 12vw; font-size: 0.8vw; left: 1vw; bottom: 0.5vw;}
+.map {width: auto;height: auto;}
+.svgMapa {height: 97.5vh;}
+.sidebarModal {overflow: auto; width: 25vw;}
+.close {right: 1vw; top: 0.3vw; font-size: 3vw;}
+#info {padding: 0px 2vw 0px 2vw; margin: auto;}
+#info h1 {font-size: 2vw; margin-top: 2.5vw;}
+#info img {width: 20vw;}
+.legend {font-size: 0.9vw;}
+.text {font-size: 1.2vw;}
+.tooltip .tt {font-size: 1vw;}
+.tt00 {top: 9.5vw; left: 6vw;}
+.tt01 {top: 9.5vw; left: 18vw;}
+.tt02 {top: 9.5vw; left: 36vw;}
+.tt03 {top: 8vw; left: 96.5vw;}
+}

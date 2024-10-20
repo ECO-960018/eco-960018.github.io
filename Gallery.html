@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Galeria - Uma breve linha do tempo do pensamento ocidental</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="timeline-style.css">
+		<link rel="stylesheet" href="overlays.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="img/Logo.png"/>
+		
+		<style>
+	
+.gTitle {
+	padding-left: 6%;
+	margin-bottom: 0;
+	font-size: 30px;
+	font-weight: 800;
+}
+	
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 10px;
+	justify-content: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  flex: 30%;
+  max-width: 30%;
+  padding: 10px;
+  margin: 4px;
+  border: 2px solid black;
+}
+
+.column > img {width: 100%}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+	display: none;
+	background-color: black;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px 14px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	transition: 0.4s;
+  
+}
+
+.next {
+	right: -50px;
+}
+
+.prev {
+	left: -48px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	color: black;
+	background-color: #e8c12c;
+	border-radius: 10px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+		
+	</head>
+	
+	<body>
+
+	<nav id="navbar">
+	<img id="logo" src="img\Logo.png">
+
+	<p class="title">UMA BREVE LINHA DO TEMPO DA ANTIGUIDADE OCIDENTAL</p>
+	<div class="links">
+		<a href="Timeline.html">GERAL</a>
+		<a href="#" class="deny">ALQUIMIA</a>
+		<a href="#" class="deny">FILOSOFIA</a>
+			<div class="lContainer">
+				<a href="#">GALERIA</a>
+				<a href="#">GLOSSÁRIO</a>
+				<a href="#">SOBRE</a>
+				<span class="mapButton" title="Mapa Interativo" onclick="showSidebar('Mapa')"><i class="fa fa-map-o"></i></span>
+			</div>
+	</div>
+	</nav>
+
+<section class="gallery">
+<h1 class="gTitle">MAPAS INTERATIVOS</h1>
+<!-- Thumbnails -->
+<div class="row">
+	<div class="column">
+		<img src="img/maps/MapaBase.png" onclick="showSidebar('mBase')" class="hover-shadow">
+		<h3>Mapa Topográfico</h3>
+		<p>Geral<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/Farming.png" onclick="showSidebar('mFarming')" class="hover-shadow">
+		<h3>Mapa das culturas agrícolas do neolítico</h3>
+		<p>Geral<br>Neolítico<br>12.000 a.C. – 4.000 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/IndoEuro.png" onclick="showSidebar('mIndoEuro')" class="hover-shadow">
+		<h3>Mapa das migrações indo-européias</h3>
+		<p>Geral<br>Placeholder<br>5.000 a.C. – 800 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/Bronze1.png" onclick="showSidebar('meBA0')" class="hover-shadow">
+		<h3>Mapa composto do período do Bronze Antigo</h3>
+		<p>Geral<br>Bronze Antigo<br>3.300 a.C. – 2.100 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="showSidebar('meBA1')" class="hover-shadow">
+		<h3>Mapa composto do período do Bronze Médio</h3>
+		<p>Geral<br>Bronze Médio<br>2.100 a.C. – 1.500 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/Amarna.png" onclick="showSidebar('meBA2')" class="hover-shadow">
+		<h3>Mapa composto do período do Bronze Recente</h3>
+		<p>Geral<br>Bronze Recente<br>1.500 a.C. – 1.200 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/IronAge.png" onclick="showSidebar('meIA0')" class="hover-shadow">
+		<h3>Mapa composto da Idade do Ferro</h3>
+		<p>Geral<br>Idade do Ferro<br>1.200 a.C. – 800 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(16)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/GreeceA3.png" onclick="showSidebar('mGreeceA3')" class="hover-shadow">
+		<h3>Mapa do Período Helenístico</h3>
+		<p>Geral<br>Período Helenístico<br>300 a.C. – 30 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/IranA2.png" onclick="showSidebar('mIranA2')" class="hover-shadow">
+		<h3>Mapa das satrápias do Império Aquemênida</h3>
+		<p>Planalto Iraniano<br>Império Aquemênida<br>550 a.C. – 330 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/RomeA2.png" onclick="showSidebar('mRomeA2')" class="hover-shadow">
+		<h3>Mapa das províncias do Império Romano</h3>
+		<p>Europa Ocidental<br>Império Romano<br>37 a.C. – 395 d.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(18)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+</div>
+</section>
+
+<section class="gallery">
+<h1 class="gTitle">MAPAS</h1>
+<!-- Thumbnails -->
+<div class="row">
+	<div class="column">
+		<img src="img/maps/EgyptS0.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+		<h3>Mapa do Alto e Baixo Egito</h3>
+		<p>Egito<br>Período Pré-Histórico<br> Antes de 3150 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/EgyptB1.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+		<h3>Mapa do Egito Unificado</h3>
+		<p>Egito<br>Época Tinita<br>3150 a.C. – 2686 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/EgyptB4.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+		<h3>Mapa do Egito durante o Império Médio</h3>
+		<p>Egito<br>Império Médio<br>2040 a.C. – 1700 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/EgyptB6.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+		<h3>Mapa do Egito durante o Império Novo</h3>
+		<p>Egito<br>Império Novo<br>1550 a.C. – 1070 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/maps/EgyptI1.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+		<h3>Mapa do Reino de Cuxe</h3>
+		<p>Egito<br>Terceiro Período Intermédio<br>1090 a.C. – 664 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(9)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(10)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(11)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(12)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(13)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(14)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(15)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(16)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(17)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(18)" class="hover-shadow">
+		<h3>Mapa Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+</div>
+</section>
+
+<section class="gallery">
+<h1 class="gTitle">ILUSTRAÇÕES</h1>
+<!-- Thumbnails -->
+<div class="row">
+	<div class="column">
+		<img src="img/EgyptB2.png" onclick="openModal();currentSlide(19)" class="hover-shadow">
+		<h3>Pirâmides de Gizé</h3>
+		<p>Egito<br>Império Antigo<br>2700 a.C. – 2200 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/EgyptB3.png" onclick="openModal();currentSlide(20)" class="hover-shadow">
+		<h3>Faraó Mentuotep II</h3>
+		<p>Egito<br>Primeiro Período Intermédio<br>2181 a.C. – 2055 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/EgyptB5.png" onclick="openModal();currentSlide(21)" class="hover-shadow">
+		<h3>Sírios trazendo presentes</h3>
+		<p>Egito<br>Segundo Período Intermédio<br>1700 a.C. – 1550 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/MesoB1.png" onclick="openModal();currentSlide(22)" class="hover-shadow">
+		<h3>Rei entronado do Estandarte de Ur</h3>
+		<p>Suméria<br>Período Dinástico<br>2900 a.C. – 2400 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/MesoB4.png" onclick="openModal();currentSlide(23)" class="hover-shadow">
+		<h3>O rei Hamurabi recebe a lei do deus Shamash</h3>
+		<p>Babilônia<br>Primeiro Império Babilônico<br>1894 a.C. – 1595 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/MesoI1.png" onclick="openModal();currentSlide(24)" class="hover-shadow">
+		<h3>Grifo sendo atacado por herói</h3>
+		<p>Assíria<br>Médio Império Assírio<br>1363 a.C. – 912 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/LevantI0.png" onclick="openModal();currentSlide(25)" class="hover-shadow">
+		<h3>Delegação de Israelitas do Obelisco Negro</h3>
+		<p>Israel<br>Idade do Ferro<br>1200 a.C. – 800 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/LevantA3.png" onclick="openModal();currentSlide(26)" class="hover-shadow">
+		<h3>Pedra de Magdala</h3>
+		<p>Judá<br>Período do Segundo Templo<br>516 a.C. – 70 d.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(27)" class="hover-shadow">
+		<h3>Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Iranx.png" onclick="openModal();currentSlide(28)" class="hover-shadow">
+		<h3>Delegação de citas trazendo tributos para o palácio de Persépolis</h3>
+		<p>Planalto Iraniano<br>Período Avéstico<br>1500 a.C. – 500 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(29)" class="hover-shadow">
+		<h3>Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(30)" class="hover-shadow">
+		<h3>Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/GreeceB0.png" onclick="openModal();currentSlide(31)" class="hover-shadow">
+		<h3>Taurocatapsia do palácio de Cnossos</h3>
+		<p>Creta<br>Período Minoano<br>3100 a.C. – 1100 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(32)" class="hover-shadow">
+		<h3>Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(33)" class="hover-shadow">
+		<h3>Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/RomeA0.png" onclick="openModal();currentSlide(34)" class="hover-shadow">
+		<h3>Lupa Capitolina</h3>
+		<p>Roma<br>Reino de Roma<br>753 a.C. – 509 a.C.</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(35)" class="hover-shadow">
+		<h3>Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+	<div class="column">
+		<img src="img/Placeholder.png" onclick="openModal();currentSlide(36)" class="hover-shadow">
+		<h3>Placeholder</h3>
+		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+	</div>
+</div>
+</section>
+	
+<!-- Full Images -->
+<div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+
+		<div class="mySlides">
+			<img src="img/maps/EgyptS0.png" style="width:100%">
+			<p class="caption">Mapa do Alto e Baixo Egito</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/maps/EgyptB1.png" style="width:100%">
+			<p class="caption">Mapa do Egito Unificado</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/maps/EgyptB4.png" style="width:100%">
+			<p class="caption">Mapa do Egito durante o Império Médio</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/maps/EgyptB6.png" style="width:100%">
+			<p class="caption">Mapa do Egito durante o Império Novo</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/maps/EgyptI1.png" style="width:100%">
+			<p class="caption">Mapa do Reino de Cuxe</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+
+		<div class="mySlides">
+		  <div class="numbertext">1 / 4</div>
+		  <img src="img/EgyptB2.png" style="width:100%">
+			<p class="caption">Pirâmides de Gizé</p>
+		</div>
+		<div class="mySlides">
+		  <div class="numbertext">2 / 4</div>
+		  <img src="img/EgyptB3.png" style="width:100%">
+			<p class="caption">Faraó Mentuotep II</p>
+		</div>
+		<div class="mySlides">
+		  <div class="numbertext">3 / 4</div>
+		  <img src="img/EgyptB5.png" style="width:100%">
+			<p class="caption">Sírios trazendo presentes</p>
+		</div>
+		
+		<div class="mySlides">
+			<div class="numbertext">4 / 4</div>
+			<img src="img/MesoB1.png" style="width:100%">
+			<p class="caption">Estandarte de Ur</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/MesoB4.png" style="width:100%">
+			<p class="caption">Hamurabi e Shamash</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/MesoI1.png" style="width:100%">
+			<p class="caption">Grifo sendo atacado por herói</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/LevantI0.png" style="width:100%">
+			<p class="caption">Delegação de Israelitas do Obelisco Negro</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/LevantA3.png" style="width:100%">
+			<p class="caption">Pedra de Magdala</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/Iranx.png" style="width:100%">
+			<p class="caption">Delegação de citas trazendo tributos para o palácio de Persépolis</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/GreeceB0.png" style="width:100%">
+			<p class="caption">Taurocatapsia do palácio de Cnossos</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		
+		<div class="mySlides">
+			<img src="img/RomeA0.png" style="width:100%">
+			<p class="caption">Lupa Capitolina</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+		<div class="mySlides">
+			<img src="img/Placeholder.png" style="width:100%">
+			<p class="caption">Placeholder</p>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)"><i class="fa fa-angle-left"></i></a>
+		<a class="next" onclick="plusSlides(1)"><i class="fa fa-angle-right"></i></a>
+	</div>
+</div> 
+		
+		<div id="mBase" class="mapaModal">
+			<span onclick="showSidebar('mBase')" class="close">&times;</span>
+			<iframe src="Mapa.html" height="100%" width="100%"></iframe>
+		</div>
+		
+		<div id="mFarming" class="mapaModal">
+			<span onclick="showSidebar('mFarming')" class="close">&times;</span>
+			<iframe src="Farming.html" height="100%" width="100%"></iframe>
+		</div>
+		
+		<div id="mIndoEuro" class="mapaModal">
+			<span onclick="showSidebar('mIndoEuro')" class="close">&times;</span>
+			<iframe src="IndoEuro.html" height="100%" width="100%"></iframe>
+		</div>
+		
+		<div id="meBA0" class="mapaModal">
+			<span onclick="showSidebar('meBA0')" class="close">&times;</span>
+			<iframe src="Bronze1.html" height="100%" width="100%"></iframe>
+		</div>
+		
+		<div id="meBA1" class="mapaModal">
+			<span onclick="showSidebar('meBA1')" class="close">&times;</span>
+			<iframe src="Bronze2.html" height="100%" width="100%"></iframe>
+		</div>
+
+		<div id="meBA2" class="mapaModal">
+			<span onclick="showSidebar('meBA2')" class="close">&times;</span>
+			<iframe src="AmarnaPeriod.html" height="100%" width="100%"></iframe>
+		</div>
+
+		<div id="meIA0" class="mapaModal">
+			<span onclick="showSidebar('meIA0')" class="close">&times;</span>
+			<iframe src="IronAge.html" height="100%" width="100%"></iframe>
+		</div>
+
+		<div id="mIranA2" class="mapaModal">
+			<span onclick="showSidebar('mIranA2')" class="close">&times;</span>
+			<iframe src="IranA2.html" height="100%" width="100%"></iframe>
+		</div>
+
+		<div id="mGreeceA3" class="mapaModal">
+			<span onclick="showSidebar('mGreeceA3')" class="close">&times;</span>
+			<iframe src="GreeceA3.html" height="100%" width="100%"></iframe>
+		</div>
+
+		<div id="mRomeA2" class="mapaModal">
+			<span onclick="showSidebar('mRomeA2')" class="close">&times;</span>
+			<iframe src="RomeA2.html" height="100%" width="100%"></iframe>
+		</div>
+
+		<script src="sidebar.js"></script>
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+	</body>
+</html>

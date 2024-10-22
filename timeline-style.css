@@ -27,7 +27,7 @@ nav {
 	background-color: #333333;
 	font-weight: bold;
 	font-size: 30px;
-	transition: 0.4s;
+	transition: 0.5s;
 }
 
 .title {
@@ -56,7 +56,6 @@ nav a:hover {
 }
 
 .lContainer {
-	padding: 0px 10px;
 	margin: 0px 10px;
 	float: right;
 }
@@ -66,7 +65,7 @@ nav a:hover {
 	color: #fff;
 	font-size: 2vw;
 	padding: 8px 12px 2px 12px;
-	margin: -20px 15px 0px 0px;
+	margin: -20px 0px 0px 0px;
 }
 
 .mapButton:hover {
@@ -93,7 +92,10 @@ aside {
 	color: #fff;
 }
 
-.side {position: fixed;}
+.side {
+	position: sticky;
+	top:0;
+}
 .side a {text-decoration: none;}
 
 .age-select {
@@ -142,7 +144,8 @@ main {
 
 .deny {cursor:not-allowed;}
 
-.event:hover{transform: scale(1.01);}
+.event:hover{transform: translate(10px);transition: 0.4s;}
+/*.event:hover{transform: scale(1.01);}*/
 
 .event0 {grid-column: 048 / 340;}
 .event1 {grid-column: 089 / 340;}
@@ -159,7 +162,9 @@ main {
 .eSA1 {grid-row: 12 / 12;}
 .eSA2 {grid-row: 16 / 16;}
 .eMesoS0 {grid-row: 14 / 14;}
+:has(.eMesoS0:hover) .oMesoS1:not(:hover),:has(.eMesoS0:hover) .oMesoB0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(90%) saturate(150%); z-index:2}
 .eLevantS0 {grid-row: 04 / 04;}
+:has(.eLevantS0:hover) .oLevantS0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
 .city01 {grid-area: 5 / 2 / 5 / 6;}
 .tech01 {grid-area: 7 / 2 / 7 / 5;}
 .city02 {grid-area: 11 / 2 / 11 / 6;}
@@ -168,44 +173,68 @@ main {
 
 /* BRONZE */
 .e3150bc {grid-row: 0151 / 0151;}
+:has(.e3150bc:hover) .oEgyptB1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(90%) saturate(150%); z-index:2}
 .e2600bc {grid-row: 0701 / 0701;}
+:has(.e2600bc:hover) .oEgyptB2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(100%); z-index:2}
 .e2025bc {grid-row: 1326 / 1326;}
+:has(.e2025bc:hover) .oMesoB3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(100%); z-index:2}
 .e1750bc {grid-row: 1551 / 1551;}
+:has(.e1750bc:hover) .oMesoB4:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(90%) saturate(150%); z-index:2}
 .e1650bc {grid-row: 1651 / 1651;}
+:has(.e1650bc:hover) .oEgyptB5:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(90%) saturate(150%); z-index:2}
 .e1595bc {grid-row: 1706 / 1706;}
+:has(.e1595bc:hover) .oMesoB5:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(100%); z-index:2}
 .e1363bc {grid-row: 2064 / 2064;}
 .e1353bc {grid-row: 1954 / 1954;}
+:has(.e1353bc:hover) .oEgyptB6:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(100%); z-index:2}
 .e42ka {grid-row: 1101 / 1101;}
 .eBAC {grid-row: 2101 / 2101;}
 
 /* IRON */
 .eIA0 {grid-row: 010 / 010;}
 .e1100 {grid-row: 0101 / 0101;}
+:has(.e1100:hover) .oMesoI1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(90%) saturate(150%); z-index:2}
 .eCIx {grid-row: 401 / 401;}
 
 /* ANCIENT */
 .eCA1 {grid-row: 501 / 501;}
+:has(.eCA1:hover) .oGreeceA3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(90%) saturate(150%); z-index:2}
 
 .eIranAx {grid-row: 251 / 471;}
+:has(.eIranAx:hover) .oIranA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #479f76; outline: 2px solid #a3cfbb; filter: brightness(90%) saturate(150%); z-index:2}
 
 .eLevantA0 {grid-row: 081 / 081;}
+:has(.eLevantA0:hover) .oLevantA1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
 .eLevantA1 {grid-row: 201 / 201;}
+:has(.eLevantA1:hover) .oLevantA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(90%) saturate(150%); z-index:2}
 .eLevantA2 {grid-area: 285 / 110 / 285 / 200;}
+:has(.eLevantA2:hover) .oLevantA3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
 .eLevantA3 {grid-row: 797 / 797;}
+:has(.eLevantA3:hover) .oLevantA5:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(90%) saturate(150%); z-index:2}
 .eLevantA4 {grid-row: 871 / 871;}
+:has(.eLevantA4:hover) .oLevantA6:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
 
-.eRomeA0 {grid-row: 0048 / 0048;}
-.eRomeA1 {grid-row: 0292 / 0292;}
-.eRomeA2 {grid-row: 0771 / 0771;}
-.eRomeA3 {grid-row: 1196 / 1196;}
-.eRomeA4 {grid-row: 1277 / 1277;}
-.eRomeC0 {grid-row: 1107 / 1107;}
-
-.eGreeceAx {grid-row: 571 / 571;}
+/*.eGreeceAx {grid-row: 471 / 471;}*/
 .e700bc {grid-row: 0101 / 0101;}
+:has(.e700bc:hover) .oGreeceA0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(100%); z-index:2}
 .e330bc {grid-row: 471 / 471;}
+:has(.e330bc:hover) .oGreeceA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(100%); z-index:2}
 .e330bcA {grid-area: 471 / 88 / 471 / 93;}
 .e330bc1 {grid-area: 471 / 93 / 471 / 140;}
+
+.eRomeA0 {grid-row: 0048 / 0048;}
+:has(.eRomeA0:hover) .oRomeA0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(100%); z-index:2}
+.eRomeA1 {grid-row: 0292 / 0292;}
+:has(.eRomeA1:hover) .oRomeA1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(90%) saturate(150%); z-index:2}
+.eRomeA2 {grid-row: 0771 / 0771;}
+:has(.eRomeA2:hover) .oRomeA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(100%); z-index:2}
+.eRomeA3 {grid-row: 1196 / 1196;}
+:has(.eRomeA3:hover) .oRomeA3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(90%) saturate(150%); z-index:2}
+:has(.eRomeA3:hover) .oGreeceA5:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(90%) saturate(150%); z-index:2}
+.eRomeA4 {grid-row: 1277 / 1277;}
+:has(.eRomeA4:hover) .oRomeA4:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(100%); z-index:2}
+.eRomeC0 {grid-row: 1107 / 1107;}
+:has(.eRomeC0:hover) .oRomeA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(100%); z-index:2}
 
 /* MEDIEVAL */
 .e610 {grid-row: 011 / 011;}
@@ -345,17 +374,17 @@ main {
 iframe{border:none;}
 
 .mapaModal {
-  display: none;
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: clip;
-  background-color: #3c3c3a;
-  color: #fff;
-  text-align: center;
+	display: none;
+	position: fixed;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: clip;
+	background-color: #3c3c3a;
+	color: #fff;
+	text-align: center;
 }
 
 .mapaModal > img {height: 90vh;}
@@ -363,8 +392,8 @@ iframe{border:none;}
 
 .flexMap{display:flex; background-color: #3c3c3a; color: #fff;}
 .infobox{width: 300px; position: relative;}
-.map {width: 1340px;height: 900px;}
-.svgMapa {height: 900px;}
+.map {width: 1340px; height: 100vh;}
+.svgMapa {height: 99vh;}
 
 .sidetipMap, .sidetipMapC {
   display: none;
@@ -402,7 +431,7 @@ iframe{border:none;}
   border: 2px solid white;
   font-size: 14px;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 20px;
 }
 
@@ -521,7 +550,7 @@ iframe{border:none;}
 .tt00 {top: 6vw; left: 3.5%;}
 .tt01 {top: 6vw; left: 12%;}
 .tt02 {top: 6vw; left: 26%;}
-.tt03 {top: 5vw; left: 97%;}
+.tt03 {top: 5vw; left: 97.5%;}
 
 .tooltip .tt::after {
   content: "";

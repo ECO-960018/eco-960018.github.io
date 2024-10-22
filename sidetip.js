@@ -1,38 +1,112 @@
 //TOOLTIP
 
+	//General
+function showTipG(Tip) {
+let text;
+switch (Tip) {
+	case "oSA0":
+		text = "<h2>Neolítico</h2><span>10.000 a.C. – 5.000 a.C.</span>";
+		break;
+	case "oMesoS0":
+		text = "<h2>SUMÉRIOS</h2><p>Cidade de Uruk</p><span>c. 5.000 a.C. – c. 700 d.C.</span>";
+		break;
+	case "oSA1":
+		text = "<h2>Idade do Cobre</h2><span>5.000 a.C. – 3.300 a.C.</span>";
+		break;
+	case "oBA0":
+		text = "<h2>Idade do Bronze</h2><span>3.300 a.C. – 1.200 a.C.</span>";
+		break;
+	case "o2600bc":
+		text = "<h2>EGITO</h2><p>Necrópolis de Gizé</p><span>c. 2.600 a.C. – c. 2.500 a.C.</span>";
+		break;
+	case "o2025bc":
+		text = "<h2>ASSÍRIOS</h2><p>Fundação da cidade-estado de Assur</p><span>c. 2.025 a.C.</span>";
+		break;
+	case "o1750bc":
+		text = "<h2>BABILÔNIA</h2><p>Código de Hamurabi</p><span>c. 1.750 a.C.</span>";
+		break;
+	case "o1650bc":
+		text = "<h2>EGITO</h2><p>XV Dinastia do Egito</p><span>1.650 a.C. – 1.550 a.C.</span>";
+		break;
+	case "o1595bc":
+		text = "<h2>BABILÔNIA</h2><p>Saque da Babilônia pelos Hititas</p><span>1.595 a.C.</span>";
+		break;
+	case "o1353bc":
+		text = "<h2>EGITO</h2><p>Reino de Aquenáton</p><span>1.353 a.C. – 1.336 a.C.</span>";
+		break;
+	case "oBAC":
+		text = "<h2>Colapso da Idade do Bronze</h2><span>1.200 a.C.</span>";
+		break;
+	case "oIA0":
+		text = "<h2>Idade do Ferro</h2><span>1.200 a.C. – 800 a.C.</span>";
+		break;
+	case "o1100bc":
+		text = "<h2>BABILÔNIA</h2><p>Criação do Enuma Elish</p><span>c. 1.100 a.C.</span>";
+		break;
+	case "oAA0":
+		text = "<h2>Antiguidade Clássica</h2><span>800 a.C. – 300 a.C.</span>";
+		break;
+	case "oLevantA0":
+		text = "<h2>ISRAEL</h2><p>Destruição do Reino de Israel por Sargão II da Assíria</p><span>c. 720 a.C.</span>";
+		break;
+	case "oLevantA1":
+		text = "<h2>JUDÁ</h2><p>Cerco a Jerusalém por Nabucodonosor II da Babilônia</p><span>c. 597 a.C.</span>";
+		break;
+	case "oLevantA3":
+		text = "<h2>JUDEIA</h2><p>Nascimento de Jesus de Nazaré</p><span>✱ c. 4-6 a.C<br>† c. 30-33 d.C.</span>";
+		break;
+	case "oLevantA4":
+		text = "<h2>JUDEIA</h2><p>Destruição do Templo de Herodes</p><span>70 d.C.</span>";
+		break;
+	case "oRomeC0":
+		text = "<h2>ROMA</h2><p>Reino de Constantino, O Grande</p><span>306 d.C. – 337 d.C.</span>";
+		break;
+	case "oRomeA3":
+		text = `<div class="sidetip1"><h2>GREGOS</h2><p>Império Romano do Oriente<br>395 a.C. – 1.453 d.C.</p></div><div class="sidetip2"><h2>ROMANOS</h2><p>Império Romano do Ocidente<br>395 d.C. – 480 d.C.</p></div>`;
+		break;
+	default:
+		text = "";
+}
+	document.getElementById("sidetip").innerHTML=text;
+	document.getElementById("sidetip").style.display='block';
+}
+
 	//Egypt
 function showTipEgypt(Tip) {
 let text;
 switch (Tip) {
 	case "oEgyptS0":
-		text = "<h2>EGITO</h2><p>Período Pré-Histórico</p><span>???? a.C. – 3150 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Período Pré-Histórico</p><span>???? a.C. – 3.150 a.C.</span>";
 		break;
 	case "oEgyptB1":
-		text = "<h2>EGITO</h2><p>Época Tinita</p><span>3150 a.C. – 2686 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Época Tinita</p><span>3.150 a.C. – 2.686 a.C.</span>";
 		break;
 	case "oEgyptB2":
-		text = "<h2>EGITO</h2><p>Império Antigo</p><span>2700 a.C. – 2200 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Império Antigo</p><span>2.700 a.C. – 2.200 a.C.</span>";
 		break;
 	case "oEgyptB3":
-		text = "<h2>EGITO</h2><p>Primeiro Período Intermédio</p><span>2181 a.C. – 2055 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Primeiro Período Intermédio</p><span>2.181 a.C. – 2.055 a.C.</span>";
 		break;
 	case "oEgyptB4":
-		text = "<h2>EGITO</h2><p>Império Médio</p><span>2040 a.C. – 1700 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Império Médio</p><span>2.040 a.C. – 1.700 a.C.</span>";
 		break;
 	case "oEgyptB5":
-		text = "<h2>EGITO</h2><p>Segundo Período Intermédio</p><span>1700 a.C. – 1550 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Segundo Período Intermédio</p><span>1.700 a.C. – 1.550 a.C.</span>";
 		break;
 	case "oEgyptB6":
-		text = "<h2>EGITO</h2><p>Império Novo</p><span>1550 a.C. – 1070 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Império Novo</p><span>1.550 a.C. – 1.070 a.C.</span>";
 		break;
 	case "oEgyptI1":
-		text = "<h2>EGITO</h2><p>Terceiro Período Intermédio</p><span>1090 a.C. – 664 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Terceiro Período Intermédio</p><span>1.090 a.C. – 664 a.C.</span>";
 		break;
 	case "oEgyptA1":
 		text = "<h2>EGITO</h2><p>Época Baixa</p><span>664 a.C. – 525 a.C.</span>";
 		break;
 	case "oEgyptA2":
 		text = "<h2>EGITO</h2><p>Império Aquemênida</p><span>525 a.C. – 330 a.C.</span>";
+		break;
+	case "oEgyptA3":
+		text = "<h2>GREGOS</h2><p>Império Macedônico</p><span>330 a.C. – 323 a.C.</span>";
 		break;
 	case "oEgyptA4":
 		text = "<h2>EGITO</h2><p>Dinastia Ptolemaica</p><span>305 a.C. – 30 a.C.</span>";
@@ -52,28 +126,28 @@ function showTipMeso(Tip) {
 let text;
 switch (Tip) {
 	case "oMesoS0":
-		text = "<h2>SUMÉRIOS</h2><p>Pré-Civilização</p><span>5500 a.C. – 4000 a.C.</span>";
+		text = "<h2>SUMÉRIOS</h2><p>Pré-Civilização</p><span>5.500 a.C. – 4.000 a.C.</span>";
 		break;
 	case "oMesoS1":
-		text = "<h2>SUMÉRIOS</h2><p>Período de Uruk</p><span>4000 a.C. – 3100 a.C.</span>";
+		text = "<h2>SUMÉRIOS</h2><p>Período de Uruk</p><span>4.000 a.C. – 3.100 a.C.</span>";
 		break;
 	case "oMesoB1":
-		text = "<h2>SUMÉRIOS</h2><p>Período Dinástico</p><span>2900 a.C. – 2400 a.C.</span>";
+		text = "<h2>SUMÉRIOS</h2><p>Período Dinástico</p><span>2.900 a.C. – 2.400 a.C.</span>";
 		break;
 	case "oMesoB2":
-		text = "<h2>ACADIANOS</h2><p>Império Acadiano</p><span>2300 a.C. – 2100 a.C.</span>";
+		text = "<h2>ACADIANOS</h2><p>Império Acadiano</p><span>2.300 a.C. – 2.100 a.C.</span>";
 		break;
 	case "oMesoB3":
-		text = "<h2>SUMÉRIOS</h2><p>Império Neo-Sumério</p><span>2112 a.C. – 2004 a.C.</span>";
+		text = "<h2>SUMÉRIOS</h2><p>Império Neo-Sumério</p><span>2.112 a.C. – 2.004 a.C.</span>";
 		break;
 	case "oMesoB4":
-		text = "<h2>AMORITAS</h2><p>Império Babilônico</p><span>1894 a.C. – 1595 a.C.</span>";
+		text = "<h2>AMORITAS</h2><p>Império Babilônico</p><span>1.894 a.C. – 1.595 a.C.</span>";
 		break;
 	case "oMesoB5":
-		text = "<h2>CASSITAS</h2><p>Dinastia Cassita da Babilônia</p><span>1595 a.C. – 1155 a.C.</span>";
+		text = "<h2>CASSITAS</h2><p>Dinastia Cassita da Babilônia</p><span>1.595 a.C. – 1.155 a.C.</span>";
 		break;
 	case "oMesoI1":
-		text = "<h2>ASSÍRIOS</h2><p>Médio Império Assírio</p><span>1363 a.C. – 912 a.C.</span>";
+		text = "<h2>ASSÍRIOS</h2><p>Médio Império Assírio</p><span>1.363 a.C. – 912 a.C.</span>";
 		break;
 	case "oMesoI2":
 		text = "<h2>ASSÍRIOS</h2><p>Império Neoassírio</p><span>911 a.C. – 609 a.C.</span>";
@@ -123,7 +197,7 @@ switch (Tip) {
 		text = "<h2>LEVANTE</h2><p>Bronze Recente</p><span>1.500 a.C. – 1.200 a.C.</span>";
 		break;
 	case "oLevantI0":
-		text = "<h2>LEVANTE</h2><p>Idade do Ferro</p><span>1200 a.C. – 800 a.C.</span>";
+		text = "<h2>LEVANTE</h2><p>Idade do Ferro</p><span>1.200 a.C. – 800 a.C.</span>";
 		break;
 	case "oLevantA0":
 		text = "<h2>HEBREUS</h2><p>Casa de Omri</p><span>c. 870 a.C. – 720 a.C.</span>";
@@ -161,13 +235,13 @@ function showTipIran(Tip) {
 let text;
 switch (Tip) {
 	case "oIranS0":
-		text = "<h2>PROTO-INDO EUROPEUS</h2><p>Migrações das culturas das estepes</p><span>5000 a.C. – 800 a.C.</span>";
+		text = "<h2>PROTO-INDO EUROPEUS</h2><p>Migrações das culturas das estepes</p><span>5.000 a.C. – 800 a.C.</span>";
 		break;
 	case "oIranB0":
-		text = "<h2>ELAMITAS</h2><p>Período Proto-Elamita</p><span>3200 a.C. – 2700 a.C.</span>";
+		text = "<h2>ELAMITAS</h2><p>Período Proto-Elamita</p><span>3.200 a.C. – 2.700 a.C.</span>";
 		break;
 	case "oIranB1":
-		text = "<h2>ELAMITAS</h2><p>Período Elamita</p><span>2700 a.C. – 1500 a.C.</span>";
+		text = "<h2>ELAMITAS</h2><p>Período Elamita</p><span>2.700 a.C. – 1.500 a.C.</span>";
 		break;
 	case "oIranB2":
 		text = "<h2>IRANIANOS</h2><p>Período Avéstico</p><span>1.500 a.C. – 500 a.C.</span>";
@@ -208,31 +282,31 @@ function showTipGreece(Tip) {
 let text;
 switch (Tip) {
 	case "oGreeceB0":
-		text = "<h2>MINOANOS</h2><p>Cultura Palacial<br>2200 a.C. – 1900 a.C.</p>";
+		text = "<h2>MINOANOS</h2><p>Cultura Palacial</p><span>2.200 a.C. – 1.900 a.C.</span>";
 		break;
 	case "oGreeceB1":
-		text = "<h2>MICÊNICOS</h2><p>Período Heládico<br>1750 a.C. – 1050 a.C.</p>";
+		text = "<h2>MICÊNICOS</h2><p>Período Heládico</p><span>1.750 a.C. – 1.050 a.C.</span>";
 		break;
 	case "oGreeceI0":
-		text = "<h2>GREGOS</h2><p>Idade das Trevas Grega<br>1200 a.C. – 800 a.C.</p></p>";
+		text = "<h2>GREGOS</h2><p>Idade das Trevas Grega</p><span>1.200 a.C. – 800 a.C.</span>";
 		break;
 	case "oGreeceA0":
-		text = "<h2>GREGOS</h2><p>Período Arcaico<br>800 a.C. – 500 a.C.</p></p>";
+		text = "<h2>GREGOS</h2><p>Período Arcaico</p><span>800 a.C. – 500 a.C.</span>";
 		break;
 	case "oGreeceA1":
-		text = "<h2>GREGOS</h2><p>Período Clássico<br>500 a.C. – 300 a.C.</p></p>";
+		text = "<h2>GREGOS</h2><p>Período Clássico</p><span>500 a.C. – 300 a.C.</span>";
 		break;
 	case "oGreeceA2":
-		text = "<h2>GREGOS</h2><p>Império Macedônico<br>330 a.C. – 323 a.C.</p>";
+		text = "<h2>GREGOS</h2><p>Império Macedônico</p><span>330 a.C. – 323 a.C.</span>";
 		break;
 	case "oGreeceA3":
-		text = "<h2>GREGOS</h2><p>Período Helenístico<br>300 a.C. – 30 a.C.</p></p>";
+		text = "<h2>GREGOS</h2><p>Período Helenístico</p><span>300 a.C. – 30 a.C.</span>";
 		break;
 	case "oGreeceA4":
-		text = "<h2>GREGOS</h2><p>Império Romano<br>37 a.C. – 395 d.C.</p>";
+		text = "<h2>GREGOS</h2><p>Império Romano</p><span>37 a.C. – 395 d.C.</span>";
 		break;
 	case "oGreeceA5":
-		text = "<h2>GREGOS</h2><p>Império Romano do Oriente<br>37 a.C. – 1453 d.C.</p>";
+		text = "<h2>GREGOS</h2><p>Império Romano do Oriente</p><span>395 a.C. – 1.453 d.C.</span>";
 		break;
 	default:
 		text = "";
@@ -246,25 +320,25 @@ function showTipRome(Tip) {
 let text;
 switch (Tip) {
 	case "oRomeA0":
-		text = "<h2>ROMANOS</h2><p>Reino de Roma<br>753 a.C. – 509 a.C.</p>";
+		text = "<h2>ROMANOS</h2><p>Reino de Roma</p><span>753 a.C. – 509 a.C.</span>";
 		break;
 	case "oRomeA1":
-		text = "<h2>ROMANOS</h2><p>República de Roma<br>509 a.C. – 27 a.C.</p>";
+		text = "<h2>ROMANOS</h2><p>República de Roma</p><span>509 a.C. – 27 a.C.</span>";
 		break;
 	case "oRomeA2":
-		text = "<h2>ROMANOS</h2><p>Império Romano<br>37 a.C. – 395 d.C.</p>";
+		text = "<h2>ROMANOS</h2><p>Império Romano</p><span>37 a.C. – 395 d.C.</span>";
 		break;
 	case "oRomeA3":
-		text = "<h2>ROMANOS</h2><p>Império Romano do Ocidente<br>395 d.C. – 480 d.C.</p>";
+		text = "<h2>ROMANOS</h2><p>Império Romano do Ocidente</p><span>395 d.C. – 480 d.C.</span>";
 		break;
 	case "oRomeA4":
-		text = "<h2>ROMANOS</h2><p>Reino da Itália<br>476 d.C. – 493 d.C.</p>";
+		text = "<h2>ROMANOS</h2><p>Reino da Itália</p><span>476 d.C. – 493 d.C.</span>";
 		break;
 	case "oRomeA5":
-		text = "<h2>OSTROGODOS</h2><p>Reino Ostrogótico<br>493 d.C. – 552 d.C.</p>";
+		text = "<h2>OSTROGODOS</h2><p>Reino Ostrogótico</p><span>493 d.C. – 552 d.C.</span>";
 		break;
 	case "oRomeA6":
-		text = "<h2>BIZANTINOS</h2><p>Império Romano<br>552 d.C. – 602 d.C.</p>";
+		text = "<h2>BIZANTINOS</h2><p>Império Romano</p><span>552 d.C. – 602 d.C.</span>";
 		break;
 	default:
 		text = "";

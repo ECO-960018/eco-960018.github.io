@@ -8,7 +8,7 @@ switch (Sidebar) {
 	case "eSA1":
 		text = `<h1>Idade do Cobre</h1><img src=img/Placeholder.png alt="Placeholder"><p class="legend">Placeholder</p><p class="text">Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
 		break;
-	case "eSA2":
+	case "eBA0":
 		text = `<h1>Idade do Bronze</h1><img src=img/Placeholder.png alt="Placeholder"><p class="legend">Placeholder</p><p class="text">Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
 		break;
 	case "e42ka":
@@ -19,6 +19,9 @@ switch (Sidebar) {
 		break;
 	case "eIA0":
 		text = `<h1>Idade do Ferro</h1><img src=img/maps/IronAge.png alt="Mapa composto das principais regiões da Idade do Ferro" onclick="showSidebar('meIA0')"><p class="legend"><i class="fa fa-map-o"></i> Mapa composto das principais regiões da Idade do Ferro</p><p class="text">O Levante após o Colapso da Idade do Bronze<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
+		break;
+	case "eAA0":
+		text = `<h1>Antiguidade Clássica</h1><img src=img/Placeholder.png alt="Placeholder"><p class="legend"><i class="fa fa-map-o"></i> Mapa composto das principais regiões da Antiguidade Clássica</p><p class="text">800 a.C. – 300 a.C.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
 		break;
 	default:
 		text = "";

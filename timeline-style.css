@@ -165,6 +165,8 @@ main {
 :has(.eMesoS0:hover) .oMesoS1:not(:hover),:has(.eMesoS0:hover) .oMesoB0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(90%) saturate(150%); z-index:2}
 .eLevantS0 {grid-row: 04 / 04;}
 :has(.eLevantS0:hover) .oLevantS0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
+.eLevantS1 {grid-row: 10 / 10;}
+:has(.eLevantS1:hover) .oLevantS0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
 .city01 {grid-area: 5 / 2 / 5 / 6;}
 .tech01 {grid-area: 7 / 2 / 7 / 5;}
 .city02 {grid-area: 11 / 2 / 11 / 6;}
@@ -176,10 +178,12 @@ main {
 :has(.e3150bc:hover) .oEgyptB1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(90%) saturate(150%); z-index:2}
 .e2600bc {grid-row: 0701 / 0701;}
 :has(.e2600bc:hover) .oEgyptB2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(100%); z-index:2}
-.e2025bc {grid-row: 1326 / 1326;}
+.e2100bc {grid-row: 1201 / 1201;}
 :has(.e2025bc:hover) .oMesoB3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(100%); z-index:2}
-.e1750bc {grid-row: 1551 / 1551;}
-:has(.e1750bc:hover) .oMesoB4:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(90%) saturate(150%); z-index:2}
+.e2025bc {grid-row: 1276 / 1276;}
+:has(.e2025bc:hover) .oMesoB3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(100%); z-index:2}
+.e1792bc {grid-row: 1509 / 1509;}
+:has(.e1792bc:hover) .oMesoB4:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(90%) saturate(150%); z-index:2}
 .e1650bc {grid-row: 1651 / 1651;}
 :has(.e1650bc:hover) .oEgyptB5:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(90%) saturate(150%); z-index:2}
 .e1595bc {grid-row: 1706 / 1706;}
@@ -200,12 +204,15 @@ main {
 .eCA1 {grid-row: 501 / 501;}
 :has(.eCA1:hover) .oGreeceA3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(90%) saturate(150%); z-index:2}
 
+.e605bc {grid-row: 0196 / 0196;}
+:has(.e605bc:hover) .oMesoA1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #fd9843; outline: 2px solid #fecba1; filter: brightness(90%) saturate(150%); z-index:2}
+
 .eIranAx {grid-row: 251 / 471;}
 :has(.eIranAx:hover) .oIranA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #479f76; outline: 2px solid #a3cfbb; filter: brightness(90%) saturate(150%); z-index:2}
 
 .eLevantA0 {grid-row: 081 / 081;}
 :has(.eLevantA0:hover) .oLevantA1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
-.eLevantA1 {grid-row: 201 / 201;}
+.eLevantA1 {grid-row: 204 / 204;}
 :has(.eLevantA1:hover) .oLevantA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(90%) saturate(150%); z-index:2}
 .eLevantA2 {grid-area: 285 / 110 / 285 / 200;}
 :has(.eLevantA2:hover) .oLevantA3:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}

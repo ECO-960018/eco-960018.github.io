@@ -22,8 +22,8 @@ switch (Tip) {
 	case "o2025bc":
 		text = "<h2>ASSÍRIOS</h2><p>Fundação da cidade-estado de Assur</p><span>c. 2.025 a.C.</span>";
 		break;
-	case "o1750bc":
-		text = "<h2>BABILÔNIA</h2><p>Código de Hamurabi</p><span>c. 1.750 a.C.</span>";
+	case "o1792bc":
+		text = "<h2>BABILÔNIA</h2><p>Reino de Hamurabi</p><span>1.792 a.C. – 1.750 a.C.</span>";
 		break;
 	case "o1650bc":
 		text = "<h2>EGITO</h2><p>XV Dinastia do Egito</p><span>1.650 a.C. – 1.550 a.C.</span>";
@@ -48,6 +48,9 @@ switch (Tip) {
 		break;
 	case "oLevantA0":
 		text = "<h2>ISRAEL</h2><p>Destruição do Reino de Israel por Sargão II da Assíria</p><span>c. 720 a.C.</span>";
+		break;
+	case "o605bc":
+		text = "<h2>BABILÔNIA</h2><p>Reino de Nabucodonosor II</p><span>605 a.C. – 562 a.C.</span>";
 		break;
 	case "oLevantA1":
 		text = "<h2>JUDÁ</h2><p>Cerco a Jerusalém por Nabucodonosor II da Babilônia</p><span>c. 597 a.C.</span>";

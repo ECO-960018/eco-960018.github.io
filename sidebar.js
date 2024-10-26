@@ -3,7 +3,7 @@ function showSidebarG(Sidebar) {
 let text;
 switch (Sidebar) {
 	case "eSA0":
-		text = `<h1>Revolução do Neolítico</h1><img src=img/maps/Farming.png alt="Disseminação da agricultura no neolítico" onclick="showSidebar('meSA0')"><p class="legend">Mapa da disseminação da agricultura no neolítico</p><p class="text">Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
+		text = `<h1>Revolução do Neolítico</h1><img src=img/maps/Farming.png alt="Disseminação da agricultura no neolítico" onclick="showSidebar('meSA0')"><p class="legend"><i class="fa fa-map-o"></i> Mapa da disseminação da agricultura no neolítico</p><p class="text">Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
 		break;
 	case "eSA1":
 		text = `<h1>Idade do Cobre</h1><img src=img/Placeholder.png alt="Placeholder"><p class="legend">Placeholder</p><p class="text">Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`;
@@ -309,4 +309,12 @@ function showSidebar(Sidebar) {
   } else {
     x.style.display = "block";
   }
+  
+  document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+		x.style.display = "none";
+    }
+});
+
+  
 }

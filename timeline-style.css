@@ -224,6 +224,8 @@ main {
 /*.eGreeceAx {grid-row: 471 / 471;}*/
 .e700bc {grid-row: 0101 / 0101;}
 :has(.e700bc:hover) .oGreeceA0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(100%); z-index:2}
+.e484bc {grid-row: 0317 / 0317;}
+:has(.e484bc:hover) .oGreeceA1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(90%) saturate(150%); z-index:2}
 .e330bc {grid-row: 471 / 471;}
 :has(.e330bc:hover) .oGreeceA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(100%); z-index:2}
 .e330bcA {grid-area: 471 / 88 / 471 / 93;}
@@ -400,7 +402,7 @@ iframe{border:none;}
 .flexMap{display:flex; background-color: #3c3c3a; color: #fff;}
 .infobox{width: 300px; position: relative;}
 .map {width: 1340px; height: 100vh;}
-.svgMapa {height: 99vh;}
+.svgMapa {height: 99vh; max-height: 1040px;}
 
 .sidetipMap, .sidetipMapC {
   display: none;
@@ -449,6 +451,7 @@ iframe{border:none;}
 .river{color:#000000;fill:#5f8dd3;stroke:#ffffff;stroke-width:10;stroke-dasharray:none;stroke-opacity:0;}
 .desert{fill:#ffeba0;stroke:#f4e3a0;}
 .mountain{fill:#aca793;stroke:#917c6f;opacity:0.75;}
+.plateau{fill:#c1b4a3;stroke:#918473;opacity:0.5;}
 .region{fill:#fff6d5;stroke:#decd87;fill-opacity:0;}
 
 .island:hover{fill:#ffeeaa;stroke:#504416;}
@@ -457,6 +460,7 @@ iframe{border:none;}
 .sea:hover{fill:#87aade;stroke:#003380;fill-opacity:1;}
 .desert:hover{fill:#ffcc00;stroke:#d4aa00;}
 .mountain:hover{fill:#918a6f;stroke:#484537;}
+.plateau:hover{fill:#c1b4a3;stroke:#918473;opacity:0.75;}
 .region:hover{fill:#e9ddaf;stroke:#decd87;fill-opacity:0.5;}
 
 .island2{fill:#fff6d5;stroke:#5f8dd3;}

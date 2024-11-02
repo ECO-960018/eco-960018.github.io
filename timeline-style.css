@@ -2,7 +2,7 @@
   font-family: 'League Spartan';
   font-style: normal;
   font-weight: 100 900;
-  src: url(https://fonts.gstatic.com/s/leaguespartan/v11/kJEqBuEW6A0lliaV_m88ja5TwvZwLZk.woff2) format('woff2');
+  src: url(fonts/leaguespartan.woff2) format('woff2');
 }
 
 * {
@@ -27,7 +27,6 @@ nav {
 	background-color: #333333;
 	font-weight: bold;
 	font-size: 30px;
-	transition: 0.5s;
 }
 
 .title {
@@ -53,6 +52,16 @@ nav a:hover {
 	background-color: #e8c12c;
 	color: #333333;
 	border-radius: 10px;
+	position: relative;
+	bottom: 2px;
+}
+
+.current {
+	background-color: #e8c12c;
+	color: #333333;
+	border-radius: 10px;
+	position: relative;
+	bottom: 2px;
 }
 
 .lContainer {
@@ -174,6 +183,11 @@ main {
 .tech03 {grid-area: 21 / 2 / 21 / 5;}
 
 /* BRONZE */
+
+.eBA1 {grid-row: 0010 / 0010;}
+.eBA2 {grid-row: 1210 / 1210;}
+.eBA3 {grid-row: 1810 / 1810;}
+
 .e3150bc {grid-row: 0151 / 0151;}
 :has(.e3150bc:hover) .oEgyptB1:not(:hover) {box-shadow:inset 0px 0px 0px 2px #ffcd39; outline: 2px solid #ffe69c; filter: brightness(90%) saturate(150%); z-index:2}
 .e2600bc {grid-row: 0701 / 0701;}
@@ -304,7 +318,7 @@ main {
   z-index: 1;
   right: 0;
   top: 0;
-  width: 400px;
+  width: 500px;
   height: 100%;
   background-color: #fff;
   border-left: 2px solid #000;
@@ -378,6 +392,38 @@ main {
 	cursor: pointer;
 }
 
+
+/* -_-_-_-_- GALERIA -_-_-_-_- */
+
+.galeriaModal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	color: white;
+	background-color: #3c3c3a;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Caption text */
+.caption {
+	text-align: center;
+	background-color: #3c3c3a;
+	padding: 2px 16px;
+	color: white;
+}
+
 /* -_-_-_-_- MAPA -_-_-_-_- */
 
 iframe{border:none;}
@@ -399,10 +445,21 @@ iframe{border:none;}
 .mapaModal > img {height: 90vh;}
 .mapaModal > p {height: 800px;}
 
-.flexMap{display:flex; background-color: #3c3c3a; color: #fff;}
-.infobox{width: 300px; position: relative;}
+.flexMap{display:flex; background-color: #3c3c3a; color: #fff;height: 100%;}
+																		   
 .map {width: 1340px; height: 100vh;}
-.svgMapa {height: 99vh; max-height: 1040px;}
+.infobox {
+	width: 300px;
+	position: relative;
+	height: 99vh;
+	max-height: 916px;
+	margin-top: calc(50vh - 462px);
+}
+.svgMapa {
+	height: 99vh;
+	max-height: 916px;
+	margin-top: calc(50vh - 462px);
+}
 
 .sidetipMap, .sidetipMapC {
   display: none;
@@ -440,7 +497,7 @@ iframe{border:none;}
   border: 2px solid white;
   font-size: 14px;
   position: absolute;
-  bottom: 20px;
+  bottom: 1px;
   left: 20px;
 }
 
@@ -452,6 +509,8 @@ iframe{border:none;}
 .desert{fill:#ffeba0;stroke:#f4e3a0;}
 .mountain{fill:#aca793;stroke:#917c6f;opacity:0.75;}
 .plateau{fill:#c1b4a3;stroke:#918473;opacity:0.5;}
+.steppe{fill:#e1ea8b;stroke:#d5db8b;}
+.taiga{fill:#bfe8b8;stroke:#afe4ad;}
 .region{fill:#fff6d5;stroke:#decd87;fill-opacity:0;}
 
 .island:hover{fill:#ffeeaa;stroke:#504416;}
@@ -461,13 +520,18 @@ iframe{border:none;}
 .desert:hover{fill:#ffcc00;stroke:#d4aa00;}
 .mountain:hover{fill:#918a6f;stroke:#484537;}
 .plateau:hover{fill:#c1b4a3;stroke:#918473;opacity:0.75;}
+.steppe:hover{fill:#5aa02c;stroke:#447821;opacity:0.75;}
+.taiga:hover{fill:#5fd38d;stroke:#37c871;opacity:0.75;}
 .region:hover{fill:#e9ddaf;stroke:#decd87;fill-opacity:0.5;}
 
 .island2{fill:#fff6d5;stroke:#5f8dd3;}
 .sea2{fill:#afc6e9;stroke:#5f8dd3;}
 .river2{fill:none;stroke:#5f8dd3;}
-.desert2{fill:#ffeba0;stroke:#f4e3a0;}
+.desert2{fill:#ffeba0;opacity:0.75;stroke-width:0;}
 .mountain2{fill:#aca793;stroke:#917c6f;opacity:0.75;}
+.plateau2{fill:#c1b4a3;opacity:0.4;stroke-width:0;}
+.steppe2{fill:#d6e0ab;opacity:0.75;stroke-width:0;}
+.taiga2{fill:#bfe8b8;opacity:0.75;stroke-width:0;}
 
 .civ {fill-opacity:0.75;}
 .civ:hover {fill-opacity:1;}
@@ -504,8 +568,8 @@ iframe{border:none;}
 .civRome2 {fill:#e35d6a;stroke:#2c0b0e;}
 .civRome2:hover {fill:#dc3545;}
 .proRome {fill:#dc3545;stroke:#d1e7dd;stroke-opacity:0.5;}
-.proRome text {fill:#fff;stroke:#000;opacity:0;stroke-opacity:0;}
-.proRome:hover text {opacity:1;stroke-opacity:1;}
+/*.proRome text {fill:#fff;stroke:#000;opacity:0;stroke-opacity:0;}
+.proRome:hover text {opacity:1;stroke-opacity:1;}*/
 
 .city {
 	font-weight:500;
@@ -514,12 +578,17 @@ iframe{border:none;}
 	stroke:#000000;
 	paint-order:stroke fill markers;
 }
-.capital {font-weight:600;font-size:13px;paint-order:stroke fill markers;}
+.capital {
+	font-weight:600;
+	font-size:13px;
+	stroke-width: 1.5;
+}
+
 .cityIcon {fill:#ff0000;stroke:#550000;stroke-width:0.1;}
 .cityIconR {fill:#fff;stroke:#000;stroke-width:0.6;paint-order:fill stroke;}
 .cityIran {stroke:#a3cfbb;}
 .cityGreece {stroke:#c5b3e6;}
-.cityRome {stroke:#f1aeb5;font-size:9px}
+.cityRome {display:none;}
 
 .map0 {fill:none;stroke:#17280b;stroke-width:2;marker-end:url(#arrow);}
 .map1 {fill:#e5f5f9;stroke:#17280b;}
@@ -585,7 +654,7 @@ nav {font-size: 2vw; width: auto;}
 .infobox{width: 14vw;min-width: 14vw;}
 .sidetipMap, .sidetipMap1, .sidetipMap2 {width: 12vw; font-size: 0.8vw;}
 .descriptionMap {width: 12vw; font-size: 0.8vw; left: 1vw; bottom: 0.5vw;}
-.map {width: auto;height: auto;}
+.map {width: auto;height: 100vh;}
 .svgMapa {height: 97.5vh;}
 .sidebarModal {overflow: auto; width: 25vw;}
 .close {right: 1vw; top: 0.3vw; font-size: 3vw;}
@@ -599,4 +668,9 @@ nav {font-size: 2vw; width: auto;}
 .tt01 {top: 9.5vw; left: 18vw;}
 .tt02 {top: 9.5vw; left: 36vw;}
 .tt03 {top: 8vw; left: 96.5vw;}
+}
+
+@media (max-height: 900px) {
+	.svgMapa {margin-top: 0;}
+	.infobox{margin-top: 0;}
 }

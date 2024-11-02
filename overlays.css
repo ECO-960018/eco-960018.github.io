@@ -245,8 +245,9 @@ background-color: #dc3545;*/
 
 .oGreece {grid-column: 36 / 40; background-color: #8c68cd; box-shadow:inset 0px 0px 0px 2px #59359a;}
 .oGreece:hover {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6;}
-.oGreeceB0 {grid-row: 0201 / 1401;}
-.oGreeceB1 {grid-row: 1601 / 2101;}
+.oGreeceB0 {grid-row: 0001 / 1201;}
+.oGreeceB1 {grid-row: 1201 / 1801;}
+.oGreeceB2 {grid-row: 1801 / 2101;}
 .oGreeceI0 {grid-row: 0001 / 0401;}
 .oGreeceA0 {grid-row: 0001 / 0301;}
 .oGreeceA1 {grid-row: 0301 / 0471;}

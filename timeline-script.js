@@ -32,6 +32,8 @@ function navHighlighter() {
   });
 }
 
+//FECHAR COM ESC
+
 document.addEventListener('keyup', function(e) {
     if (e.keyCode == 27) {
         document.getElementById("sidebarModal").style.display='none';

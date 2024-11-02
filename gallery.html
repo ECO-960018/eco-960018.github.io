@@ -30,7 +30,6 @@
   clear: both;
 }
 
-/* Create four equal columns that floats next to eachother */
 .column {
   float: left;
   flex: 30%;
@@ -42,51 +41,7 @@
 
 .column > img {width: 100%}
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-	display: none;
-	background-color: black;
-}
 
 /* Next & previous buttons */
 .prev,
@@ -101,7 +56,6 @@
 	font-weight: bold;
 	font-size: 40px;
 	transition: 0.4s;
-  
 }
 
 .next {
@@ -118,23 +72,6 @@
 	color: black;
 	background-color: #e8c12c;
 	border-radius: 10px;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Caption text */
-.caption {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
 }
 
 img.hover-shadow {
@@ -155,11 +92,11 @@ img.hover-shadow {
 
 	<p class="title">UMA BREVE LINHA DO TEMPO DA ANTIGUIDADE OCIDENTAL</p>
 	<div class="links">
-		<a href="Timeline.html">GERAL</a>
+		<a href="index.html">GERAL</a>
 		<a href="#" class="deny">ALQUIMIA</a>
 		<a href="#" class="deny">FILOSOFIA</a>
 			<div class="lContainer">
-				<a href="#">GALERIA</a>
+				<a class="current">GALERIA</a>
 				<a href="#">GLOSSÁRIO</a>
 				<a href="#">SOBRE</a>
 				<span class="mapButton" title="Mapa Interativo" onclick="showSidebar('Mapa')"><i class="fa fa-map-o"></i></span>
@@ -187,17 +124,17 @@ img.hover-shadow {
 		<p>Geral<br>Placeholder<br>5.000 a.C. – 800 a.C.</p>
 	</div>
 	<div class="column">
-		<img src="img/maps/Bronze1.png" onclick="showSidebar('meBA0')" class="hover-shadow">
+		<img src="img/maps/Bronze1.png" onclick="showSidebar('meBA1')" class="hover-shadow">
 		<h3>Mapa composto do período do Bronze Antigo</h3>
 		<p>Geral<br>Bronze Antigo<br>3.300 a.C. – 2.100 a.C.</p>
 	</div>
 	<div class="column">
-		<img src="img/Placeholder.png" onclick="showSidebar('meBA1')" class="hover-shadow">
+		<img src="img/maps/Bronze2.png" onclick="showSidebar('meBA2')" class="hover-shadow">
 		<h3>Mapa composto do período do Bronze Médio</h3>
 		<p>Geral<br>Bronze Médio<br>2.100 a.C. – 1.500 a.C.</p>
 	</div>
 	<div class="column">
-		<img src="img/maps/Amarna.png" onclick="showSidebar('meBA2')" class="hover-shadow">
+		<img src="img/maps/Bronze3.png" onclick="showSidebar('meBA3')" class="hover-shadow">
 		<h3>Mapa composto do período do Bronze Recente</h3>
 		<p>Geral<br>Bronze Recente<br>1.500 a.C. – 1.200 a.C.</p>
 	</div>
@@ -207,12 +144,12 @@ img.hover-shadow {
 		<p>Geral<br>Idade do Ferro<br>1.200 a.C. – 800 a.C.</p>
 	</div>
 	<div class="column">
-		<img src="img/Placeholder.png" onclick="openModal();currentSlide(16)" class="hover-shadow">
-		<h3>Mapa Placeholder</h3>
-		<p>Placeholder<br>Placeholder<br>Placeholder</p>
+		<img src="img/maps/Ancient1.png" onclick="showSidebar('meAA0')" class="hover-shadow">
+		<h3>Mapa composto da Antiguidade Clássica</h3>
+		<p>Geral<br>Antiguidade Clássica<br>800 a.C. – 300 a.C.</p>
 	</div>
 	<div class="column">
-		<img src="img/maps/GreeceA3.png" onclick="showSidebar('mGreeceA3')" class="hover-shadow">
+		<img src="img/maps/Ancient2.png" onclick="showSidebar('mAncient2')" class="hover-shadow">
 		<h3>Mapa do Período Helenístico</h3>
 		<p>Geral<br>Período Helenístico<br>300 a.C. – 30 a.C.</p>
 	</div>
@@ -357,7 +294,7 @@ img.hover-shadow {
 	</div>
 	<div class="column">
 		<img src="img/MesoB4.png" onclick="openModal();currentSlide(23)" class="hover-shadow">
-		<h3>O rei Hamurabi recebe a lei do deus Shamash</h3>
+		<h3>O rei Hamurabi recebe sua insíginia real do deus Shamash</h3>
 		<p>Babilônia<br>Primeiro Império Babilônico<br>1894 a.C. – 1595 a.C.</p>
 	</div>
 	<div class="column">
@@ -381,7 +318,7 @@ img.hover-shadow {
 		<p>Placeholder<br>Placeholder<br>Placeholder</p>
 	</div>
 	<div class="column">
-		<img src="img/Iranx.png" onclick="openModal();currentSlide(28)" class="hover-shadow">
+		<img src="img/IranB2.png" onclick="openModal();currentSlide(28)" class="hover-shadow">
 		<h3>Delegação de citas trazendo tributos para o palácio de Persépolis</h3>
 		<p>Planalto Iraniano<br>Período Avéstico<br>1500 a.C. – 500 a.C.</p>
 	</div>
@@ -429,8 +366,8 @@ img.hover-shadow {
 </section>
 	
 <!-- Full Images -->
-<div id="myModal" class="modal">
-	<span class="close cursor" onclick="closeModal()">&times;</span>
+<div id="myModal" class="galeriaModal">
+	<span class="close" onclick="closeModal()">&times;</span>
 	<div class="modal-content">
 
 		<div class="mySlides">
@@ -512,23 +449,19 @@ img.hover-shadow {
 		</div>
 
 		<div class="mySlides">
-		  <div class="numbertext">1 / 4</div>
 		  <img src="img/EgyptB2.png" style="width:100%">
 			<p class="caption">Pirâmides de Gizé</p>
 		</div>
 		<div class="mySlides">
-		  <div class="numbertext">2 / 4</div>
 		  <img src="img/EgyptB3.png" style="width:100%">
 			<p class="caption">Faraó Mentuotep II</p>
 		</div>
 		<div class="mySlides">
-		  <div class="numbertext">3 / 4</div>
 		  <img src="img/EgyptB5.png" style="width:100%">
 			<p class="caption">Sírios trazendo presentes</p>
 		</div>
 		
 		<div class="mySlides">
-			<div class="numbertext">4 / 4</div>
 			<img src="img/MesoB1.png" style="width:100%">
 			<p class="caption">Estandarte de Ur</p>
 		</div>
@@ -555,7 +488,7 @@ img.hover-shadow {
 		</div>
 		
 		<div class="mySlides">
-			<img src="img/Iranx.png" style="width:100%">
+			<img src="img/IranB2.png" style="width:100%">
 			<p class="caption">Delegação de citas trazendo tributos para o palácio de Persépolis</p>
 		</div>
 		<div class="mySlides">
@@ -613,24 +546,29 @@ img.hover-shadow {
 			<iframe src="IndoEuro.html" height="100%" width="100%"></iframe>
 		</div>
 		
-		<div id="meBA0" class="mapaModal">
-			<span onclick="showSidebar('meBA0')" class="close">&times;</span>
+		<div id="meBA1" class="mapaModal">
+			<span onclick="showSidebar('meBA1')" class="close">&times;</span>
 			<iframe src="Bronze1.html" height="100%" width="100%"></iframe>
 		</div>
 		
-		<div id="meBA1" class="mapaModal">
-			<span onclick="showSidebar('meBA1')" class="close">&times;</span>
+		<div id="meBA2" class="mapaModal">
+			<span onclick="showSidebar('meBA2')" class="close">&times;</span>
 			<iframe src="Bronze2.html" height="100%" width="100%"></iframe>
 		</div>
 
-		<div id="meBA2" class="mapaModal">
-			<span onclick="showSidebar('meBA2')" class="close">&times;</span>
-			<iframe src="AmarnaPeriod.html" height="100%" width="100%"></iframe>
+		<div id="meBA3" class="mapaModal">
+			<span onclick="showSidebar('meBA3')" class="close">&times;</span>
+			<iframe src="Bronze3.html" height="100%" width="100%"></iframe>
 		</div>
 
 		<div id="meIA0" class="mapaModal">
 			<span onclick="showSidebar('meIA0')" class="close">&times;</span>
 			<iframe src="IronAge.html" height="100%" width="100%"></iframe>
+		</div>
+		
+		<div id="meAA0" class="mapaModal">
+			<span onclick="showSidebar('meAA0')" class="close">&times;</span>
+			<iframe src="Ancient1.html" height="100%" width="100%"></iframe>
 		</div>
 
 		<div id="mIranA2" class="mapaModal">
@@ -638,9 +576,9 @@ img.hover-shadow {
 			<iframe src="IranA2.html" height="100%" width="100%"></iframe>
 		</div>
 
-		<div id="mGreeceA3" class="mapaModal">
-			<span onclick="showSidebar('mGreeceA3')" class="close">&times;</span>
-			<iframe src="GreeceA3.html" height="100%" width="100%"></iframe>
+		<div id="mAncient2" class="mapaModal">
+			<span onclick="showSidebar('mAncient2')" class="close">&times;</span>
+			<iframe src="Ancient2.html" height="100%" width="100%"></iframe>
 		</div>
 
 		<div id="mRomeA2" class="mapaModal">
@@ -648,8 +586,16 @@ img.hover-shadow {
 			<iframe src="RomeA2.html" height="100%" width="100%"></iframe>
 		</div>
 
-		<script src="sidebar.js"></script>
-<script>
+	<script src="timeline-script.js"></script>
+	<script src="sidebar.js"></script>
+	<script>
+	
+document.addEventListener('keyup', function(e) {
+	if (e.keyCode == 27) {
+	document.getElementById("myModal").style.display = "none";
+   }
+});
+	
 // Open the Modal
 function openModal() {
   document.getElementById("myModal").style.display = "block";
@@ -676,20 +622,14 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-</script>
+}</script>
 
 	</body>
 </html>

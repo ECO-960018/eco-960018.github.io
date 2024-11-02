@@ -17,7 +17,7 @@
 
 	<p class="title">UMA BREVE LINHA DO TEMPO DA ANTIGUIDADE OCIDENTAL</p>
 	<div class="links">
-		<a href="#">GERAL</a>
+		<a class="current">GERAL</a>
 		<a href="#" class="deny">ALQUIMIA</a>
 		<a href="#" class="deny">FILOSOFIA</a>
 			<div class="lContainer">
@@ -122,13 +122,13 @@
 			<div class="m2400bc"><span class="year">2.400 a.C.</span><hr class="hr0"></div>
 			<div class="m2300bc"><span class="year">2.300 a.C.</span><hr class="hr0"></div>
 			<div class="m2200bc"><span class="year">2.200 a.C.</span><hr class="hr2"></div>
-			<div class="m2100bc"><span class="year">2.100 a.C.</span><hr class="hr0"></div>
+			<div class="m2100bc"><span class="year">2.100 a.C.</span><hr class="hr2"></div>
 			<div class="m2000bc"><span class="year">2.000 a.C.</span><hr class="hr0"></div>
 			<div class="m1900bc"><span class="year">1.900 a.C.</span><hr class="hr0"></div>
 			<div class="m1800bc"><span class="year">1.800 a.C.</span><hr class="hr0"></div>
 			<div class="m1700bc"><span class="year">1.700 a.C.</span><hr class="hr0"></div>
 			<div class="m1600bc"><span class="year">1.600 a.C.</span><hr class="hr0"></div>
-			<div class="m1500bc"><span class="year">1.500 a.C.</span><hr class="hr0"></div>
+			<div class="m1500bc"><span class="year">1.500 a.C.</span><hr class="hr2"></div>
 			<div class="m1400bc"><span class="year">1.400 a.C.</span><hr class="hr0"></div>
 			<div class="m1300bc"><span class="year">1.300 a.C.</span><hr class="hr0"></div>
 			
@@ -173,13 +173,15 @@
 			<div class="overlay2 oIran oIranB0" onmouseenter="showTipIran('oIranB0')" onmouseleave="hideTip()"></div>
 			<!--Elam-->
 			<div class="overlay oIran oIranB1" onmouseenter="showTipIran('oIranB1')" onmouseleave="hideTip()"></div>
-			<!--Avesta-->
-			<div class="overlay2 oIran oIranB2" onmouseenter="showTipIran('oIranB2')" onmouseleave="hideTip()"></div>
+			<!--Avestic Period 1-->
+			<div class="overlay2 oIran oIranB2" onmouseenter="showTipIran('oIranB2')" onmouseleave="hideTip()" onclick="showSidebarIran('sbIranB2')"></div>
 			
+			<!--Cyclades-->
+			<div class="overlay oGreece oGreeceB0" onmouseenter="showTipGreece('oGreeceB0')" onmouseleave="hideTip()"></div>
 			<!--Minoans-->
-			<div class="overlay oGreece oGreeceB0" onmouseenter="showTipGreece('oGreeceB0')" onmouseleave="hideTip()" onclick="showSidebarGreece('sbGreeceB0')"></div>
+			<div class="overlay2 oGreece oGreeceB1" onmouseenter="showTipGreece('oGreeceB1')" onmouseleave="hideTip()" onclick="showSidebarGreece('sbGreeceB1')"></div>
 			<!--Miceneans-->
-			<div class="overlay oGreece oGreeceB1" onmouseenter="showTipGreece('oGreeceB1')" onmouseleave="hideTip()"></div>
+			<div class="overlay oGreece oGreeceB2" onmouseenter="showTipGreece('oGreeceB2')" onmouseleave="hideTip()"></div>
 			
 			<!--Events-->
 			
@@ -193,6 +195,10 @@
 			<span class="event event0 e1792bc meso deny" onmouseenter="showTipG('o1792bc')" onmouseleave="hideTip()">Reino de Hamurabi</span>
 			<span class="event event0 e1595bc meso deny" onmouseenter="showTipG('o1595bc')" onmouseleave="hideTip()">Saque da Babilônia pelos hititas</span>
 			<span class="event event0 e1363bc meso deny">Fundação do Império Assírio</span>
+			
+			<span class="event event0 eBA1" onmouseenter="showTipG('oBA1')" onmouseleave="hideTip()" onclick="showSidebarG('eBA1')">Bronze Antigo</span>
+			<span class="event event0 eBA2" onmouseenter="showTipG('oBA2')" onmouseleave="hideTip()" onclick="showSidebarG('eBA2')">Bronze Médio</span>
+			<span class="event event0 eBA3" onmouseenter="showTipG('oBA3')" onmouseleave="hideTip()" onclick="showSidebarG('eBA3')">Bronze Recente</span>
 			
 			<span class="event event0 e42ka" onclick="showSidebarG('e42ka')">Mudança Climática de 4200 ap</span>
 			<span class="event event0 eBAC" onmouseenter="showTipG('oBAC')" onmouseleave="hideTip()" onclick="showSidebarG('eBAC')">Colapso da Idade do Bronze</span>
@@ -226,8 +232,8 @@
 			<!--Levantive Iron Age-->
 			<div class="overlay2 oLevant oLevantI0" onmouseenter="showTipLevant('oLevantI0')" onmouseleave="hideTip()" onclick="showSidebarLevant('sbLevantI0')"></div>
 			
-			<!--Neo-Elamite Period-->
-			<div class="overlay2 oIran oIranI0" onmouseenter="showTipIran('oIranB2')" onmouseleave="hideTip()" onclick="showSidebarIran('oIranB2')"></div>
+			<!--Avestic Period 2-->
+			<div class="overlay2 oIran oIranI0" onmouseenter="showTipIran('oIranB2')" onmouseleave="hideTip()" onclick="showSidebarIran('sbIranB2')"></div>
 			
 			<!--Greek Dark Ages-->
 			<div class="overlay2 oGreece oGreeceI0" onmouseenter="showTipGreece('oGreeceI0')" onmouseleave="hideTip()"></div>
@@ -317,7 +323,7 @@
 			<div class="overlay2 oLevant oLevantA7" onmouseenter="showTipLevant('oLevantA7')" onmouseleave="hideTip()" onclick="showSidebarLevant('sbLevantA7')"></div>
 			
 			<!--Early Iranians-->
-			<div class="overlay2 oIran oIranA0" onmouseenter="showTipIran('oIranB2')" onmouseleave="hideTip()" onclick="showSidebarIran('oIranB2')"></div>			
+			<div class="overlay2 oIran oIranA0" onmouseenter="showTipIran('oIranB2')" onmouseleave="hideTip()" onclick="showSidebarIran('sbIranB2')"></div>			
 			<!--Median Empire-->
 			<div class="overlay oIran oIranA1" onmouseenter="showTipIran('oIranA1')" onmouseleave="hideTip()" onclick="showSidebarIran('sbIranA1')"></div>
 			<!--Achaemenid Empire-->
@@ -489,14 +495,29 @@
 			<iframe src="Farming.html" height="100%" width="100%"></iframe>
 		</div>
 
-		<div id="meBA0" class="mapaModal">
-			<span onclick="showSidebar('meBA0')" class="close">&times;</span>
+		<div id="meBA1" class="mapaModal">
+			<span onclick="showSidebar('meBA1')" class="close">&times;</span>
 			<iframe src="Bronze1.html" height="100%" width="100%"></iframe>
+		</div>
+		
+		<div id="meBA2" class="mapaModal">
+			<span onclick="showSidebar('meBA2')" class="close">&times;</span>
+			<iframe src="Bronze2.html" height="100%" width="100%"></iframe>
+		</div>
+
+		<div id="meBA3" class="mapaModal">
+			<span onclick="showSidebar('meBA3')" class="close">&times;</span>
+			<iframe src="Bronze3.html" height="100%" width="100%"></iframe>
 		</div>
 
 		<div id="meIA0" class="mapaModal">
 			<span onclick="showSidebar('meIA0')" class="close">&times;</span>
 			<iframe src="IronAge.html" height="100%" width="100%"></iframe>
+		</div>
+		
+		<div id="mAncient2" class="mapaModal">
+			<span onclick="showSidebar('mAncient2')" class="close">&times;</span>
+			<iframe src="Ancient2.html" height="100%" width="100%"></iframe>
 		</div>
 		
 		<div id="mEgyptS0" class="mapaModal">
@@ -555,7 +576,7 @@
 		
 		<div id="mMesoB5" class="mapaModal">
 			<span onclick="showSidebar('mMesoB5')" class="close">&times;</span>
-			<iframe src="AmarnaPeriod.html" height="100%" width="100%"></iframe>
+			<iframe src="Bronze3.html" height="100%" width="100%"></iframe>
 		</div>
 
 		<div id="mIndoEuro" class="mapaModal">
@@ -574,9 +595,9 @@
 			<p class="legend">Mapa do Império Macedônico em sua maior extensão</p>
 		</div>
 
-		<div id="mGreeceA3" class="mapaModal">
-			<span onclick="showSidebar('mGreeceA3')" class="close">&times;</span>
-			<iframe src="GreeceA3.html" height="100%" width="100%"></iframe>
+		<div id="mAncient2" class="mapaModal">
+			<span onclick="showSidebar('mAncient2')" class="close">&times;</span>
+			<iframe src="Ancient2.html" height="100%" width="100%"></iframe>
 		</div>
 		
 		<div id="mRomeA2" class="mapaModal">

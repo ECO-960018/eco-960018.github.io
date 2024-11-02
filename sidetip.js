@@ -16,8 +16,17 @@ switch (Tip) {
 	case "oBA0":
 		text = "<h2>Idade do Bronze</h2><span>3.300 a.C. – 1.200 a.C.</span>";
 		break;
+	case "oBA1":
+		text = "<h2>Bronze Antigo</h2><span>3.300 a.C. – 2.100 a.C.</span>";
+		break;
+	case "oBA2":
+		text = "<h2>Bronze Médio</h2><span>2.100 a.C. – 1.500 a.C.</span>";
+		break;
+	case "oBA3":
+		text = "<h2>Bronze Recente</h2><span>1.500 a.C. – 1.200 a.C.</span>";
+		break;
 	case "o2600bc":
-		text = "<h2>EGITO</h2><p>Necrópolis de Gizé</p><span>c. 2.600 a.C. – c. 2.500 a.C.</span>";
+		text = "<h2>EGITO</h2><p>Necrópolis de Gizé</p><span>2.600 a.C. – 2.500 a.C.</span>";
 		break;
 	case "o2025bc":
 		text = "<h2>ASSÍRIOS</h2><p>Fundação da cidade-estado de Assur</p><span>c. 2.025 a.C.</span>";
@@ -285,9 +294,12 @@ function showTipGreece(Tip) {
 let text;
 switch (Tip) {
 	case "oGreeceB0":
-		text = "<h2>MINOANOS</h2><p>Cultura Palacial</p><span>2.200 a.C. – 1.900 a.C.</span>";
+		text = "<h2>CÍCLADES</h2><p>Civilização Cicládica</p><span>3.300 a.C. – 1.000 a.C.</span>";
 		break;
 	case "oGreeceB1":
+		text = "<h2>CRETA</h2><p>Civilização Minóica</p><span>3.100 a.C. – 1.075 a.C.</span>";
+		break;
+	case "oGreeceB2":
 		text = "<h2>MICÊNICOS</h2><p>Período Heládico</p><span>1.750 a.C. – 1.050 a.C.</span>";
 		break;
 	case "oGreeceI0":

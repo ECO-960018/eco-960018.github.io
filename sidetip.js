@@ -25,6 +25,9 @@ switch (Tip) {
 	case "oBA3":
 		text = "<h2>Bronze Recente</h2><span>1.500 a.C. – 1.200 a.C.</span>";
 		break;
+	case "o3200bc":
+		text = "<h2>HIERÓGLIFOS EGÍPCIOS</h2><p>Língua egípcia</p><span>c. 3.250 a.C – c. 400 d.C</span>";
+		break;
 	case "o2600bc":
 		text = "<h2>EGITO</h2><p>Necrópolis de Gizé</p><span>2.600 a.C. – 2.500 a.C.</span>";
 		break;
@@ -372,4 +375,12 @@ function showTipMap(Tip) {
 
 function hideTipMap(Tip) {
 	document.getElementById(Tip).style.display='none';
+}
+
+function showChartLine(Line) {
+	document.getElementById(Line).style.stroke='#ff0000';
+}
+
+function hideChartLine(Line) {
+	document.getElementById(Line).style.stroke='none';
 }

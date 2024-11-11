@@ -151,8 +151,8 @@ background-color: #0d6efd;
 background-color: #198754; 
 background-color: #6f42c1; 
 background-color: #dc3545;*/
-.overlay {cursor:help;}
-.overlay2 {cursor:help;filter: brightness(75%) saturate(150%);}
+.overlay {cursor: url(img/cursors/PointerTip.png),auto;}
+.overlay2 {cursor:url(img/cursors/PointerTip.png),auto; filter: brightness(75%) saturate(150%);}
 .overlay:hover {filter: brightness(100%); z-index:2}
 .overlay2:hover {filter: brightness(90%) saturate(150%); z-index:2}
 

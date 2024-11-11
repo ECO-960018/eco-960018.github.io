@@ -3,51 +3,7 @@
 <head>
     <title>Império Romano</title>
 	<link rel="stylesheet" href="timeline-style.css">
-	<link rel="stylesheet" href="overlays.css">
-	
-	<style>
-		:has(.mauretaniaT:hover) .mauretaniaTC:not(:hover) {display:block}
-		:has(.mauretaniaC:hover) .mauretaniaCC:not(:hover) {display:block}
-		:has(.africa:hover) .africaC:not(:hover) {display:block}
-		:has(.crete:hover) .creteC:not(:hover) {display:block}
-		:has(.aegyptus:hover) .aegyptusC:not(:hover) {display:block}
-		:has(.arabia:hover) .arabiaC:not(:hover) {display:block}
-		:has(.judaea:hover) .judaeaC:not(:hover) {display:block}
-		:has(.syria:hover) .syriaC:not(:hover) {display:block}
-		:has(.cyprus:hover) .cyprusC:not(:hover) {display:block}
-		:has(.cilicia:hover) .ciliciaC:not(:hover) {display:block}
-		:has(.lycia:hover) .lyciaC:not(:hover) {display:block}
-		:has(.cappadocia:hover) .cappadociaC:not(:hover) {display:block}
-		:has(.galatia:hover) .galatiaC:not(:hover) {display:block}
-		:has(.bithynia:hover) .bithyniaC:not(:hover) {display:block}
-		:has(.asia:hover) .asiaC:not(:hover) {display:block}
-		:has(.achaia:hover) .achaiaC:not(:hover) {display:block}
-		:has(.epirus:hover) .epirusC:not(:hover) {display:block}
-		:has(.macedonia:hover) .macedoniaC:not(:hover) {display:block}
-		:has(.thracia:hover) .thraciaC:not(:hover) {display:block}
-		:has(.moesiaSup:hover) .moesiaSupC:not(:hover) {display:block}
-		:has(.moesiaInf:hover) .moesiaInfC:not(:hover) {display:block}
-		:has(.dacia:hover) .daciaC:not(:hover) {display:block}
-		:has(.dalmatia:hover) .dalmatiaC:not(:hover) {display:block}
-		:has(.pannoniaInf:hover) .pannoniaInfC:not(:hover) {display:block}
-		:has(.pannoniaSup:hover) .pannoniaSupC:not(:hover) {display:block}
-		:has(.noricum:hover) .noricumC:not(:hover) {display:block}
-		:has(.raetia:hover) .raetiaC:not(:hover) {display:block}
-		:has(.sicilia:hover) .siciliaC:not(:hover) {display:block}
-		:has(.corsica:hover) .corsicaC:not(:hover) {display:block}
-		:has(.italia:hover) .italiaC:not(:hover) {display:block}
-		:has(.germaniaSup:hover) .germaniaSupC:not(:hover) {display:block}
-		:has(.germaniaInf:hover) .germaniaInfC:not(:hover) {display:block}
-		:has(.britania:hover) .britaniaC:not(:hover) {display:block}
-		:has(.belgica:hover) .belgicaC:not(:hover) {display:block}
-		:has(.narbonnensis:hover) .narbonnensisC:not(:hover) {display:block}
-		:has(.aquitania:hover) .aquitaniaC:not(:hover) {display:block}
-		:has(.lugdunensis:hover) .lugdunensisC:not(:hover) {display:block}
-		:has(.tarraconensis:hover) .tarraconensisC:not(:hover) {display:block}
-		:has(.baetica:hover) .baeticaC:not(:hover) {display:block}
-		:has(.lusitania:hover) .lusitaniaC:not(:hover) {display:block}
-	</style>
-	
+	<link rel="stylesheet" href="overlays.css">	
 </head>
 <body>
 
@@ -112,93 +68,93 @@
 		<g>
 			<g id="mapa"></g>
 			
-			<path class="civ proRome mauretaniaT" onmouseover="showTipMap('mauretaniaT')" onmouseout="hideTipMap('mauretaniaT')"
+			<path class="civ proRome mauretaniaT" onmouseover="showTipMap('mauretaniaT');showTipMap('mauretaniaTC')" onmouseout="hideTipMap('mauretaniaT');hideTipMap('mauretaniaTC')"
 			d="m 150.00001,494.99998 h -5 L 140.00001,515 115,530 l -20.000003,45 60.000013,-45 20,-5 10,-20.00001 -30,-4.99999 z"/>
 		 
-			<path class="civ proRome mauretaniaC" onmouseover="showTipMap('mauretaniaC')" onmouseout="hideTipMap('mauretaniaC')"
+			<path class="civ proRome mauretaniaC" onmouseover="showTipMap('mauretaniaC');showTipMap('mauretaniaCC')" onmouseout="hideTipMap('mauretaniaC');hideTipMap('mauretaniaCC')"
 			d="m 185.00003,504.99999 35,-19.99999 49.99999,-5.56008 -9.99998,30.56006 -40,5.00002 -45.00001,10 z"/>
 			
-			<path class="civ proRome africa" onmouseover="showTipMap('africa')" onmouseout="hideTipMap('africa')"
+			<path class="civ proRome africa" onmouseover="showTipMap('africa');showTipMap('africaC')" onmouseout="hideTipMap('africa');hideTipMap('africaC')"
 			d="m 270.00002,479.43992 c 0.99999,0 40.00001,-4.43992 40.00001,-4.43992 l 9.99998,10 5.00002,15 -4.99999,9.99998 h -4.99999 V 515 l 24.99997,14.99999 h 10.00001 l 15.00002,4.99999 4.99997,10.00001 20.00001,5.00001 19.99999,9.99998 2e-5,5.00002 -130,-54.99999 -20,-3e-5 z"/>
 
-			<g class="civ proRome crete" onmouseover="showTipMap('crete')" onmouseout="hideTipMap('crete')">
+			<g class="civ proRome crete" onmouseover="showTipMap('crete');showTipMap('creteC')" onmouseout="hideTipMap('crete');hideTipMap('creteC')">
 				<path d="m 500.00004,550 -50.00001,-15 -5,-5.00001 h -15 l -10,4.99999 -5.00002,10.00001 5.00002,4.99999 -10.00001,10 V 565 h 85.00002 z"/>
 				<path d="M 454.99998,494.99998 V 500 l 10.00001,4.99999 h 15 l 5,-4.99999 h -15 z"/>
 			</g>
 		
-			<path class="civ proRome aegyptus" onmouseover="showTipMap('aegyptus')" onmouseout="hideTipMap('aegyptus')"
+			<path class="civ proRome aegyptus" onmouseover="showTipMap('aegyptus');showTipMap('aegyptusC')" onmouseout="hideTipMap('aegyptus');hideTipMap('aegyptusC')"
 			d="m 495.00004,565 30,30 20,35 h 34.99998 l -29.99999,-55.00002 -4.99999,-15 5,-9.99998 -5,-2e-5 -5.00002,-4.99999 h -14.99999 l -10.00001,4.99999 h -14.99999 z"/>
 			
-			<path class="civ proRome arabia" onmouseover="showTipMap('arabia')" onmouseout="hideTipMap('arabia')"
+			<path class="civ proRome arabia" onmouseover="showTipMap('arabia');showTipMap('arabiaC')" onmouseout="hideTipMap('arabia');hideTipMap('arabiaC')"
 			d="m 585.00004,525 5,-5 5.00001,20 -15.00003,25 v 25 l -9.99998,-5.00001 V 565 l -5.00001,19.99999 h -4.99999 l -15,-25.00001 4.99999,-10 h 29.99999 z"/>
 			
-			<path class="civ proRome judaea" onmouseover="showTipMap('judaea')" onmouseout="hideTipMap('judaea')"
+			<path class="civ proRome judaea" onmouseover="showTipMap('judaea');showTipMap('judaeaC')" onmouseout="hideTipMap('judaea');hideTipMap('judaeaC')"
 			d="m 560.00004,549.99998 h 19.99998 L 585.00004,525 571.43,530 l -6.42997,14.99999 z"/>
 			
-			<path class="civ proRome syria" onmouseover="showTipMap('syria')" onmouseout="hideTipMap('syria')"
+			<path class="civ proRome syria" onmouseover="showTipMap('syria');showTipMap('syriaC')" onmouseout="hideTipMap('syria');hideTipMap('syriaC')"
 			d="m 590.00003,519.99999 25,-15 10e-6,-9.99999 -5,-2e-5 -5.00001,-4.99999 5.00001,-4.99999 -5.00001,-10 10,-5.00002 v -4.99999 L 610.00004,460 l -5.00001,9.99998 h -15 v 10.00001 l -10.00001,10 v 19.99999 L 571.42998,529.99999 585.00004,525 Z"/>
 			
-			<path class="civ proRome cyprus" onmouseover="showTipMap('cyprus')" onmouseout="hideTipMap('cyprus')"
+			<path class="civ proRome cyprus" onmouseover="showTipMap('cyprus');showTipMap('cyprusC')" onmouseout="hideTipMap('cyprus');hideTipMap('cyprusC')"
 			d="M 569.99996,494.99998 559.99998,500 h -10 l -4.99999,4.99999 5.00007,5.00001 9.99992,-5.00001 h 4.99999 V 500 Z"/>
 
-			<path class="civ proRome cilicia" onmouseover="showTipMap('cilicia')" onmouseout="hideTipMap('cilicia')"
+			<path class="civ proRome cilicia" onmouseover="showTipMap('cilicia');showTipMap('ciliciaC')" onmouseout="hideTipMap('cilicia');hideTipMap('ciliciaC')"
 			d="m 545.00004,489.99999 5,-9.99999 h 10 l 20,-15 h 10 v 15 l -5,5 v -5 l -5.00002,5 h -15.00005 l -4.99993,4.99999 z"/>
 			
-			<path class="civ proRome lycia" onmouseover="showTipMap('lycia')" onmouseout="hideTipMap('lycia')"
+			<path class="civ proRome lycia" onmouseover="showTipMap('lycia');showTipMap('lyciaC')" onmouseout="hideTipMap('lycia');hideTipMap('lyciaC')"
 			d="M 510.00003,485 530.00002,464.99999 540.00004,475 l 9.99999,4.99999 -4.99999,10 L 535.00003,485 h -5.00001 l -4.99999,4.99999 h -10.00001 z"/>
 			
-			<path class="civ proRome cappadocia" onmouseover="showTipMap('cappadocia')" onmouseout="hideTipMap('cappadocia')"
+			<path class="civ proRome cappadocia" onmouseover="showTipMap('cappadocia');showTipMap('cappadociaC')" onmouseout="hideTipMap('cappadocia');hideTipMap('cappadociaC')"
 			d="M 565.00003,429.99998 580.00004,440 l -5,10 h -10 l -5,29.99999 19.99998,-15 h 10.00001 v 4.99999 l 15.00001,2e-5 5,-10 5,-5 -5,-5 h 15 l 10.00001,-15 15,-15 v -5 l -5,-5 h -5 l 5,10 -5,5 -10.00002,4.99998 H 600.00004 L 575.00003,420 v 9.99998 z"/>
 			
-			<path class="civ proRome galatia" onmouseover="showTipMap('galatia')" onmouseout="hideTipMap('galatia')"
+			<path class="civ proRome galatia" onmouseover="showTipMap('galatia');showTipMap('galatiaC')" onmouseout="hideTipMap('galatia');hideTipMap('galatiaC')"
 			d="m 530.00002,464.99999 h 10 L 545.00004,460 535.00003,445 555.00002,429.99998 h 10.00001 l 14.99999,10.00001 -4.99999,10 h -10 l -4.99999,30 H 550.00003 L 540.00002,475 Z"/>
 
-			<path class="civ proRome bithynia" onmouseover="showTipMap('bithynia')" onmouseout="hideTipMap('bithynia')"
+			<path class="civ proRome bithynia" onmouseover="showTipMap('bithynia');showTipMap('bithyniaC')" onmouseout="hideTipMap('bithynia');hideTipMap('bithyniaC')"
 			d="m 535.00004,445 20,-15 h 20 l -10e-6,-10 h -20.00001 l -19.99999,9.99998 -9.99999,2e-5 -10.00002,-5.00001 -4.99999,4.99999 L 520.00004,435 h -10.00001 l -10,4.99999 10,10 h 4.99999 z"/>
 
-			<path class="civ proRome asia" onmouseover="showTipMap('asia')" onmouseout="hideTipMap('asia')"
+			<path class="civ proRome asia" onmouseover="showTipMap('asia');showTipMap('asiaC')" onmouseout="hideTipMap('asia');hideTipMap('asiaC')"
 			d="m 510.00003,485 19.99999,-20.00001 h 10 L 545.00004,460 l -10,-15 -20.00002,4.99999 h -4.99999 l -10,-10 H 490.00002 L 480.00004,445 v 4.99999 h 4.99999 v 15 l 10.00001,15 h 4.99999 L 505.00004,485 Z"/>
 			
-			<path class="civ proRome achaia" onmouseover="showTipMap('achaia')" onmouseout="hideTipMap('achaia')"
+			<path class="civ proRome achaia" onmouseover="showTipMap('achaia');showTipMap('achaiaC')" onmouseout="hideTipMap('achaia');hideTipMap('achaiaC')"
 			d="M 430.00003,464.99999 V 445 h 15 l 25,24.99998 -10,-4.99999 V 475 l -4.99999,-5.00002 -5.00005,2e-5 -5,-5 -9.99997,-10e-6 4.99997,10e-6 10,5 5.00005,5 h -10.00001 l 4.99999,10 -10.00001,4.99999 -9.99998,-20.00001 4.99999,-4.99999 z"/>
 			
-			<path class="civ proRome epirus" onmouseover="showTipMap('epirus')" onmouseout="hideTipMap('epirus')"
+			<path class="civ proRome epirus" onmouseover="showTipMap('epirus');showTipMap('epirusC')" onmouseout="hideTipMap('epirus');hideTipMap('epirusC')"
 			d="m 410.00002,429.99998 15,5.00002 5.00001,10 v 19.99999 l -20.00001,-25 z"/>
 
-			<path class="civ proRome macedonia" onmouseover="showTipMap('macedonia')" onmouseout="hideTipMap('macedonia')"
+			<path class="civ proRome macedonia" onmouseover="showTipMap('macedonia');showTipMap('macedoniaC')" onmouseout="hideTipMap('macedonia');hideTipMap('macedoniaC')"
 			d="m 410.00002,420 h 4.99999 l 20.00001,-5.00002 20.00002,5.00002 4.99999,4.99999 h 14.99999 L 495.00004,435 485.00003,439.99999 480.00004,435 470.00003,429.99998 455.00004,435 l 9.99998,10 h -15 l -4.99999,-10 v 10 L 430.00005,444.86771 425.00003,435 l -15,-5 z"/>
 
-			<path class="civ proRome thracia" onmouseover="showTipMap('thracia')" onmouseout="hideTipMap('thracia')"
+			<path class="civ proRome thracia" onmouseover="showTipMap('thracia');showTipMap('thraciaC')" onmouseout="hideTipMap('thracia');hideTipMap('thraciaC')"
 			d="m 455.00004,405.00001 40,4.99999 4.99999,10 5.00001,4.99999 h 4.99999 l -4.99999,4.99999 h -5.00001 L 495.00004,435 475.00002,424.99999 H 460.00003 L 455.00004,420 Z"/>
 
-			<path class="civ proRome moesiaSup" onmouseover="showTipMap('moesiaSup')" onmouseout="hideTipMap('moesiaSup')"
+			<path class="civ proRome moesiaSup" onmouseover="showTipMap('moesiaSup');showTipMap('moesiaSupC')" onmouseout="hideTipMap('moesiaSup');hideTipMap('moesiaSupC')"
 			d="m 415.00003,420 20,-5 20,5 v -15 -9 l -5,-1 -5,-10.00001 -25,10e-6 -15,-5 10,20 z"/>
 
-			<path class="civ proRome moesiaInf" onmouseover="showTipMap('moesiaInf')" onmouseout="hideTipMap('moesiaInf')"
+			<path class="civ proRome moesiaInf" onmouseover="showTipMap('moesiaInf');showTipMap('moesiaInfC')" onmouseout="hideTipMap('moesiaInf');hideTipMap('moesiaInfC')"
 			d="m 455.00004,395.99999 19.99998,4 v -25 l 15,-15 10.00001,10.00001 14.99999,-4.99999 20.00001,-15.00003 15.00001,2e-5 10,5 -10,5 -10,5 -5.00001,-5.00001 h -5.00001 l -15,25 h -4.99999 l -4.99999,15 -5.00001,5.00002 V 410 h -4.99999 l -40,-4.99999 z"/>
 
-			<path class="civ proRome dacia" onmouseover="showTipMap('dacia')" onmouseout="hideTipMap('dacia')"
+			<path class="civ proRome dacia" onmouseover="showTipMap('dacia');showTipMap('daciaC')" onmouseout="hideTipMap('dacia');hideTipMap('daciaC')"
 			d="m 420.00003,365.00001 20,-5.00001 15.00001,-15.00001 h 19.99998 l 10.00002,5 4.99998,10 -15,15 v 25 l -25,-4.99999 -4.99999,-10 -25,-10e-6 z"/>
 
-			<path class="civ proRome dalmatia" onmouseover="showTipMap('dalmatia')" onmouseout="hideTipMap('dalmatia')"
+			<path class="civ proRome dalmatia" onmouseover="showTipMap('dalmatia');showTipMap('dalmatiaC')" onmouseout="hideTipMap('dalmatia');hideTipMap('dalmatiaC')"
 			d="M 355.00005,384.99999 V 370 h 25 l 10,10 h 15 l 10,20 v 20 h -5.00001 l -44.99999,-30.00002 -5.00001,-14.99999 z"/>
 
-			<path class="civ proRome pannoniaInf" onmouseover="showTipMap('pannoniaInf')" onmouseout="hideTipMap('pannoniaInf')"
+			<path class="civ proRome pannoniaInf" onmouseover="showTipMap('pannoniaInf');showTipMap('pannoniaInfC')" onmouseout="hideTipMap('pannoniaInf');hideTipMap('pannoniaInfC')"
 			d="m 395.00005,344.99999 -5,20.00001 v 15 h 15 l 15,5 v -15 h -15 v -5 l 4.99999,-20.00001 z"/>
 
-			<path class="civ proRome pannoniaSup" onmouseover="showTipMap('pannoniaSup')" onmouseout="hideTipMap('pannoniaSup')"
+			<path class="civ proRome pannoniaSup" onmouseover="showTipMap('pannoniaSup');showTipMap('pannoniaSupC')" onmouseout="hideTipMap('pannoniaSup');hideTipMap('pannoniaSupC')"
 			d="m 360.00003,360 9.99999,-25.00001 20.00002,5.00001 4.99999,4.99999 -5,20.00001 v 15 l -10,-10 h -25 v -5 l -10.00001,-10 z"/>
 
-			<path class="civ proRome noricum" onmouseover="showTipMap('noricum')" onmouseout="hideTipMap('noricum')"
+			<path class="civ proRome noricum" onmouseover="showTipMap('noricum');showTipMap('noricumC')" onmouseout="hideTipMap('noricum');hideTipMap('noricumC')"
 			d="m 345.00002,355 h -15 v -20 l 15,-5 15.00001,5 9.99999,-10e-6 L 360.00003,360 Z"/>
 
-			<path class="civ proRome raetia" onmouseover="showTipMap('raetia')" onmouseout="hideTipMap('raetia')"
+			<path class="civ proRome raetia" onmouseover="showTipMap('raetia');showTipMap('raetiaC')" onmouseout="hideTipMap('raetia');hideTipMap('raetiaC')"
 			d="m 305.00004,325.00001 h 29.99999 L 345.00004,330 l -15,4.99999 V 355 l -35.00001,4.99999 -10,-10.00001 h 5.00001 z"/>
 
-			<path class="civ proRome sicilia" onmouseover="showTipMap('sicilia')" onmouseout="hideTipMap('sicilia')"
+			<path class="civ proRome sicilia" onmouseover="showTipMap('sicilia');showTipMap('siciliaC')" onmouseout="hideTipMap('sicilia');hideTipMap('siciliaC')"
 			d="M 370,464.99999 364.99998,475 370,479.99999 364.99998,485 354.99997,479.99999 339.99998,475 v -10.00001 h 10 L 354.99999,470 Z"/>
 
-			<g class="civ proRome corsica" onmouseover="showTipMap('corsica')" onmouseout="hideTipMap('corsica')">
+			<g class="civ proRome corsica" onmouseover="showTipMap('corsica');showTipMap('corsicaC')" onmouseout="hideTipMap('corsica');hideTipMap('corsicaC')">
 				<path d="m 310.00002,405 -15.00003,10 4.99999,9.99999 h 5.00001 l 4.99999,-10.00001 z"/>
 				<path d="M 304.99999,429.99998 309.99998,435 v 19.99998 h -4.99999 L 299.99998,460 294.99999,454.99998 V 439.99999 L 290,435 l 4.99999,-5.00002 z"/>
 			</g>
@@ -215,34 +171,34 @@
 			<path class="civ proRome" onmouseover="showTipMap('poeninae')" onmouseout="hideTipMap('poeninae')"
 			d="m 285.00001,349.99998 10,10.00001 L 285.00002,365 v 9.86172 l -10,-4.86172 10e-6,-4.99999 z"/>
 
-			<path class="civ proRome germaniaSup" onmouseover="showTipMap('germaniaSup')" onmouseout="hideTipMap('germaniaSup')"
+			<path class="civ proRome germaniaSup" onmouseover="showTipMap('germaniaSup');showTipMap('germaniaSupC')" onmouseout="hideTipMap('germaniaSup');hideTipMap('germaniaSupC')"
 			d="m 285.00004,320 -5,-5 10,-20 15,30 -15,25 h -5 l -10,15 -10,-15 5,-10 h 10 l 5,-10 z"/>
 
-			<path class="civ proRome germaniaInf" onmouseover="showTipMap('germaniaInf')" onmouseout="hideTipMap('germaniaInf')"
+			<path class="civ proRome germaniaInf" onmouseover="showTipMap('germaniaInf');showTipMap('germaniaInfC')" onmouseout="hideTipMap('germaniaInf');hideTipMap('germaniaInfC')"
 			d="m 250.00004,290 5,-5.00002 h 20.00001 l 9.99998,20.00001 L 280.00004,315 h -5 l -15,-5 z"/>
 
-			<path class="civ proRome britania" onmouseover="showTipMap('britania')" onmouseout="hideTipMap('britania')"
+			<path class="civ proRome britania" onmouseover="showTipMap('britania');showTipMap('britaniaC')" onmouseout="hideTipMap('britania');hideTipMap('britaniaC')"
 			d="m 160.00001,235 10,-5.00001 h 15 l 25,35.00001 v 10 h 15 v 9.99998 l -10,10.00001 h 5 l 5,5.00001 -15,4.99999 h -35 l -5,4.99999 h -10 l -5,5.00002 -5,-5.00002 15,-9.99998 h 10 l 10,-10 -10,4.99999 -20,-4.99999 v -5.00002 h 5 l 5,-4.99999 -5,-4.99999 v -10 l 15,4.99999 5,-9.99999 -10.00002,-10 5.00002,-5 -15,5 -5,-5 z"/>
 
-			<path class="civ proRome belgica" onmouseover="showTipMap('belgica')" onmouseout="hideTipMap('belgica')"
+			<path class="civ proRome belgica" onmouseover="showTipMap('belgica');showTipMap('belgicaC')" onmouseout="hideTipMap('belgica');hideTipMap('belgicaC')"
 			d="m 270.00002,340 h 10 l 5,-10 v -10 l -5,-5 h -5 l -15,-5 -10,-20 -5.00001,4.99999 -20,10 v 4.99999 L 235.00002,325 Z"/>
 
-			<path class="civ proRome narbonnensis" onmouseover="showTipMap('narbonnensis')" onmouseout="hideTipMap('narbonnensis')"
+			<path class="civ proRome narbonnensis" onmouseover="showTipMap('narbonnensis');showTipMap('narbonnensisC')" onmouseout="hideTipMap('narbonnensis');hideTipMap('narbonnensisC')"
 			d="m 260.00002,370 15,-5 v 5 l -5,15 9,17 -3.99999,3.00001 -20.00001,-5.00002 -15.00001,5.00002 h -25 l -5,-10.00001 9.90678,0.004 25.09323,-5.004 10,-5 v -5 h 5 z"/>
 
-			<path class="civ proRome aquitania" onmouseover="showTipMap('aquitania')" onmouseout="hideTipMap('aquitania')"
+			<path class="civ proRome aquitania" onmouseover="showTipMap('aquitania');showTipMap('aquitaniaC')" onmouseout="hideTipMap('aquitania');hideTipMap('aquitaniaC')"
 			d="m 185.00001,355 20,5 30.00001,-10 20,30 v 5 l -9.99076,4.99583 -25.10247,5.00817 -9.90678,-0.004 5,10.00001 -25,-5.00002 5,-4.99999 v -29.99999 z"/>
 
-			<path class="civ proRome lugdunensis" onmouseover="showTipMap('lugdunensis')" onmouseout="hideTipMap('lugdunensis')"
+			<path class="civ proRome lugdunensis" onmouseover="showTipMap('lugdunensis');showTipMap('lugdunensisC')" onmouseout="hideTipMap('lugdunensis');hideTipMap('lugdunensisC')"
 			d="M 225.00003,309.99998 235.00004,325 l 35,15 -5,10 10,15 -15,5 v 10 h -5 l -20,-30 -30.00001,10 -20,-5 -25.00001,-20.00001 15.00001,-4.99999 5,4.99999 h 15 l -5,-15 h 5 l 4.99998,5.00002 10.00002,-5.00002 z"/>
 
-			<path class="civ proRome tarraconensis" onmouseover="showTipMap('tarraconensis')" onmouseout="hideTipMap('tarraconensis')"
+			<path class="civ proRome tarraconensis" onmouseover="showTipMap('tarraconensis');showTipMap('tarraconensisC')" onmouseout="hideTipMap('tarraconensis');hideTipMap('tarraconensisC')"
 			d="m 120.00003,429.99998 -10,-24.99997 20,-10.00001 60,4.99999 L 215.00004,405 h 25 l -1e-5,15 -20,9.99998 -15,20.00001 5,10.00001 -25,25 h -5 l -10,-10 -5,-10.00001 -15,-4.99999 10,-10.00001 V 435 l -15,-10.00001 -5,4.99999 z"/>
 
-			<path class="civ proRome baetica" onmouseover="showTipMap('baetica')" onmouseout="hideTipMap('baetica')"
+			<path class="civ proRome baetica" onmouseover="showTipMap('baetica');showTipMap('baeticaC')" onmouseout="hideTipMap('baetica');hideTipMap('baeticaC')"
 			d="M 130.00003,479.99999 V 470 l 20,-10 15,4.99999 5,10.00001 10,10 h -20 l -10,4.99999 h -5 l -5,-10 z"/>
 
-			<path class="civ proRome lusitania" onmouseover="showTipMap('lusitania')" onmouseout="hideTipMap('lusitania')"
+			<path class="civ proRome lusitania" onmouseover="showTipMap('lusitania');showTipMap('lusitaniaC')" onmouseout="hideTipMap('lusitania');hideTipMap('lusitaniaC')"
 			d="m 150.00001,460 10,-10.00001 V 435 l -15,-10 -5,5 -20,-2e-5 -10,30.00002 h 5 v 19.99999 h 15 v -10.00001 z"/>
 			
 			<path class="civ proRome" onmouseover="showTipMap('mesopotamia')" onmouseout="hideTipMap('mesopotamia')"
@@ -274,130 +230,90 @@
 			<text class="capital city" x="344.83801" y="413.19681">ROMA</text>
 			<path style="stroke:#000000;fill:none;" d="m 339.50002,419.71004 5.5,-4.71006 h 38"/>
 			
-			<text class="city cityRome mauretaniaTC" x="148.29628" y="498.4111">Tingis</text>
-			<text class="city cityRome mauretaniaCC" x="233.2963" y="486.4111">Cesareia</text>
-			<text class="city cityRome africaC" x="317.2963" y="484.87387">Cartago</text>
-			<text class="city cityRome creteC" x="468.34076" y="507.4111">Gortina</text>
-			<text class="city cityRome aegyptusC" x="520.53003" y="550.48181">Alexandria</text>
-			<text class="city cityRome arabiaC" x="579.09259" y="563.41107">Petra</text>
-			<text class="city cityRome judaeaC" x="576.29633" y="535.41107">Cesareia Marítima</text>
-			<text class="city cityRome syriaC" x="586.45929" y="489.95908">Antioquia</text>
-			<text class="city cityRome cyprusC" x="549.09259" y="508.4111">Pafos</text>
-			<text class="city cityRome ciliciaC" x="574.41486" y="484.4111">Tarso</text>
-			<text class="city cityRome lyciaC" x="530.45929" y="484.4111">Antália</text>
-			<text class="city cityRome cappadociaC" x="581.29633" y="462.4111">Cesareia</text>
-			<text class="city cityRome galatiaC" x="553.45929" y="446.4111">Ancira</text>
-			<text class="city cityRome bithyniaC" x="521.12219" y="436.4111">Nicomédia</text>
-			<text class="city cityRome asiaC" x="495.12222" y="473.4111">Éfeso</text>
-			<text class="city cityRome achaiaC" x="448.2963" y="471.4111">Corinto</text>
-			<text class="city cityRome epirusC" x="426.12219" y="457.95908">Nicópolis</text>
-			<text class="city cityRome macedoniaC" x="449.09256" y="439.4111">Tessalônica</text>
-			<text class="city cityRome thraciaC" x="500.09259" y="433.4111">Perinto</text>
-			<text class="city cityRome moesiaSupC" x="436.44818" y="389.4111">Viminácio</text>
-			<text class="city cityRome moesiaInfC" x="509.41483" y="391.4111">Tômis</text>
-			<text class="city cityRome daciaC" x="452.34445" y="374.87387">Sarmisegetusa</text>
-			<text class="city cityRome dalmatiaC" x="379.34445" y="399.4111">Salona</text>
-			<text class="city cityRome pannoniaInfC" x="409.45929" y="349.95908">Aquinco</text>
-			<text class="city cityRome pannoniaSupC" x="381.2963" y="341.4111">Carnunto</text>
-			<text class="city cityRome noricumC" x="357.4014" y="356.3725">Viruno</text>
-			<text class="city cityRome raetiaC" x="324.45929" y="337.87387">Augusta dos Vindélicos</text>
-			<text class="city cityRome siciliaC" x="369.34445" y="479.4111">Siracusa</text>
-			<text class="city cityRome corsicaC" x="304.2963" y="455.4111">Caralis</text>
-			<text class="city cityRome germaniaSupC" x="295.13702" y="318.87387">Mogoncíaco</text>
-			<text class="city cityRome germaniaInfC" x="281.12961" y="299.4111">Colônia Agripinense</text>
-			<text class="city cityRome britaniaC" x="209.11478" y="295.4111">Londínio</text>
-			<text class="city cityRome belgicaC" x="249.11479" y="323.87387">Durocortoro</text>
-			<text class="city cityRome narbonnensisC" x="241.12219" y="406.4111">Narbo Márcio</text>
-			<text class="city cityRome aquitaniaC" x="204.11478" y="380.87387">Burdígala</text>
-			<text class="city cityRome lugdunensisC" x="260.11478" y="373.87387">Lugduno</text>
-			<text class="city cityRome tarraconensisC" x="221.41483" y="432.4111">Tarraco</text>
-			<text class="city cityRome baeticaC" x="159.29628" y="470.4111">Córduba</text>
-			<text class="city cityRome lusitaniaC" x="142.12219" y="456.87387">Emérita Augusta</text>
+			<text id="mauretaniaTC" class="city cityRome" x="148.29628" y="498.4111">Tingis</text>
+			<text id="mauretaniaCC" class="city cityRome" x="233.2963" y="486.4111">Cesareia</text>
+			<text id="africaC" class="city cityRome" x="317.2963" y="484.87387">Cartago</text>
+			<text id="creteC" class="city cityRome" x="468.34076" y="507.4111">Gortina</text>
+			<text id="aegyptusC" class="city cityRome" x="520.53003" y="550.48181">Alexandria</text>
+			<text id="arabiaC" class="city cityRome" x="579.09259" y="563.41107">Petra</text>
+			<text id="judaeaC" class="city cityRome" x="576.29633" y="535.41107">Cesareia Marítima</text>
+			<text id="syriaC" class="city cityRome" x="586.45929" y="489.95908">Antioquia</text>
+			<text id="cyprusC" class="city cityRome" x="549.09259" y="508.4111">Pafos</text>
+			<text id="ciliciaC" class="city cityRome" x="574.41486" y="484.4111">Tarso</text>
+			<text id="lyciaC" class="city cityRome" x="530.45929" y="484.4111">Antália</text>
+			<text id="cappadociaC" class="city cityRome" x="581.29633" y="462.4111">Cesareia</text>
+			<text id="galatiaC" class="city cityRome" x="553.45929" y="446.4111">Ancira</text>
+			<text id="bithyniaC" class="city cityRome" x="521.12219" y="436.4111">Nicomédia</text>
+			<text id="asiaC" class="city cityRome" x="495.12222" y="473.4111">Éfeso</text>
+			<text id="achaiaC" class="city cityRome" x="448.2963" y="471.4111">Corinto</text>
+			<text id="epirusC" class="city cityRome" x="426.12219" y="457.95908">Nicópolis</text>
+			<text id="macedoniaC" class="city cityRome" x="449.09256" y="439.4111">Tessalônica</text>
+			<text id="thraciaC" class="city cityRome" x="500.09259" y="433.4111">Perinto</text>
+			<text id="moesiaSupC" class="city cityRome" x="436.44818" y="389.4111">Viminácio</text>
+			<text id="moesiaInfC" class="city cityRome" x="509.41483" y="391.4111">Tômis</text>
+			<text id="daciaC" class="city cityRome" x="452.34445" y="374.87387">Sarmisegetusa</text>
+			<text id="dalmatiaC" class="city cityRome" x="379.34445" y="399.4111">Salona</text>
+			<text id="pannoniaInfC" class="city cityRome" x="409.45929" y="349.95908">Aquinco</text>
+			<text id="pannoniaSupC" class="city cityRome" x="381.2963" y="341.4111">Carnunto</text>
+			<text id="noricumC" class="city cityRome" x="357.4014" y="356.3725">Viruno</text>
+			<text id="raetiaC" class="city cityRome" x="324.45929" y="337.87387">Augusta dos Vindélicos</text>
+			<text id="siciliaC" class="city cityRome" x="369.34445" y="479.4111">Siracusa</text>
+			<text id="corsicaC" class="city cityRome" x="304.2963" y="455.4111">Caralis</text>
+			<text id="germaniaSupC" class="city cityRome" x="295.13702" y="318.87387">Mogoncíaco</text>
+			<text id="germaniaInfC" class="city cityRome" x="281.12961" y="299.4111">Colônia Agripinense</text>
+			<text id="britaniaC" class="city cityRome" x="209.11478" y="295.4111">Londínio</text>
+			<text id="belgicaC" class="city cityRome" x="249.11479" y="323.87387">Durocortoro</text>
+			<text id="narbonnensisC" class="city cityRome" x="241.12219" y="406.4111">Narbo Márcio</text>
+			<text id="aquitaniaC" class="city cityRome" x="204.11478" y="380.87387">Burdígala</text>
+			<text id="lugdunensisC" class="city cityRome" x="260.11478" y="373.87387">Lugduno</text>
+			<text id="tarraconensisC" class="city cityRome" x="221.41483" y="432.4111">Tarraco</text>
+			<text id="baeticaC" class="city cityRome" x="159.29628" y="470.4111">Córduba</text>
+			<text id="lusitaniaC" class="city cityRome" x="142.12219" y="456.87387">Emérita Augusta</text>
 		</g>
 		
 		<!-- CIDADES - ÍCONES -->
 		
 		<g>
-			<path class="cityIconR" id="Gortynas"
-			d="M 466.00003,506.99999 464.00004,505 466.00003,502.99999 468.00004,505 Z"/>
-			<path class="cityIconR" id="Nicomedia"
-			d="M 519.00004,435.99999 521.00003,434 519.00004,431.99999 517.00003,434 Z"/>
-			<path class="cityIconR" id="Ancyra"
-			d="M 551.00004,446.99999 553.00003,445 551.00004,442.99999 549.00003,445 Z"/>
-			<path class="cityIconR" id="Caesarea"
-			d="M 579.00004,461.99999 581.00003,460 579.00004,457.99999 577.00003,460 Z"/>
-			<path class="cityIconR" id="Corinth"
-			d="M 446.00003,470.99999 448.00002,469 446.00003,466.99999 444.00002,469 Z"/>
-			<path class="cityIconR" id="Nicopolis"
-			d="M 424.00003,457.99999 426.00002,456 424.00003,453.99999 422.00002,456 Z"/>
-			<path class="cityIconR" id="Thessaloniki"
-			d="M 447.00003,438.99999 449.00002,437 447.00003,434.99999 445.00002,437 Z"/>
-			<path class="cityIconR" id="Perinthus"
-			d="M 498.00004,432.99999 500.00003,431 498.00004,428.99999 496.00003,431 Z"/>
-			<path class="cityIconR" id="Salona"
-			d="M 377.00003,398.99999 379.00002,397 377.00003,394.99999 375.00002,397 Z"/>
-			<path class="cityIconR" id="Virunum"
-			d="M 355.00003,355.99999 357.00002,354 355.00003,351.99999 353.00002,354 Z"/>
-			<path class="cityIconR" id="Syracuse"
-			d="M 367.00003,478.99999 369.00002,477 367.00003,474.99999 365.00002,477 Z"/>
-			<path class="cityIconR" id="Caralis"
-			d="M 302.00002,454.99999 304.00001,453 302.00002,450.99999 300.00001,453 Z"/>
-			<path class="cityIconR" id="Tarsus"
-			d="M 572.00005,484.99999 574.00004,483 572.00005,480.99999 570.00004,483 Z"/>
-			<path class="cityIconR" id="Attalia"
-			d="M 528.00004,483.99999 530.00003,482 528.00004,479.99999 526.00003,482 Z"/>
-			<path class="cityIconR" id="Ephesus"
-			d="M 493.00004,472.99999 495.00003,471 493.00004,468.99999 491.00003,471 Z"/>
-			<path class="cityIconR" id="Rome"
-			d="m 341.00002,422 -1.50004,-1.2 -1.49996,1.2 0.49996,-2 -1.49996,-1 h 1.79996 l 0.7,-2 0.69999,2 h 1.80005 l -1.50005,1 z"/>
-			<path class="cityIconR" id="Petra"
-			d="m 577.00004,563 -1.99998,-2.00001 1.99998,-1.99999 2.00001,1.99999 z"/>
-			<path class="cityIconR" id="Antiochia"
-			d="m 584.00005,490 -2.00001,-2.00001 2.00001,-1.99999 1.99999,1.99999 z"/>
-			<path class="cityIconR" id="Paphos"
-			d="M 547.00005,508.00001 545.00004,506 547.00005,504.00001 549.00004,506 Z"/>
-			<path class="cityIconR" id="Caesarea Maritima"
-			d="m 574.00005,535 -2.00001,-2.00001 2.00001,-1.99999 1.99999,1.99999 z"/>
-			<path class="cityIconR" id="Alexandria"
-			d="M 518.00003,550.99999 516.00004,549 518.00003,546.99999 520.00004,549 Z"/>
-			<path class="cityIconR" id="Carthago"
-			d="m 313.00003,483 1.99999,2 2.00001,-2 -2.00001,-2 z"/>
-			<path class="cityIconR" id="Augusta Vindelicorum"
-			d="M 322.00002,337.99999 324.00001,336 322.00002,333.99999 320.00001,336 Z"/>
-			<path class="cityIconR" id="Tomis"
-			d="M 507.00004,391.99999 509.00003,390 507.00004,387.99999 505.00003,390 Z"/>
-			<path class="cityIconR" id="Viminacium"
-			d="m 434.07075,389.07071 1.99999,-1.99999 -1.99999,-2.00001 -2.00001,2.00001 z"/>
-			<path class="cityIconR" id="Sarmizegetusa"
-			d="M 450.00003,374.99999 452.00002,373 450.00003,370.99999 448.00002,373 Z"/>
-			<path class="cityIconR" id="Aquincum"
-			d="M 407.00004,349.99999 409.00003,348 407.00004,345.99999 405.00003,348 Z"/>
-			<path class="cityIconR" id="Carnuntum"
-			d="M 379.00003,340.99999 381.00002,339 379.00003,336.99999 377.00002,339 Z"/>
-			<path class="cityIconR" id="Mogontiacum"
-			d="M 293.00002,318.99999 295.00001,317 293.00002,314.99999 291.00001,317 Z"/>
-			<path class="cityIconR" id="Colonia Agrippina"
-			d="M 279.00002,298.99999 281.00001,297 279.00002,294.99999 277.00001,297 Z"/>
-			<path class="cityIconR" id="Durocortorum"
-			d="M 247.00002,323.99999 249.00001,322 247.00002,319.99999 245.00001,322 Z"/>
-			<path class="cityIconR" id="Londinium"
-			d="M 207.00002,294.99999 209.00001,293 207.00002,290.99999 205.00001,293 Z"/>
-			<path class="cityIconR" id="Lugdunum"
-			d="M 258.00002,373.99999 260.00001,372 258.00002,369.99999 256.00001,372 Z"/>
-			<path class="cityIconR" id="Narbo"
-			d="M 238.99999,405.99999 240.99998,404 238.99999,401.99999 236.99998,404 Z"/>
-			<path class="cityIconR" id="Burdigala"
-			d="M 202.00002,380.99999 204.00001,379 202.00002,376.99999 200.00001,379 Z"/>
-			<path class="cityIconR" id="Tarraco"
-			d="M 219.00002,431.99999 221.00001,430 219.00002,427.99999 217.00001,430 Z"/>
-			<path class="cityIconR" id="Corduba"
-			d="M 157.00001,469.99999 159,468 157.00001,465.99999 155,468 Z"/>
-			<path class="cityIconR" id="Emerita Augusta"
-			d="M 140.00001,456.99999 142,455 140.00001,452.99999 138,455 Z"/>
-			<path class="cityIconR" id="Tingis"
-			d="M 146.00001,497.99999 148,496 146.00001,493.99999 144,496 Z"/>
-			<path class="cityIconR" id="Caesarea"
-			d="M 231.00002,486.99999 233.00001,485 231.00002,482.99999 229.00001,485 Z"/>
+			<path class="cityIconR" id="Gortynas" d="M 466.00003,506.99999 464.00004,505 466.00003,502.99999 468.00004,505 Z"/>
+			<path class="cityIconR" id="Nicomedia" d="M 519.00004,435.99999 521.00003,434 519.00004,431.99999 517.00003,434 Z"/>
+			<path class="cityIconR" id="Ancyra" d="M 551.00004,446.99999 553.00003,445 551.00004,442.99999 549.00003,445 Z"/>
+			<path class="cityIconR" id="Caesarea" d="M 579.00004,461.99999 581.00003,460 579.00004,457.99999 577.00003,460 Z"/>
+			<path class="cityIconR" id="Corinth" d="M 446.00003,470.99999 448.00002,469 446.00003,466.99999 444.00002,469 Z"/>
+			<path class="cityIconR" id="Nicopolis" d="M 424.00003,457.99999 426.00002,456 424.00003,453.99999 422.00002,456 Z"/>
+			<path class="cityIconR" id="Thessaloniki" d="M 447.00003,438.99999 449.00002,437 447.00003,434.99999 445.00002,437 Z"/>
+			<path class="cityIconR" id="Perinthus" d="M 498.00004,432.99999 500.00003,431 498.00004,428.99999 496.00003,431 Z"/>
+			<path class="cityIconR" id="Salona" d="M 377.00003,398.99999 379.00002,397 377.00003,394.99999 375.00002,397 Z"/>
+			<path class="cityIconR" id="Virunum" d="M 355.00003,355.99999 357.00002,354 355.00003,351.99999 353.00002,354 Z"/>
+			<path class="cityIconR" id="Syracuse" d="M 367.00003,478.99999 369.00002,477 367.00003,474.99999 365.00002,477 Z"/>
+			<path class="cityIconR" id="Caralis" d="M 302.00002,454.99999 304.00001,453 302.00002,450.99999 300.00001,453 Z"/>
+			<path class="cityIconR" id="Tarsus" d="M 572.00005,484.99999 574.00004,483 572.00005,480.99999 570.00004,483 Z"/>
+			<path class="cityIconR" id="Attalia" d="M 528.00004,483.99999 530.00003,482 528.00004,479.99999 526.00003,482 Z"/>
+			<path class="cityIconR" id="Ephesus" d="M 493.00004,472.99999 495.00003,471 493.00004,468.99999 491.00003,471 Z"/>
+			<path class="cityIconR" id="Rome" d="m 341.00002,422 -1.50004,-1.2 -1.49996,1.2 0.49996,-2 -1.49996,-1 h 1.79996 l 0.7,-2 0.69999,2 h 1.80005 l -1.50005,1 z"/>
+			<path class="cityIconR" id="Petra" d="m 577.00004,563 -1.99998,-2.00001 1.99998,-1.99999 2.00001,1.99999 z"/>
+			<path class="cityIconR" id="Antiochia" d="m 584.00005,490 -2.00001,-2.00001 2.00001,-1.99999 1.99999,1.99999 z"/>
+			<path class="cityIconR" id="Paphos" d="M 547.00005,508.00001 545.00004,506 547.00005,504.00001 549.00004,506 Z"/>
+			<path class="cityIconR" id="Caesarea Maritima" d="m 574.00005,535 -2.00001,-2.00001 2.00001,-1.99999 1.99999,1.99999 z"/>
+			<path class="cityIconR" id="Alexandria" d="M 518.00003,550.99999 516.00004,549 518.00003,546.99999 520.00004,549 Z"/>
+			<path class="cityIconR" id="Carthago" d="m 313.00003,483 1.99999,2 2.00001,-2 -2.00001,-2 z"/>
+			<path class="cityIconR" id="Augusta Vindelicorum" d="M 322.00002,337.99999 324.00001,336 322.00002,333.99999 320.00001,336 Z"/>
+			<path class="cityIconR" id="Tomis" d="M 507.00004,391.99999 509.00003,390 507.00004,387.99999 505.00003,390 Z"/>
+			<path class="cityIconR" id="Viminacium" d="m 434.07075,389.07071 1.99999,-1.99999 -1.99999,-2.00001 -2.00001,2.00001 z"/>
+			<path class="cityIconR" id="Sarmizegetusa" d="M 450.00003,374.99999 452.00002,373 450.00003,370.99999 448.00002,373 Z"/>
+			<path class="cityIconR" id="Aquincum" d="M 407.00004,349.99999 409.00003,348 407.00004,345.99999 405.00003,348 Z"/>
+			<path class="cityIconR" id="Carnuntum" d="M 379.00003,340.99999 381.00002,339 379.00003,336.99999 377.00002,339 Z"/>
+			<path class="cityIconR" id="Mogontiacum" d="M 293.00002,318.99999 295.00001,317 293.00002,314.99999 291.00001,317 Z"/>
+			<path class="cityIconR" id="Colonia Agrippina" d="M 279.00002,298.99999 281.00001,297 279.00002,294.99999 277.00001,297 Z"/>
+			<path class="cityIconR" id="Durocortorum" d="M 247.00002,323.99999 249.00001,322 247.00002,319.99999 245.00001,322 Z"/>
+			<path class="cityIconR" id="Londinium" d="M 207.00002,294.99999 209.00001,293 207.00002,290.99999 205.00001,293 Z"/>
+			<path class="cityIconR" id="Lugdunum" d="M 258.00002,373.99999 260.00001,372 258.00002,369.99999 256.00001,372 Z"/>
+			<path class="cityIconR" id="Narbo" d="M 238.99999,405.99999 240.99998,404 238.99999,401.99999 236.99998,404 Z"/>
+			<path class="cityIconR" id="Burdigala" d="M 202.00002,380.99999 204.00001,379 202.00002,376.99999 200.00001,379 Z"/>
+			<path class="cityIconR" id="Tarraco" d="M 219.00002,431.99999 221.00001,430 219.00002,427.99999 217.00001,430 Z"/>
+			<path class="cityIconR" id="Corduba" d="M 157.00001,469.99999 159,468 157.00001,465.99999 155,468 Z"/>
+			<path class="cityIconR" id="Emerita Augusta" d="M 140.00001,456.99999 142,455 140.00001,452.99999 138,455 Z"/>
+			<path class="cityIconR" id="Tingis" d="M 146.00001,497.99999 148,496 146.00001,493.99999 144,496 Z"/>
+			<path class="cityIconR" id="Caesarea" d="M 231.00002,486.99999 233.00001,485 231.00002,482.99999 229.00001,485 Z"/>
 	   </g>
 			</svg>
 		</div>

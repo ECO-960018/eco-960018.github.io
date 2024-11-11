@@ -27,7 +27,6 @@ nav {
 	height: 200px;
 	background-color: #333333;
 	font-weight: bold;
-	font-size: 30px;
 }
 
 .title {
@@ -37,9 +36,41 @@ nav {
 	font-size: 3.1vw;
 }
 
-.links {
+.navbox {
+	font-size: 30px;
+	width: calc(100vw - 220px);
+	height: 200px;
+	position: absolute;
+	top: 0;
+	left: 200px;
+}
+
+.rContainer {
+	padding-bottom: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+}
+
+.lContainer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.mapButton {
+	color: #fff;
+	font-size: 2vw;
+	padding: 8px 12px 2px 12px;
+	cursor:url(img/cursors/Pointer.png),auto;
+}
+
+.mapButton:hover {
+	background-color: #e8c12c;
+	color: #333333;
+	border-radius: 10px;
 	position: relative;
-	bottom: -45px;
+	bottom: 4px;
 }
 
 nav a {
@@ -55,7 +86,7 @@ nav a:hover {
 	color: #333333;
 	border-radius: 10px;
 	position: relative;
-	bottom: 2px;
+	bottom: 4px;
 }
 
 .current {
@@ -64,26 +95,6 @@ nav a:hover {
 	border-radius: 10px;
 	position: relative;
 	bottom: 2px;
-}
-
-.lContainer {
-	margin: 0px 10px;
-	float: right;
-}
-
-.mapButton {
-	float: right;
-	color: #fff;
-	font-size: 2vw;
-	padding: 8px 12px 2px 12px;
-	margin: -20px 0px 0px 0px;
-	cursor:url(img/cursors/Pointer.png),auto;
-}
-
-.mapButton:hover {
-	background-color: #e8c12c;
-	color: #333333;
-	border-radius: 10px;
 }
 
 #logo {
@@ -431,6 +442,76 @@ main {
 	color: white;
 }
 
+.gTitle {
+	padding-left: 6%;
+	margin-bottom: 0;
+	font-size: 30px;
+	font-weight: 800;
+}
+	
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 10px;
+	justify-content: center;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  flex: 30%;
+  max-width: 30%;
+  padding: 10px;
+  margin: 4px;
+  border: 2px solid black;
+}
+
+.column > img {width: 100%}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px 14px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	transition: 0.4s;
+}
+
+.next {
+	right: -50px;
+}
+
+.prev {
+	left: -48px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	color: black;
+	background-color: #e8c12c;
+	border-radius: 10px;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 /* -_-_-_-_- MAPA -_-_-_-_- */
 
 iframe{border:none;}
@@ -509,7 +590,7 @@ iframe{border:none;}
   left: 20px;
 }
 
-.island,.sea0,.sea,.river,.desert,.mountain,.plateau,.steppe,.taiga,.region{cursor:url(img/cursors/CursorPin.png),auto;}
+.island,.sea0,.sea,.river,.desert,.mountain,.plateau,.steppe,.taiga,.region {cursor:url(img/cursors/CursorPin.png),auto;}
 
 
 
@@ -545,7 +626,7 @@ iframe{border:none;}
 .steppe2{fill:#d6e0ab;opacity:0.75;stroke-width:0;}
 .taiga2{fill:#bfe8b8;opacity:0.75;stroke-width:0;}
 
-.civ {fill-opacity:0.75;}
+.civ {fill-opacity:0.75; cursor:url(img/cursors/CursorPin.png),auto;}
 .civ:hover {fill-opacity:1;}
 .civ2 {fill-opacity:0.75;stroke-dasharray:2, 1;}
 .civ2:hover {fill-opacity:1;}
@@ -635,6 +716,7 @@ iframe{border:none;}
   display: inline-block;
   border-bottom: 1px dotted black;
   color: #e8c12c;
+  padding: 7px 12px 2px 12px;
 }
 
 .tooltip .tt {
@@ -676,30 +758,43 @@ iframe{border:none;}
   visibility: visible;
 }
 
+.tooltip:hover {
+	background-color: #e8c12c;
+	color: #333333;
+	border-radius: 10px;
+	position: relative;
+	bottom: 4px;
+	cursor:url(img/cursors/CursorTip.png),auto;
+}
+
 @media (max-width: 1900px) {
-nav {font-size: 2vw; width: auto;}
-.links {bottom: -65px;}
-.mapButton {margin: -10px 0px 0px 0px;}
-.infobox{width: 14vw;min-width: 14vw;}
-.sidetipMap, .sidetipMap1, .sidetipMap2 {width: 12vw; font-size: 0.8vw;}
-.descriptionMap {width: 12vw; font-size: 0.8vw; left: 1vw; bottom: 0.5vw;}
-.map {width: auto;height: 100vh;}
-.svgMapa {height: 97.5vh;}
-.sidebarModal {overflow: auto; width: 25vw;}
-.close {right: 1vw; top: 0.3vw; font-size: 3vw;}
-#info {padding: 0px 2vw 0px 2vw; margin: auto;}
-#info h1 {font-size: 2vw; margin-top: 2.5vw;}
-#info img {width: 20vw;}
-.legend {font-size: 0.9vw;}
-.text {font-size: 1.2vw;}
-.tooltip .tt {font-size: 1vw;}
-.tt00 {top: 9.5vw; left: 6vw;}
-.tt01 {top: 9.5vw; left: 18vw;}
-.tt02 {top: 9.5vw; left: 36vw;}
-.tt03 {top: 8vw; left: 96.5vw;}
+	nav {font-size: 2vw; width: auto;}
+	.navbox {font-size: 2vw;}
+	.mapButton {margin: -10px 0px 0px 0px;}
+	.infobox{width: 14vw;min-width: 14vw;}
+	.sidetipMap, .sidetipMap1, .sidetipMap2 {width: 12vw; font-size: 0.8vw;}
+	.descriptionMap {width: 12vw; font-size: 0.8vw; left: 1vw; bottom: 0.5vw;}
+	.map {width: auto;height: 100vh;}
+	.svgMapa {height: 97.5vh;}
+	.sidebarModal {overflow: auto; width: 25vw;}
+	.close {right: 1vw; top: 0.3vw; font-size: 3vw;}
+	#info {padding: 0px 2vw 0px 2vw; margin: auto;}
+	#info h1 {font-size: 2vw; margin-top: 2.5vw;}
+	#info img {width: 20vw;}
+	.legend {font-size: 0.9vw;}
+	.text {font-size: 1.2vw;}
+	.tooltip .tt {font-size: 1vw;}
+	.tt00 {top: 9.5vw; left: 6vw;}
+	.tt01 {top: 9.5vw; left: 18vw;}
+	.tt02 {top: 9.5vw; left: 36vw;}
+	.tt03 {top: 8vw; left: 96.5vw;}
 }
 
 @media (max-height: 900px) {
 	.svgMapa {margin-top: 0;}
 	.infobox{margin-top: 0;}
 }
+
+/*@-moz-document url-prefix() {
+	.links{bottom: -45px;}
+}*/

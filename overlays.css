@@ -142,15 +142,9 @@ hr {
 			.m30bc {grid-area: 771 / 1 / 771 / 340;}
 			.m70ad {grid-area: 871 / 1 / 871 / 340;}
 			.m610ad {grid-area: 011 / 1 / 011 / 340;}
+
 /*-_-_-_-_-_-_-_-_-_-_*/
 
-/*ERAS*/
-/*background-color: #ffc107;
-background-color: #fd7e14;
-background-color: #0d6efd; 
-background-color: #198754; 
-background-color: #6f42c1; 
-background-color: #dc3545;*/
 .overlay {cursor: url(img/cursors/PointerTip.png),auto;}
 .overlay2 {cursor:url(img/cursors/PointerTip.png),auto; filter: brightness(75%) saturate(150%);}
 .overlay:hover {filter: brightness(100%); z-index:2}
@@ -275,20 +269,6 @@ background-color: #dc3545;*/
 .iran {border-color: #479f76;}
 .greece {border-color: #8c68cd;}
 .rome {border-color: #e35d6a;}
-
-/*	.mesoBack {background-color: #fd9843;}
-	.mesoBorder {box-shadow:inset 0px 0px 0px 2px #ca6510;}
-	.egyptBack {background-color: #ffcd39;}
-	.egyptBorder {box-shadow:inset 0px 0px 0px 2px #ac7400;}
-	.hebrewBack {background-color: #3d8bfd;}
-	.hebrewBorder {box-shadow:inset 0px 0px 0px 2px #0a58ca;}
-	.iranBack {background-color: #479f76;}
-	.iranBorder {box-shadow:inset 0px 0px 0px 2px #146c43;}
-	.greeceBack {background-color: #8c68cd;}
-	.greeceBorder {box-shadow:inset 0px 0px 0px 2px #59359a;}
-	.romeBack {background-color: #e35d6a;}
-	.romeBorder {box-shadow:inset 0px 0px 0px 2px #b02a37;}
-*/
 
 /*TOOLTIPS*/
 

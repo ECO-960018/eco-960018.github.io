@@ -15,24 +15,29 @@
 	<nav id="navbar">
 	<img id="logo" src="img\Logo.png">
 
-	<p class="title">UMA BREVE LINHA DO TEMPO DA ANTIGUIDADE OCIDENTAL</p>
-	<div class="links">
-		<a class="current">GERAL</a>
-		<a href="#" class="deny">ALQUIMIA</a>
-		<a href="#" class="deny">FILOSOFIA</a>
-			<div class="lContainer">
-				<div class="tooltip">GUIA
-					<span class="tt tt00"><h3>ERAS</h3><p>Clique para pular<br>para uma seção.</p></span>
-					<span class="tt tt01"><h3>LINHAS DO TEMPO</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></span>
-					<span class="tt tt02"><h3>EVENTOS</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></span>
-					<span class="tt tt03">MAPA<br>INTERATIVO</span>
-				</div>
+	<h1 class="title">UMA BREVE LINHA DO TEMPO DA ANTIGUIDADE OCIDENTAL</h1>
+	
+	<div class="navbox">
+		<div class="rContainer">
+			<a class="current">GERAL</a>
+			<a href="#" class="deny">ALQUIMIA</a>
+			<a href="#" class="deny">FILOSOFIA</a>
+		</div>
+			
+		<div class="lContainer">
+			<div class="tooltip">GUIA
+				<div class="tt tt00"><h3>ERAS</h3><p>Clique para pular<br>para uma seção.</p></div>
+				<div class="tt tt01"><h3>LINHAS DO TEMPO</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></div>
+				<div class="tt tt02"><h3>EVENTOS</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></div>
+				<div class="tt tt03">MAPA<br>INTERATIVO</div>
+			</div>
 			<a href="gallery.html">GALERIA</a>
 			<a href="#">GLOSSÁRIO</a>
 			<a href="#">SOBRE</a>
 			<span class="mapButton" title="Mapa Interativo" onclick="showSidebar('Mapa')"><i class="fa fa-map-o"></i></span>
-			</div>
+		</div>
 	</div>
+	
 	</nav>
 	
 	<div class="flexbox">
@@ -43,10 +48,6 @@
 		<a href="#bronze" class="age-select">Idade do Bronze</a>
 		<a href="#iron" class="age-select">Idade do Ferro</a>
 		<a href="#ancient" class="age-select">Antiguidade</a>
-		<!--
-		<a href="#medieval" class="age-select">Idade Média</a>
-		<a href="#modern" class="age-select">Modernidade</a>
-		-->
 		<div id="sidetip" class="sidetip"></div>
 		</div>
 		</aside>
@@ -398,65 +399,6 @@
 			<span class="event event0 eRomeC0 rome deny" onmouseenter="showTipG('oRomeC0')" onmouseleave="hideTip()">Reino de Constantino, O Grande</span>
 			
 		</section>
-		<!--
-		<div class="grid1">
-			
-			<div class="e3300 cell tech sumer">ESCRITA</div>
-			
-			<div class="ePS600">
-				<div class="cell group">Pré-Socráticos</div>
-				<div class="cellBox">
-				<fieldset class="lbox">
-					<legend>Escola Milésia</legend>
-						<span class="l0">Tales</span>
-						<span class="l0">Anaximandro</span>
-						<span class="l0">Anaxágoras</span>
-				</fieldset>
-				<fieldset class="lbox">
-					<legend>Escola Pitagórica</legend>
-						<span class="l0">Pitágoras</span>
-				</fieldset>
-				<fieldset class="lbox">
-					<legend>Escola Efésica</legend>
-						<span class="l0">Heráclito</span>
-				</fieldset>
-				<fieldset class="lbox">
-					<legend>Escola Eleática</legend>
-						<span class="l0">Xenófanes</span>
-						<span class="l0">Parmênides</span>
-						<span class="l0">Zenão</span>
-						<span class="l0">Melisso</span>
-				</fieldset>
-				<fieldset class="lbox">
-					<legend>Escola Pluralista</legend>
-						<span class="l0">Anaxágoras</span>
-						<span class="l0">Arquelaus</span>
-						<span class="l0">Empédocles</span>
-				</fieldset>
-				<fieldset class="lbox">
-					<legend>Escola Atomista</legend>
-						<span class="l0">Leucipo</span>
-						<span class="l0">Demócrito</span>
-				</fieldset>
-				<fieldset class="lbox">
-					<legend>Escola Sofista</legend>
-						<span class="l0">Protágoras</span>
-						<span class="l0">Górgias</span>
-						<span class="l0">Pródico</span>
-						<span class="l0">Hípias</span>
-				</fieldset>
-				<fieldset class="lbox">
-					<legend>Outros</legend>
-						<span class="l0">Ferécides</span>
-						<span class="l0">Hípon</span>
-						<span class="l0">Diógenes</span>
-						<span class="l0">Diotima</span>
-						<span class="l0">Hermótimo</span>
-				</fieldset>
-				</div>
-			</div>
-			
-		</div>-->
 		</main>
 		
 		</div>
@@ -477,22 +419,6 @@
 			<span onclick="document.getElementById('sidebarModal').style.display='none'" class="close">&times;</span>
 				<div id="info">
 				</div>
-		</div>
-		
-		<!-- STONE -->
-		
-		<div id="0000" class="modal">
-		
-			<span onclick="document.getElementById('0000').style.display='none'" class="close">&times;</span>
-				
-				<div class="info">
-				<h1>IDADE DO COBRE</h1>
-					<img src=img/Ancient_Orient.png alt="Mapa do Antigo Oriente Próximo">
-					<p class="legend">Mapa do Antigo Oriente Próximo</p>
-					<p class="text">A Idade do Cobre foi muito daora.<br>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				</div>
-			
 		</div>
 
 		<!-- MAPAS -->

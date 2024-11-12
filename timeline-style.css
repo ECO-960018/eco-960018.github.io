@@ -27,6 +27,7 @@ nav {
 	height: 200px;
 	background-color: #333333;
 	font-weight: bold;
+	position: relative;
 }
 
 .title {
@@ -39,23 +40,21 @@ nav {
 .navbox {
 	font-size: 30px;
 	width: calc(100vw - 220px);
-	height: 200px;
+	height: 30px;
 	position: absolute;
-	top: 0;
 	left: 200px;
-}
-
-.rContainer {
-	padding-bottom: 2px;
-	position: absolute;
-	bottom: 0;
-	left: 20px;
+	bottom: 6px;
 }
 
 .lContainer {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+	padding-bottom: 2px;
+	float: left;
+}
+
+.rContainer {
+	float: right;
+	position: relative;
+	bottom: 7px;
 }
 
 .mapButton {
@@ -471,7 +470,7 @@ main {
   border: 2px solid black;
 }
 
-.column > img {width: 100%}
+.column > img {width: 100%; cursor:url(img/cursors/Pointer.png),auto;}
 
 /* Next & previous buttons */
 .prev,
@@ -553,22 +552,28 @@ iframe{border:none;}
   display: none;
 }
 
-.sidetipMap, .sidetipMap1, .sidetipMap2 {
+.sidetipMap, .sidetipMap1 {
 	height: auto;
 	width: 220px;
 	text-align: center;
-	margin: auto;
+	margin: 30px auto;
 	padding-bottom: 8px;
 	border: 2px solid white;
 	font-size: 14px;
-	position: sticky;
-	top: 30px;
+	/*position: sticky;
+	top: 30px;*/
 }
 
 .sidetipMap2 {
-	padding: 0px 8px;
+	height: auto;
+	width: 220px;
+	margin: auto;
+	padding-bottom: 8px;
+	border: 2px solid white;
 	font-size: 16px;
 	text-align: left;
+	/*position: relative;
+	top: 40px;*/
 }
 
 .sidetipMap > h2, .descriptionMap > h2 {margin: auto;margin-top: 10px;}
@@ -628,7 +633,7 @@ iframe{border:none;}
 
 .civ {fill-opacity:0.75; cursor:url(img/cursors/CursorPin.png),auto;}
 .civ:hover {fill-opacity:1;}
-.civ2 {fill-opacity:0.75;stroke-dasharray:2, 1;}
+.civ2 {fill-opacity:0.75;stroke-dasharray:2, 1; cursor:url(img/cursors/CursorPin.png),auto;}
 .civ2:hover {fill-opacity:1;}
 
 .civEgypt {fill:#ffc107;stroke:#332701;}
@@ -788,6 +793,12 @@ iframe{border:none;}
 	.tt01 {top: 9.5vw; left: 18vw;}
 	.tt02 {top: 9.5vw; left: 36vw;}
 	.tt03 {top: 8vw; left: 96.5vw;}
+}
+
+@media (max-width: 1005px) {
+	.navbox {bottom: 20px;}
+	.rContainer {float: left;padding-top: 6px;}
+	.lContainer {padding-bottom: 6px;}
 }
 
 @media (max-height: 900px) {

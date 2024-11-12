@@ -13,43 +13,39 @@
 	<body>
 	
 	<nav id="navbar">
-	<img id="logo" src="img\Logo.png">
-
-	<h1 class="title">UMA BREVE LINHA DO TEMPO DA ANTIGUIDADE OCIDENTAL</h1>
-	
-	<div class="navbox">
-		<div class="rContainer">
-			<a class="current">GERAL</a>
-			<a href="#" class="deny">ALQUIMIA</a>
-			<a href="#" class="deny">FILOSOFIA</a>
-		</div>
-			
-		<div class="lContainer">
-			<div class="tooltip">GUIA
-				<div class="tt tt00"><h3>ERAS</h3><p>Clique para pular<br>para uma seção.</p></div>
-				<div class="tt tt01"><h3>LINHAS DO TEMPO</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></div>
-				<div class="tt tt02"><h3>EVENTOS</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></div>
-				<div class="tt tt03">MAPA<br>INTERATIVO</div>
+		<img id="logo" src="img\Logo.png">
+		<h1 class="title">UMA BREVE LINHA DO TEMPO DA ANTIGUIDADE OCIDENTAL</h1>
+		<div class="navbox">
+			<div class="lContainer">
+				<a class="current">GERAL</a>
+				<a href="#" class="deny">ALQUIMIA</a>
+				<a href="#" class="deny">FILOSOFIA</a>
 			</div>
-			<a href="gallery.html">GALERIA</a>
-			<a href="#">GLOSSÁRIO</a>
-			<a href="#">SOBRE</a>
-			<span class="mapButton" title="Mapa Interativo" onclick="showSidebar('Mapa')"><i class="fa fa-map-o"></i></span>
+			<div class="rContainer">
+				<div class="tooltip">GUIA
+					<div class="tt tt00"><h3>ERAS</h3><p>Clique para pular<br>para uma seção.</p></div>
+					<div class="tt tt01"><h3>LINHAS DO TEMPO</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></div>
+					<div class="tt tt02"><h3>EVENTOS</h3><p>Passe o mouse sobre e clique<br>para ver mais informações</p></div>
+					<div class="tt tt03">MAPA<br>INTERATIVO</div>
+				</div>
+				<a href="gallery.html">GALERIA</a>
+				<a href="#" class="deny">GLOSSÁRIO</a>
+				<a href="#" class="deny">SOBRE</a>
+				<span class="mapButton" title="Mapa Interativo" onclick="showSidebar('Mapa')"><i class="fa fa-map-o"></i></span>
+			</div>
 		</div>
-	</div>
-	
 	</nav>
 	
 	<div class="flexbox">
 	
 		<aside>
-		<div class="side">
-		<a href="#stone" class="age-select">Idade da Pedra</a>
-		<a href="#bronze" class="age-select">Idade do Bronze</a>
-		<a href="#iron" class="age-select">Idade do Ferro</a>
-		<a href="#ancient" class="age-select">Antiguidade</a>
-		<div id="sidetip" class="sidetip"></div>
-		</div>
+			<div class="side">
+				<a href="#stone" class="age-select">Idade da Pedra</a>
+				<a href="#bronze" class="age-select">Idade do Bronze</a>
+				<a href="#iron" class="age-select">Idade do Ferro</a>
+				<a href="#ancient" class="age-select">Antiguidade</a>
+				<div id="sidetip" class="sidetip"></div>
+			</div>
 		</aside>
 		
 		<main>
@@ -406,19 +402,15 @@
 		<!-- MAPA -->
 		
 		<div id="Mapa" class="mapaModal">
-		
 			<span onclick="document.getElementById('Mapa').style.display='none'" class="close">&times;</span>
-		
 			<iframe src="Mapa.html" height="100%" width="100%"></iframe>
-		
 		</div>
 		
 		<!-- SIDEBAR -->
 		
 		<div id="sidebarModal" class="sidebarModal">
 			<span onclick="document.getElementById('sidebarModal').style.display='none'" class="close">&times;</span>
-				<div id="info">
-				</div>
+				<div id="info"></div>
 		</div>
 
 		<!-- MAPAS -->

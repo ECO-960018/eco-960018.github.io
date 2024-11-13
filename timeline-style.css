@@ -20,6 +20,7 @@ body {
 	margin: 0;
 	cursor: url(img/cursors/Cursor.png),auto;
 }
+
 /*Barra de Título*/
 nav {
 	overflow: hidden;
@@ -40,27 +41,23 @@ nav {
 .navbox {
 	font-size: 30px;
 	width: calc(100vw - 220px);
-	height: 30px;
 	position: absolute;
-	left: 200px;
-	bottom: 6px;
+	bottom: 0;
+	right: 0;
 }
 
 .lContainer {
-	padding-bottom: 2px;
 	float: left;
+
 }
 
 .rContainer {
 	float: right;
-	position: relative;
-	bottom: 7px;
 }
 
 .mapButton {
 	color: #fff;
-	font-size: 2vw;
-	padding: 8px 12px 2px 12px;
+	padding: 8px 22px 2px 12px;
 	cursor:url(img/cursors/Pointer.png),auto;
 }
 
@@ -70,6 +67,21 @@ nav {
 	border-radius: 10px;
 	position: relative;
 	bottom: 4px;
+}
+
+.tooltip {
+  display: inline;
+  color: #e8c12c;
+  padding: 4px 8px 0px 8px;
+}
+
+.tooltip:hover {
+	background-color: #e8c12c;
+	color: #333333;
+	border-radius: 10px;
+	position: relative;
+	bottom: 4px;
+	cursor:url(img/cursors/CursorTip.png),auto;
 }
 
 nav a {
@@ -178,7 +190,6 @@ main {
 .event6 {grid-column: 294 / 340;}
 
 /* STONE */
-
 .eSA0 {grid-row: 02 / 02;}
 .eSA00 {grid-row: 15 / 15;}
 .eSA1 {grid-row: 12 / 12;}
@@ -196,7 +207,6 @@ main {
 .tech03 {grid-area: 21 / 2 / 21 / 5;}
 
 /* BRONZE */
-
 .eBA1 {grid-row: 0010 / 0010;}
 .eBA2 {grid-row: 1210 / 1210;}
 .eBA3 {grid-row: 1810 / 1810;}
@@ -252,7 +262,6 @@ main {
 .eLevantA4 {grid-row: 871 / 871;}
 :has(.eLevantA4:hover) .oLevantA6:not(:hover) {box-shadow:inset 0px 0px 0px 2px #3d8bfd; outline: 2px solid #9ec5fe; filter: brightness(100%); z-index:2}
 
-/*.eGreeceAx {grid-row: 471 / 471;}*/
 .e700bc {grid-row: 0101 / 0101;}
 :has(.e700bc:hover) .oGreeceA0:not(:hover) {box-shadow:inset 0px 0px 0px 2px #8c68cd; outline: 2px solid #c5b3e6; filter: brightness(100%); z-index:2}
 .e484bc {grid-row: 0317 / 0317;}
@@ -275,11 +284,6 @@ main {
 :has(.eRomeA4:hover) .oRomeA4:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(100%); z-index:2}
 .eRomeC0 {grid-row: 1107 / 1107;}
 :has(.eRomeC0:hover) .oRomeA2:not(:hover) {box-shadow:inset 0px 0px 0px 2px #e35d6a; outline: 2px solid #f1aeb5; filter: brightness(100%); z-index:2}
-
-/* MEDIEVAL */
-.e610 {grid-row: 011 / 011;}
-
-/*.eCA0 {grid-area: 401 / 33 / 401 / 100;}*/
 
 .Civ550 {grid-area: 251 / 5 / 471 / 10;}
 .Civ330 {grid-area: 471 / 5 / 501 / 12;}
@@ -332,7 +336,7 @@ main {
   display: none;
   overflow: auto;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   right: 0;
   top: 0;
   width: 500px;
@@ -577,7 +581,7 @@ iframe{border:none;}
 }
 
 .sidetipMap > h2, .descriptionMap > h2 {margin: auto;margin-top: 10px;}
-.sidetipMap > p, .descriptionMap > p {margin: auto;}
+.sidetipMap > p, .descriptionMap > p {margin: auto; padding: 0px 2px;}
 
 .sidetipMap1 > h2 {margin: auto;margin-top: 10px;}
 .sidetipMap1 > p {margin: auto;}
@@ -595,9 +599,7 @@ iframe{border:none;}
   left: 20px;
 }
 
-.island,.sea0,.sea,.river,.desert,.mountain,.plateau,.steppe,.taiga,.region {cursor:url(img/cursors/CursorPin.png),auto;}
-
-
+.island,.sea0,.sea,.river,.desert,.mountain,.plateau,.steppe,.taiga,.region,.regionP,.regionS {cursor:url(img/cursors/CursorPin.png),auto;}
 
 .land{fill:#fff6d5;stroke:#5f8dd3;}
 .island{fill:#fff6d5;stroke:#5f8dd3;}
@@ -609,7 +611,7 @@ iframe{border:none;}
 .plateau{fill:#c1b4a3;stroke:#918473;opacity:0.5;}
 .steppe{fill:#e1ea8b;stroke:#d5db8b;}
 .taiga{fill:#bfe8b8;stroke:#afe4ad;}
-.region{fill:#fff6d5;stroke:#decd87;fill-opacity:0;}
+.region,.regionP,.regionS{fill:#fff6d5;stroke:#decd87;fill-opacity:0;}
 
 .island:hover{fill:#ffeeaa;stroke:#504416;}
 .river:hover{fill:red;}
@@ -621,6 +623,9 @@ iframe{border:none;}
 .steppe:hover{fill:#5aa02c;stroke:#447821;opacity:0.75;}
 .taiga:hover{fill:#5fd38d;stroke:#37c871;opacity:0.75;}
 .region:hover{fill:#ffeeaa;stroke:#504416;fill-opacity:1;}
+
+.regionP:hover{fill:#c1b4a3;stroke:#918473;fill-opacity:0.75;}
+.regionS:hover{fill:#ffcc00;stroke:#d4aa00;fill-opacity:0.75;}
 
 .island2{fill:#fff6d5;stroke:#5f8dd3;}
 .sea2{fill:#afc6e9;stroke:#5f8dd3;}
@@ -716,15 +721,7 @@ iframe{border:none;}
 .fcYear {font-size:4.5px; text-anchor:end;}
 /* -_-_-_-_- TOUR -_-_-_-_- */
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-  color: #e8c12c;
-  padding: 7px 12px 2px 12px;
-}
-
-.tooltip .tt {
+ .tt {
   visibility: hidden;
   width: auto;
   background-color: #e8c12c;
@@ -748,7 +745,7 @@ iframe{border:none;}
 .tt02 {top: 6vw; left: 26%;}
 .tt03 {top: 5vw; left: 97.5%;}
 
-.tooltip .tt::after {
+.tt::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -763,17 +760,9 @@ iframe{border:none;}
   visibility: visible;
 }
 
-.tooltip:hover {
-	background-color: #e8c12c;
-	color: #333333;
-	border-radius: 10px;
-	position: relative;
-	bottom: 4px;
-	cursor:url(img/cursors/CursorTip.png),auto;
-}
-
 @media (max-width: 1900px) {
 	nav {font-size: 2vw; width: auto;}
+	nav a, .tooltip {padding: 4px 3px 1px 3px;}
 	.navbox {font-size: 2vw;}
 	.mapButton {margin: -10px 0px 0px 0px;}
 	.infobox{width: 14vw;min-width: 14vw;}
@@ -796,8 +785,8 @@ iframe{border:none;}
 }
 
 @media (max-width: 1005px) {
-	.navbox {bottom: 20px;}
-	.rContainer {float: left;padding-top: 6px;}
+	.navbox {bottom: -10px;}
+	.rContainer {padding-top: 3px;}
 	.lContainer {padding-bottom: 6px;}
 }
 

@@ -474,7 +474,8 @@ main {
   border: 2px solid black;
 }
 
-.column > img {width: 100%; cursor:url(img/cursors/Pointer.png),auto;}
+.column > img {width: 100%; cursor:url(img/cursors/Pointer.png),auto; border: 2px solid black;}
+.column > img:hover {border: 2px solid #ff2929; filter: opacity(75%);}
 
 /* Next & previous buttons */
 .prev,

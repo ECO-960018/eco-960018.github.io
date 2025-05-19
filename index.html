@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa D3</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+	<div id="toolbox">
+		<input type="range" id="year-slider" min="-3500" max="500" value="-3500" class="slider"/>
+			<!--<div id="year-label">Topographic Map</div>-->
+		<div id="year-description">Topographic Map</div>
+
+		<div id="layer-toggles">
+			<label><input type="checkbox" checked onclick="toggleClass('river')"> Rivers</label><br/>
+			<label><input type="checkbox" checked onclick="toggleClass('mountain')"> Mountains</label><br/>
+			<label><input type="checkbox" checked onclick="toggleClass('desert')"> Deserts</label>
+		</div>
+	</div>
+
+  <button class="reset-button" onclick="resetZoom()">Reset Zoom</button>
+  <svg viewBox="0 0 1145 780" id="map"></svg>
+  <div id="tooltip" class="tooltip"></div>
+  <div id="sidebar" class="sidebar">
+    <button id="closeSidebar">✖</button>
+    <div id="sidebar-content"></div>
+  </div>
+  
+  <script>
+    const svg = d3.select("#map");
+    const g = svg.append("g");
+
+	const baseLayer = g.append("g").attr("id", "base-layer");
+	const topoLayer = g.append("g").attr("id", "topo-layer");
+	const regionLayer = g.append("g").attr("id", "region-layer");
+	
+function toggleClass(className) {
+  const elements = document.querySelectorAll(`.${className}`);
+  elements.forEach(el => {
+    if (el.style.display === "none") {
+      el.style.display = "inline";
+    } else {
+      el.style.display = "none";
+    }
+  });
+}
+
+    const tooltip = d3.select("#tooltip");
+    const sidebar = d3.select("#sidebar");
+
+    let regionData = {};
+	let validYears = [];
+	const yearDescriptions = {
+      "-3300": "The world at the dawn of civilization\n3.300 BC - 2.100 BC",
+	  "-2100": "Middle Bronze Age\n2.100 BC - 1.500 BC",
+	  "-1500": "Late Bronze Age\n1.500 BC - 1.200 BC",
+      "-1200": "The Iron Age before the rise of the Assyrian Empire\n1.200 BC - 1.000 BC",
+	  "-600": "Classical Antiquity\n800 BC - 300 BC",
+	  "-300": "Hellenistic Period\n300 BC - 30 BC",
+      "100": "The Roman Empire's greatest extent\nc. AD 117 ",
+      "500": "The world after the fall of the Western Roman Empire\nc. AD 500"
+    };
+
+    fetch("regions.json")
+      .then(res => res.json())
+      .then(data => {
+        regionData = data;
+		validYears = Object.keys(data)
+      .filter(key => !isNaN(key)) // exclude 'base' or other strings
+      .map(Number)
+      .sort((a, b) => a - b);
+        drawBaseMap();
+		drawTopo();
+        drawPoliticalRegions(0);
+      });
+
+    function drawBaseMap() {
+      const baseRegions = regionData["base"];
+      for (let id in baseRegions) {
+        const region = baseRegions[id];
+        baseLayer.append("path")
+          .attr("class", "base")
+          .attr("id", `base-${id}`)
+          .attr("d", region.path)
+          .style("fill", region.color);
+      };
+    }
+	
+	function drawTopo() {
+  const topography = regionData["topography"];
+  for (let id in topography) {
+    const topo = topography[id];
+    topoLayer.append("path")
+      .attr("class", `topo ${topo.class}`)
+      .attr("id", `topo-${id}`)
+      .attr("d", topo.path)
+		.on("mouseover", function(event) {
+			tooltip.html(topo.name)
+            tooltip.style("display", "block")
+			})
+			.on("mousemove", (event) => {
+            tooltip.style("left", (event.pageX + 10) + "px")
+                   .style("top", (event.pageY + 10) + "px");
+          })
+          .on("mouseout", function() {
+            tooltip.style("display", "none");
+          })
+		.on("click", () => {
+            d3.select("#sidebar-content").html(
+              `<h2>${topo.name}</h2><p>${topo.sidebar.text}</p>` +
+              (topo.sidebar.image ? `<img src="${topo.sidebar.image}" alt="${topo.name}" />` : "")
+            );
+            sidebar.style("display", "block");
+          });
+  }
+}
+
+    function drawPoliticalRegions(year) {
+      const regions = regionData[year];
+      for (let id in regions) {
+        const region = regions[id];
+        regionLayer.append("path")
+          .attr("class", region.class)
+          .attr("id", id)
+          .attr("d", region.path)
+          .style("fill", region.color)
+          .on("mouseover", function(event) {
+            tooltip.html(region.tooltip);
+            tooltip.style("display", "block");
+          })
+          .on("mousemove", (event) => {
+            tooltip.style("left", (event.pageX + 10) + "px")
+                   .style("top", (event.pageY + 10) + "px");
+          })
+          .on("mouseout", function() {
+            tooltip.style("display", "none");
+          })
+          .on("click", () => {
+            d3.select("#sidebar-content").html(
+              `<h2>${region.name}</h2>` +
+              (region.sidebar.image ? `<img src="${region.sidebar.image}" alt="${region.name}" />` : "") +
+			  `<p>${region.sidebar.text}</p>`
+            );
+            sidebar.style("display", "block");
+          });
+      }
+    }
+
+    document.getElementById("closeSidebar").onclick = () => {
+      sidebar.style("display", "none");
+    };
+
+const slider = document.getElementById("year-slider");
+//const yearLabel = document.getElementById("year-label");
+const yearDescription = document.getElementById("year-description");
+
+// == SLIDER ==
+	slider.addEventListener("input", () => {
+	  const rawYear = parseInt(slider.value);
+	  const firstYear = validYears[0];
+
+	  if (rawYear < firstYear) {
+		// Show topographic-only map
+		//yearLabel.textContent = "Topographic Map";
+		yearDescription.textContent = "Topographic Map";
+		baseMap(0);
+	  } else {
+		// Find nearest valid year
+		let closestYear = validYears.reduce((prev, curr) => 
+		  Math.abs(curr - rawYear) < Math.abs(prev - rawYear) ? curr : prev
+		);
+
+		// Snap slider to that year
+		slider.value = closestYear;
+		//yearLabel.textContent = `Year: ${closestYear}`;
+		yearDescription.textContent = yearDescriptions[closestYear] || "";
+		updateMap(closestYear);
+	  }
+	});
+
+// == LAYERING ==
+    function updateMap(year) {
+      regionLayer.selectAll("*").remove();
+      drawPoliticalRegions(year);
+		d3.selectAll(".topo")
+			.classed("topo2", true)
+}
+
+    function baseMap(year) {
+      regionLayer.selectAll("*").remove();
+		d3.selectAll(".topo")
+			.classed("topo2", false)
+}
+
+	// === ZOOM ===
+	const zoom = d3.zoom()
+	  .scaleExtent([0.5, 8])
+	  .on("zoom", (event) => {
+		g.attr("transform", event.transform);
+	  });
+
+	svg.call(zoom);
+
+    function resetZoom() {
+      svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity);
+    }
+  </script>
+</body>
+</html>

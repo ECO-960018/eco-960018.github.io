@@ -1,0 +1,244 @@
+	/* == MAP == */
+
+	body {
+		background: #f9f6f0;
+		font-family: sans-serif;
+		margin: 0;
+		overflow: hidden;
+	}
+		
+	svg {
+		width: 100%;
+		height: 100vh;
+		cursor: grab;
+	}
+	
+	.base {
+		stroke: #444;
+		stroke-width: 1px;
+		fill-opacity: 0.5;
+	}
+	
+	/* == TOPOLOGICAL == */
+	
+	.topo {
+		stroke-width: 1px;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		opacity: 1;
+	}
+	
+	.topo:hover {
+		stroke-width: 3px;
+		opacity: 1;
+		stroke-opacity: 1;
+		stroke: #444;
+		fill: #FFD700;
+	}
+	
+	.topo2 {
+		pointer-events: none;
+		stroke-width: 0px;
+		opacity: 0.5;
+	}
+	
+	.river {stroke: #4682B4; fill: none; stroke-width: 1.5px; stroke-opacity: 1;}
+	.river:hover {stroke: #444444; fill: none;}
+	
+	.desert {fill: #d8ba5f; stroke: #000; stroke-opacity: 0;}
+	.desert:hover {fill: #FFD700;}
+	
+	.mountain {fill: #9b8e7d; stroke: #736859;}
+	.mountain:hover {fill: #FFD700;}
+	
+	.plateau {fill: #c2b4a3; stroke: #444;}
+	
+	.steppe {fill: #a7c270; stroke: #657d36;}
+	
+	.taiga {fill: #bdcab4; stroke: #88a079;}
+	
+	.sea {fill: #f9f6f0; stroke: #444; opacity: 1; stroke-width: 1px; stroke-opacity: 1;}
+	
+	/* == POLITICAL == */
+
+		.region {
+		stroke: #444;
+		stroke-width: 1.5px;
+		opacity: 0.7;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-dasharray: none;
+	}
+	.region:hover {stroke-width: 3px; opacity: 1;}
+
+	.region2 {
+		stroke-dasharray: 2, 1;
+		stroke: #444;
+		stroke-width: 1.5px;
+		stroke-linejoin: round;
+		opacity: 0.7;
+	}
+	.region2:hover {stroke-dasharray: none; opacity: 1; stroke-width: 3px;}
+
+	.civAfrica {fill: #ffc107; stroke: #332600;}
+	.civAfrica:hover {fill: #ffc107;}
+	.civAfrica2 {fill: #ffd042; stroke: #332600;}
+		
+	.civMeso {fill: #dd6d22; stroke: #2c1607;}
+	.civMeso:hover {fill: #dd6d22;}
+	.civMeso2 {fill: #e07b39; stroke: #2c1607;}
+		
+	.civLevant {fill: #2ca02c; stroke: #0b280b;}
+	.civLevant:hover {fill: #2ca02c;}
+	.civLevant2 {fill: #31b431; stroke: #0b280b;}
+		
+	.civIran {fill: #236da9; stroke: #091b2a;}
+	.civIran:hover {fill: #236da9;}
+	.civIran2 {fill: #277abe; stroke: #091b2a;}
+		
+	.civEEuro {fill: #702963; stroke: #250e21;}
+	.civEEuro:hover {fill: #702963;}
+	.civEEuro2 {fill: #953784; stroke: #250e21;}
+	
+	.civWEuro {fill: #d42b3c; stroke: #2a090c;}
+	.civWEuro:hover {fill: #d42b3c;}
+	.civWEuro2 {fill: #dc5663; stroke: #2a090c;}
+	
+	.civRome {fill: #cc0014; stroke: #fff;}
+	.civRome2 {fill: none; stroke: #2a090c;}
+	
+	.civNew {fill: #6C757D; stroke: #444;}
+	
+	.cityIconR {
+		fill: #fff;
+		stroke: #000;
+		stroke-width: 0.5;
+		cursor: pointer;
+		transform-box: fill-box;
+		transform-origin: center;
+		transition: transform 0.2s ease-in-out;
+  }
+	.cityIconR:hover {
+		fill: #f00;
+		stroke: #000;
+		stroke-width: 1;
+		transform: scale(1.5);
+		}
+	
+	.year-button, .reset-button {
+		position: absolute;
+		top: 10px;
+		padding: 6px 12px;
+		margin: 5px;
+		background: #876c3d;
+		color: #fff;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		z-index: 10;
+	}
+	
+	.reset-button {
+		right: 10px;
+	}
+	
+	.tooltip {
+		position: absolute;
+		background: #fff;
+		border: 1px solid #444;
+		padding: 8px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		pointer-events: none;
+		display: none;
+		z-index: 20;
+	}
+	
+	.sidebar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 300px;
+		height: 100vh;
+		background: #fff;
+		border-left: 2px solid #876c3d;
+		padding: 16px;
+		overflow-y: auto;
+		display: none;
+		z-index: 15;
+	}
+	
+	.sidebar img {
+		max-width: 100%;
+		height: auto;
+		margin-top: 10px;
+	}
+	
+	.sidebar button {
+		position: absolute;
+		top: 8px;
+		right: 10px;
+		background: none;
+		border: none;
+		font-size: 20px;
+		cursor: pointer;
+		color: #876c3d;
+		z-index: 20;
+	}
+	
+	#toolbox {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	
+	.slider {
+		/*position: absolute;
+		top: 10px;
+		left: 10px;*/
+		width: 300px;
+		height: 10px;
+		background: #e0dbc3;
+		border: 1px solid #444;
+		z-index: 10;
+	}
+		
+	.slider::-moz-range-thumb {
+		width: 25px;
+		height: 25px;
+		background: #444;
+		cursor: pointer;
+		border-radius: 50%;
+	}
+	
+	/*#year-label {
+		position: absolute;
+		top: 40px;
+		left: 10px;
+		background: #444;
+		color: #f9f6f0;
+		font-weight: bold;
+		padding: 4px 8px;
+		border-radius: 5px;
+		z-index: 10;
+	}*/
+	
+	#year-description {
+		position: relative;
+		top: 10px;
+		max-width: 290px;
+		text-align: center;
+		background: #444;
+		color: #f9f6f0;
+		font-weight: bold;
+		padding: 8px 8px;
+		border-radius: 5px;
+		z-index: 10;
+		white-space:pre-wrap;
+	}
+
+	#layer-toggles {
+		position:relative;
+		top:20px;
+		z-index:10;
+	}

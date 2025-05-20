@@ -57,7 +57,10 @@
 	
 	.taiga {fill: #bdcab4; stroke: #88a079;}
 	
-	.sea {fill: #f9f6f0; stroke: #444; opacity: 1; stroke-width: 1px; stroke-opacity: 1;}
+	.lake {fill: #f9f6f0; stroke: #444; opacity: 1; stroke-width: 1px; stroke-opacity: 1;}
+	.lake:hover {fill: #2C7FB8; stroke: #444;}
+	.sea {fill: #f9f6f0; fill-opacity: 0; stroke: #444; stroke-opacity: 0.5; stroke-dasharray: 8, 2, 1, 2;}
+	.sea:hover {fill: #2C7FB8; stroke: #444; fill-opacity: 1;}
 	
 	/* == POLITICAL == */
 
@@ -76,9 +79,9 @@
 		stroke: #444;
 		stroke-width: 1.5px;
 		stroke-linejoin: round;
-		opacity: 0.7;
+		opacity: 0.5;
 	}
-	.region2:hover {stroke-dasharray: none; opacity: 1; stroke-width: 3px;}
+	.region2:hover {stroke-dasharray: 3, 1.5; opacity: 1; stroke-width: 3px;}
 
 	.civAfrica {fill: #ffc107; stroke: #332600;}
 	.civAfrica:hover {fill: #ffc107;}
@@ -117,13 +120,32 @@
 		transform-box: fill-box;
 		transform-origin: center;
 		transition: transform 0.2s ease-in-out;
-  }
+	}
+	
 	.cityIconR:hover {
 		fill: #f00;
 		stroke: #000;
 		stroke-width: 1;
 		transform: scale(1.5);
-		}
+	}
+  
+  	.cityIconR2 {
+		fill: #fff;
+		stroke: #000;
+		stroke-width: 0.1;
+		cursor: pointer;
+		transform-box: fill-box;
+		transform-origin: center;
+		transform: scale(2);
+		transition: transform 0.2s ease-in-out;
+	}
+	
+	.cityIconR2:hover {
+		fill: #f00;
+		stroke: #000;
+		stroke-width: 0.2;
+		transform: scale(3);
+	}
 	
 	.year-button, .reset-button {
 		position: absolute;

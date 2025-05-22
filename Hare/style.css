@@ -1,0 +1,617 @@
+@import url("https://fonts.googleapis.com/css?family=Urbanist:100,300,500,900|Space+Grotesk:300,500,700|Orbitron:400|Bayon:400|Bebas+Neue:400|Libre+Franklin:900");
+
+html,
+body {
+	margin: 0px;
+	height: 100%;
+	background-color: #D7B882;
+}
+
+p {margin: 0px;}
+
+div {box-sizing: border-box;}
+
+.tab {
+	position: absolute;
+	width: 265px;
+	height: 95px;
+	top: 5px;
+	left: 5px;
+	background-color: #d7b882;
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-right-width: 5px;
+	border-right-style: solid;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-color: #1b140f;
+	font-family: "Urbanist", Helvetica;
+	font-weight: 300;
+	color: #1B140F;
+	text-align: center;
+	font-size: 48px;
+	line-height: 25px;
+}
+
+.tab-2 {
+	background-color: #2a2c2e;
+	font-weight: 100;
+	color: #daa520;
+	transition-duration: 0.2s;
+}
+
+.tab-2:hover {
+	background-image: url(./img/sh.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.tab-2:active {
+	background-image: url(./img/lh.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(6, minmax(0, 320px));
+	grid-template-rows: repeat(10, minmax(0, 250px));
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	border-left: 20px solid #1B140F;
+	border-right: 20px solid #1B140F;
+	border-bottom: 20px solid #1B140F;
+}
+
+.grid > div {
+	font-weight: 500;
+	position: relative;
+	align-self: stretch;
+	font-family: "Space Grotesk", Helvetica;
+	color: #272018;
+	font-size: 30px;
+	letter-spacing: 0;
+	line-height: 35px;
+	background-repeat: no-repeat;
+}
+
+.logo {
+	grid-area: 1 / 1 / 3 / 7;
+	background-color: #1B140F;
+	border-top: 24px solid #1B140F;
+	background-image: url(./img/Logo.svg);
+	background-size: 100%;
+}
+
+.btnl {
+	margin: auto;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	width: 275px;
+	height: 100px;
+	background-color: #2a2c2e;
+}
+
+.btnr {
+	margin: auto;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	width: 275px;
+	height: 100px;
+	background-color: #2a2c2e;
+}
+
+.btn-1 {
+	background-color: #d7b882;
+}
+
+.btn-HOME {grid-area: 2 / 1 / 3 / 2;}
+.btn-EVENTOS {grid-area: 2 / 2 / 3 / 3;}
+.btn-CONTATO {grid-area: 2 / 5 / 3 / 6;}
+.btn-SOBRE {grid-area: 2 / 6 / 3 / 7;}
+
+.HOME .div-text{grid-area: 3 / 4 / 6 / 7;}
+
+.HOME .back{
+	grid-area: 3 / 1 / 11 / 7;
+	background-image: url(./img/back.svg);
+}
+
+.HOME .sponsor{
+	grid-area: 11 / 1 / 11 / 7;
+	background-color: #e3dedb;
+	height: 250px;
+}
+
+.HOME .s0{
+	grid-area: 11 / 1 / 11 / 2;
+	font-family: "Bayon", Helvetica;
+	color: #1B140F;
+	text-align: center;
+	font-size: 48px;
+	line-height: 25px;
+}
+
+.HOME .s1{
+	background-size: 192px;
+	background-position: center;
+}
+
+.HOME .s2{
+	grid-area: 11 / 2 / 11 / 3;
+	background-image: url(./img/jj.svg);
+}
+
+.HOME .s3{
+	grid-area: 11 / 3 / 11 / 4;
+	background-image: url(./img/tc.svg);
+}
+
+.HOME .s4{
+	grid-area: 11 / 4 / 11 / 5;
+	background-image: url(./img/mk.png);
+}
+
+.HOME .s5{
+	grid-area: 11 / 6 / 11 / 7;
+	background-image: url(./img/gdf.png);
+}
+
+.HOME .text0 {
+	position: relative;
+	top: 10%;
+	font-weight: 300;
+	font-size: 40px;
+	line-height: 45px;
+	padding-right: 50px;
+}
+
+.HOME .div-btn-1{
+	grid-area: 6 / 4 / 8 / 5;
+	padding-top: 58px;
+}
+
+.HOME .div-btn-2{
+	grid-area: 6 / 6 / 8 / 7;
+	padding-top: 138px;
+}
+
+.HOME .bands {
+	background-color: transparent; 
+	border: 0px;
+	cursor: pointer; 
+	width: 600px;
+	padding-top: 10px;
+	padding-bottom: 9px;
+	padding-right: 20px;
+	padding-left: 20px;
+	font-family: "Orbitron", Helvetica;
+	font-size: 48px;
+	position: relative;
+	display: flex;
+}
+
+.HOME .btn_band-0 {
+	background-image: url(./img/band_button_0.svg);
+	color: #e3dedb;
+}
+
+.HOME .btn_band-0:hover {
+	background-image: url(./img/band_button_01.svg);
+	color: #973123;
+}
+
+.HOME .btn_band-1 {
+	background-image: url(./img/band_button_1.svg);
+	justify-content: right;
+	color: #973123;
+	right: 310px;
+}
+
+.HOME .btn_band-1:hover {
+	background-image: url(./img/band_button_11.svg);
+	color: #e3dedb;
+}
+
+.HOME .form {
+	grid-area: 6 / 2 / 8 / 7;
+	background-color: #d7b882;
+	display: none;
+	position: relative;
+	border: 5px solid #1b140f;
+	width: 1320px;
+	height: 570px;
+}
+
+.HOME .bar {
+	border-bottom: 5px solid #1b140f;
+	width: 1310px;
+	height: 104px;
+}
+
+.HOME .b0 {background-color: #973123;}
+.HOME .b1 {background-color: #e3dedb;}
+
+.HOME .form-title {
+	font-family: "Bebas Neue", Helvetica;
+	font-size: 96px;
+	letter-spacing: 0;
+}
+
+.HOME .ft0 {
+	color: #d7b882;
+	line-height: 50px;
+	padding-left: 70px;
+}
+
+.HOME .ft1 {
+	color: #1b140f;
+	line-height: 149px;
+	padding-right: 70px;
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+}
+
+.HOME .form-photo {
+	padding-left: 5px;
+	padding-top: 36px;
+	padding-bottom: 15px;
+}
+
+.HOME .fp1 {
+	position: absolute;
+	left: 660px;
+	object-fit: cover;
+}
+
+.HOME .form-text {
+	font-size: 20px;
+	line-height: 28px;
+	position: absolute;
+	width: 645px;
+	display: inline-block;
+	justify-content: right;
+	padding-left: 10px;
+	padding-top: 30px;
+}
+
+.HOME .close {
+	font-family: "Bebas Neue", Helvetica;
+	font-size: 30px;
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
+	position: absolute;
+	top: 10px
+}
+
+.HOME .c0 {
+	color: #d7b882;
+	left: 92%;
+}
+
+.HOME .c1 {
+	color: #1b140f;
+	right: 92%;
+}
+
+.EVENTOS .fest-text{
+	grid-area: 3 / 1 / 5 / 4;
+	font-size: 40px;
+	padding-left: 100px;
+	padding-top: 120px;
+}
+
+.EVENTOS .fest-banner{
+	grid-area: 3 / 1 / 6 / 7;
+	background-image: url(./img/fest-banner.svg);
+	background-position: 0px;
+}
+
+.EVENTOS .dia16{
+	grid-area: 6 / 1 / 8 / 7;
+	background-image: url(./img/16.svg);
+	background-position: 0px;
+}
+
+.EVENTOS .dia17{
+	grid-area: 8 / 1 / 10 / 7;
+	background-image: url(./img/17.svg);
+	background-position: right;
+}
+
+.EVENTOS .evt-deco {
+	grid-area: 10 / 1 / 11 / 7;
+	align-self: center;
+	margin: auto;
+}
+
+.EVENTOS .bur-text{
+	grid-area: 11 / 4 / 13 / 7;
+	font-size: 40px;
+	line-height: 45px;
+	padding-top: 200px;
+	padding-right: 100px;
+}
+
+.EVENTOS .bur-banner{
+	grid-area: 11 / 1 / 14 / 7;
+	background-image: url(./img/burlesque-banner.svg);
+	background-position: right;
+	height: 640px;
+	max-width: 100%;
+}
+
+.EVENTOS .b-text {
+	font-size: 30px;
+	line-height: 45px;
+	padding: 20px;
+}
+
+.EVENTOS .b-text > h1{
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 70px;
+	padding-left: 20px;
+	margin: 0px;
+}
+
+.EVENTOS .b-img {
+	background-position: center bottom;
+	background-size: 640px 460px;
+}
+
+.EVENTOS .b1 {
+	grid-area: 14 / 4 / 16 / 7;
+	background-image: url(./img/b1.png);
+}
+.EVENTOS .b1-text {grid-area: 14 / 1 / 16 / 4;}
+
+.EVENTOS .b2 {
+	grid-area: 16 / 4 / 18 / 7;
+	background-image: url(./img/b2.png);
+}
+.EVENTOS .b2-text {grid-area: 16 / 1 / 18 / 4;}
+
+.EVENTOS .b3 {
+	grid-area: 18 / 1 / 20 / 4;
+	background-image: url(./img/b3.png);
+}
+.EVENTOS .b3-text {grid-area: 18 / 4 / 20 / 7;}
+
+.EVENTOS .b4 {
+	grid-area: 20 / 1 / 22 / 4;
+	background-image: url(./img/b4.png);
+}
+.EVENTOS .b4-text {grid-area: 20 / 4 / 22 / 7;}
+
+.CONTATO .t-bar {
+	grid-area: 3 / 1 / 4 / 7;
+	background-color: #DAA520;
+	width: 100%;
+	height: 150px;
+	top: 54px;
+	font-family: "Bebas Neue", Helvetica;
+	font-size: 128px;
+	padding-top: 93px;
+	padding-left: 40px;
+}
+
+.CONTATO .t-deco {
+	grid-area: 3 / 1 / 11 / 7;
+	background-image: url(./img/tickets.svg);
+	background-position: 94px 204px;
+	height: 2000px;
+}
+
+.CONTATO .btn-ticket {
+	grid-area: 4 / 1 / 5 / 2;
+	background-image: url(./img/btn_ticket.svg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-family: "Bebas Neue", Helvetica;
+	font-size: 64px;
+	color: #E3DEDB;
+	display: flex;
+	line-height: 75px;
+	justify-content: center;
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
+	position: relative;
+	height: 70px;
+	width: 320px;
+}
+
+.CONTATO .btn-ticket:hover {background-image: url(./img/btn_ticket-1.svg);}
+
+.CONTATO .btn-t1 {
+	top: 90px;
+	width: 307px;
+}
+
+.CONTATO .btn-t2 {
+	top: 180px;
+	width: 294px;
+}
+
+.CONTATO .t-price {
+	grid-area: 4 / 2 / 5 / 3;
+	font-family: "Bebas Neue", Helvetica;
+	font-size: 64px;
+	line-height: 75px;
+	position: relative;
+	padding-left: 115px;
+	padding-top: 80px;
+}
+
+.CONTATO .price1 {color: #272018;}
+
+.CONTATO .price2 {
+	color: #DAA520;
+	left: 222px;
+	top: 77px;
+}
+
+.CONTATO .s-bar {
+	grid-area: 6 / 5 / 7 / 7;
+	background-color: #973123;
+	width: 480px;
+	height: 20px;
+	left: 15px;
+}
+
+.CONTATO .social {
+	grid-area: 6 / 5 / 7 / 7;
+	font-weight: 500;
+	font-family: "Libre Franklin", Helvetica;
+	font-size: 96px;
+	padding-left: 15px;
+	padding-top: 44px;
+}
+
+.CONTATO .div-social {grid-area: 6 / 4 / 10 / 7;}
+
+.CONTATO .btn-soc {
+	background-color: transparent;
+	border: 0px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+.CONTATO .btn-YT {
+	background-image: url(./img/YT.svg);
+	width: 490px;
+	height: 560px;
+}
+
+.CONTATO .btn-YT:hover {background-image: url(./img/YT-1.svg);}
+
+.CONTATO .btn-Twit {
+	background-image: url(./img/Twit.svg);
+	width: 620px;
+	height: 620px;
+	top: 250px;
+	left: 155px;
+}
+
+.CONTATO .btn-Twit:hover {background-image: url(./img/Twit-1.svg);}
+
+.CONTATO .btn-Insta {
+	background-image: url(./img/Insta.svg);
+	width: 265px;
+	height: 265px;
+	top: 750px;
+	left: 43px;
+}
+
+.CONTATO .btn-Insta:hover {background-image: url(./img/Insta-1.svg);}
+
+.CONTATO .div-tel {grid-area: 10 / 3 / 11 / 7;}
+
+.CONTATO .c-deco {
+	background-image: url(./img/c-deco.svg);
+	width: 795px;
+	height: 40px;
+	top: 50px;
+	left: 262px;
+	position: relative;
+}
+
+.CONTATO .tel {
+	font-family: "Urbanist", Helvetica;
+	font-weight: 900;
+	font-size: 80px;
+	color: #32527B;
+	padding-left: 262px;
+	padding-top: 120px;
+}
+
+.CONTATO .WP {
+	width: 60px;
+	height: 60px;
+}
+
+.CONTATO .add {
+	grid-area: 10 / 5 / 11 / 7;
+	font-family: "Urbanist", Helvetica;
+	font-weight: 700;
+	font-size: 50px;
+	width: 240px;
+	height: 35px;
+	position: relative;
+	text-align: center;
+	line-height: 48px;
+	white-space: nowrap;
+	padding-top: 88px;
+	padding-left: 194px;
+}
+
+.CONTATO .add1 {letter-spacing: 7.5px;}
+.CONTATO .add2 {letter-spacing: 13.5px;}
+.CONTATO .add3 {letter-spacing: 4px;}
+
+.SOBRE .div2{grid-area: 3 / 2 / 6 / 5;}
+
+.SOBRE .div3{grid-area: 3 / 6 / 6 / 7;}
+
+.SOBRE .div4{grid-area: 3 / 1 / 6 / 7;}
+
+.SOBRE .div6{
+	margin: auto;
+	grid-area: 6 / 1 / 8 / 3;
+}
+
+.SOBRE .div7{grid-area: 6 / 3 / 8 / 7;}
+
+.SOBRE .l-0 {
+	grid-area: 3 / 1 / 6 / 7;
+	background-image: url(./img/L-0.svg);
+	top: 40px;
+}
+
+.SOBRE .l-1{
+	grid-area: 7 / 1 / 10 / 7;
+	background-image: url(./img/L-1.svg);
+	top: 205px;
+	height: 795px;
+}
+
+.SOBRE .div9{
+	grid-area: 8 / 2 / 11 / 6;
+	top: -5%;
+}
+
+.SOBRE .deco0 {
+	position: relative;
+	left: 10%;
+	padding: 10px;
+}
+
+.SOBRE .deco1 {
+	position: relative;
+	align: center;
+	vertical-align: bottom;
+}
+
+.SOBRE .card {
+	position: relative;
+	top: 10%;
+}
+
+.SOBRE .text0{
+	position: relative;
+	top: 10%;
+}
+
+.SOBRE .text1{
+	position: relative;
+	top: 25%;
+	margin-right: 10%;
+}
+
+.bold {font-weight: 500;}
+.heavy {font-weight: 700;}

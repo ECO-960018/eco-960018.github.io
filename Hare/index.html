@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Lebre Saltitante</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" href="img/lebre32.png"/>
+	
+	<style>
+	.grid {grid-template-rows: repeat(11, minmax(0, 250px));
+	</style>
+</head>
+
+<body>
+  
+  <div class="HOME">
+    <div class="grid">
+	
+      <div class="logo"></div>
+
+      <div class="btnl btn-1 btn-HOME">
+			<div class="tab"><br>INÍCIO</div>
+      </div>
+
+      <div class="btnl btn-EVENTOS">
+		<a href="eventos.html">
+			<div class="tab tab-2"><br>EVENTOS</div>
+		</a>
+      </div>
+
+      <div class="btnr btn-CONTATO">
+		<a href="contato.html">
+			<div class="tab tab-2"><br>CONTATO</div>
+		</a>
+      </div>
+
+      <div class="btnr btn-SOBRE">
+		<a href="sobre.html">
+			<div class="tab tab-2"><br>SOBRE</div>
+		</a>
+      </div>
+	  
+	  <div class="back"></div>
+
+      <div class="div-text">
+		<p class="text0"><span class="bold">Dias 16 & 17 de Dezembro</span> acontece a mais nova versão do melhor festival de jazz da cidade.
+		<br><br>
+		O <span class="heavy">LEBRE SALTITANTE</span> tem o orgulho de trazer por mais um ano o que há de mais interessante na cena do cabaré moderno.
+		<br><br>
+		Dedicado a reviver a magia da Belle Époque perto de você, apresentamos as bandas mais renomadas do gênero. Reveja velhos favoritos e conheça novidades.</p>
+      </div>
+	  
+	  <div class="div-btn-1">
+		<button class="bands btn_band-0" onclick="bandO(0)">Os Gatos Negros</button>
+		<button class="bands btn_band-0" onclick="bandO(1)" style="top:80px">Moinho Vermelho</button>
+		<button class="bands btn_band-0" onclick="bandO(2)" style="top:160px">Cabaret Inferno</button>
+	  </div>
+	  
+	  <div class="div-btn-2">
+		<button class="bands btn_band-1" onclick="bandO(3)">Le Cheval Fou</button>
+		<button class="bands btn_band-1" onclick="bandO(4)" style="top:80px">Parisiana</button>
+		<button class="bands btn_band-1" onclick="bandO(5)" style="top:160px">Carrossel</button>
+	  </div>
+
+	  <div class="sponsor"></div>
+	  	  <div class="s0"><br>OFERECIMENTO:</div>
+		  <div class="s1 s2"></div>
+		  <div class="s1 s3"></div>
+		  <div class="s1 s4"></div>
+		  <div class="s1 s5"></div>
+
+	  <div class="form" id="GNForm">
+		<form class="form-container">
+			<div class="bar b0"><div class="form-title ft0"><br>OS GATOS NEGROS<button class="close c0" type="button" onclick="bandC(0)">FECHAR</button></div></div>
+			<img class="form-photo" src="img/GN.png"/>
+			<div class="form-text">Balance noite adentro com a energia contagiante dos Gatos Negros. Este conjunto dinâmico enriquece o swing tradicional com um toque contemporâneo, criando uma experiência que te faz dançar. A combinação de metais vibrantes, vocais suaves e ritmos irresistíveis os torna imperdíveis para os amantes do jazz clássico e moderno.
+			<br><br>
+			Fundado em 2012 por um grupo de entusiastas do swing, Os Gatos Negros tornaram-se um dos pilares da cena jazz dos cabarés. Sua dedicação em preservar a essência do swing e ao mesmo tempo adicionar seus próprios toques inovadores conquistou seguidores dedicados.</div>
+		</form>
+	  </div>
+	  
+	  <div class="form" id="MVForm">
+		<form class="form-container">
+			<div class="bar b0"><div class="form-title ft0"><br>MOINHO VERMELHO<button class="close c0" type="button" onclick="bandC(1)">FECHAR</button></div></div>
+			<img class="form-photo" src="img/MV.png"/>
+			<div class="form-text">Mergulhe nos sons sensuais e atemporais do Moinho Vermelho. Com um repertório enraizado nos standards clássicos do jazz e um toque de chanson francês, este conjunto traz um ar de sofisticação ao palco do Lebre. Suas melodias suaves e performances cativantes criam uma atmosfera íntima e encantadora que transporta o público para uma era passada de elegância.
+			<br><br>
+			Formado em 2010, o Moinho Vermelho é composto por músicos de jazz experientes que compartilham a paixão por reviver a magia dos cabarés. Inspirados na cena jazz parisiense da década de 1920, eles conferem às suas apresentações um toque moderno, cativando o público em renomados clubes e festivais de jazz em todo o mundo.</div>
+		</form>
+	  </div>
+	  
+	  <div class="form" id="CIForm">
+		<form class="form-container">
+			<div class="bar b0"><div class="form-title ft0"><br>CABARET INFERNO<button class="close c0" type="button" onclick="bandC(2)">FECHAR</button></div></div>
+			<img class="form-photo" src="img/CI.png"/>
+			<div class="form-text">Entre no mundo misterioso do Cabaret Inferno, um conjunto inovador que combina perfeitamente jazz, cabaré e elementos da arte performática de vanguarda. Suas performances visualmente impressionantes e carregadas de emoção criam uma experiência envolvente, ultrapassando os limites do cabaré tradicional. Espere o inesperado enquanto Cabaret Inferno transporta você através de um caleidoscópio de som e emoção.
+			<br><br>
+			Fundado em 2015 por um grupo de artistas que buscam redefinir o cabaré, o Cabaret Inferno ganhou reputação por suas performances ousadas e ecléticas. Inspirando-se na Berlim da era Weimar e nos movimentos experimentais modernos, eles continuam a expandir os limites do que o jazz de cabaré pode ser.</div>
+		</form>
+	  </div>
+	  
+	  <div class="form" id="CFForm">
+		<form class="form-container">
+			<div class="bar b1"><div class="form-title ft1"><br><button class="close c1" type="button" onclick="bandC(3)">FECHAR</button>Le Cheval Fou</div></div>
+			<img class="form-photo fp1" src="img/CF.png"/>
+			<div class="form-text">Deixe-se levar pelas melodias encantadoras de Le Cheval Fou. Este trio nostálgico é especializado em baladas românticas e serenatas ao luar, evocando o ambiente sonhador de uma época passada. Seus vocais harmoniosos e instrumentação comovente criam uma atmosfera de romance atemporal.
+			<br><br>
+			Fundada por um grupo de aficionados do jazz em 2014, Le Cheval Fou decidiu reviver a essência romântica dos padrões do jazz. Com a dedicação em preservar a arte da serenata, eles se tornaram uma presença constante no circuito de cabarés, cativando o público com suas apresentações emocionantes.</div>
+		</form>
+	  </div>
+	  
+	  <div class="form" id="PrForm">
+		<form class="form-container">
+			<div class="bar b1"><div class="form-title ft1"><br><button class="close c1" type="button" onclick="bandC(4)">FECHAR</button>Parisiana</div></div>
+			<img class="form-photo fp1" src="img/Pr.png"/>
+			<div class="form-text">Entre em um mundo onde o jazz encontra as batidas eletrônicas com a Parisiana. Este grupo vanguardista combina perfeitamente o charme vintage do swing com elementos eletrônicos modernos, criando uma fusão dançante e de alta energia. As performances da Parisiana são um banquete visual e auditivo, complementadas com luzes deslumbrantes e um entusiasmo contagiante que deixará o público de pé.
+			<br><br>
+			Fundado pelo produtor de música eletrônica Alex Harmon e pela vocalista de jazz Sophia Delacroix em 2018, a Parisiana surgiu do desejo de preencher a lacuna entre dois mundos musicais aparentemente díspares. Inspirando-se nos pioneiros do electro-swing, eles criaram um som único que agrada tanto aos puristas do jazz quanto aos fãs de batidas contemporâneas.</div>
+		</form>
+	  </div>
+	  
+	  <div class="form" id="CsForm">
+		<form class="form-container">
+			<div class="bar b1"><div class="form-title ft1"><br><button class="close c1" type="button" onclick="bandC(5)">FECHAR</button>Carrossel</div></div>
+			<img class="form-photo fp1" src="img/Cs.png"/>
+			<div class="form-text">Prepare-se para a apresentação divertida e enérgica do Carrossel. Este conjunto animado traz uma sensação de extravagância ao palco do cabaré, infundindo seu set com uma mistura de swing, Dixieland e charme cômico. Com ritmos vibrantes e energia contagiante, eles criam uma atmosfera que é tão divertida quanto musicalmente cativante.
+			<br><br>
+			Formado por três amigos em 2016, o Carrossel nasceu de um amor partilhado pelo lado mais leve do jazz. O seu objetivo é trazer alegria e risos ao público, ao mesmo tempo que mostra as proezas técnicas que definem o jazz clássico.</div>
+		</form>
+	  </div>
+
+    </div>
+
+  </div>
+	
+	
+	<script>
+	function bandO(band) {
+		let id;
+		switch (band) {
+		case 0:
+			id = "GNForm";
+		break;
+		case 1:
+			id = "MVForm";
+		break;
+  		case 2:
+			id = "CIForm";
+		break;
+  		case 3:
+			id = "CFForm";
+		break;
+		case 4:
+			id = "PrForm";
+		break;
+		case 5:
+			id = "CsForm";
+
+}
+	document.getElementById(id).style.display = "block";
+}
+
+	function bandC(band) {
+		let id;
+		switch (band) {
+		case 0:
+			id = "GNForm";
+		break;
+		case 1:
+			id = "MVForm";
+		break;
+  		case 2:
+			id = "CIForm";
+		break;
+  		case 3:
+			id = "CFForm";
+		break;
+		case 4:
+			id = "PrForm";
+		break;
+		case 5:
+			id = "CsForm";
+
+}
+	document.getElementById(id).style.display = "none";
+}
+	</script>
+  </body>
+</html>

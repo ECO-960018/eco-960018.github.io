@@ -1,0 +1,683 @@
+[
+  {
+	"id": "test01",
+    "year": -10000,
+    "region": "africa",
+    "title": "TEST 01",
+    "description": "Tooltip placeholder",
+	"image": "img/Placeholder.png",
+	"text": "Event Placeholder",
+	"tags": ["civilization"],
+	"connections": [
+    { "target": "test02", "type": "cultural", "label": "Influenced" },
+    { "target": "test03", "type": "military", "label": "Conquered" }
+	],
+	"priority": 1,
+	"lane": 1,
+	"type": "civ"
+  },
+  
+  {
+    "id": "test02",
+	"year": -9000,
+    "region": "africa",
+    "title": "TEST 02",
+    "description": "Priority 2",
+	"image": "img/Placeholder.png",
+	"text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	"tags": ["civilization"],
+	"priority": 2,
+	"lane": 2,
+	"type": "war",
+	"icon": "⚔"
+  },
+  
+  {
+	"id": "test03",
+    "year": -8000,
+    "region": "africa",
+    "title": "TEST 03",
+    "description": "Priority 3",
+	"image": "img/Placeholder.png",
+	"text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	"tags": ["civilization"],
+	"priority": 3,
+    "lane": 0,
+	"type": "person"
+  },
+  
+  {
+    "year": -7000,
+    "region": "africa",
+    "title": "TEST 04",
+    "description": "Priority 4",
+	"image": "img/Placeholder.png",
+	"text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+	"priority": 4,
+	"tags": ["civilization"],
+    "map": true
+  },
+  
+	{
+		"id": "gen10000bc",
+		"year": -10000,
+		"region": "general",
+		"title": {
+			"en": "Neolithic Revolution",
+			"pt": "Revolução do Neolítico"
+		},
+		"description": {
+			"en": "Placeholder description.",
+			"pt": "Descrição temporária."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		},
+		"tags": ["civilization"],
+		"connections": [
+			{"target": "", "type": "cultural", "label": "Influenced"}
+		],
+		"priority": 1,
+		"lane": 2,
+		"type": "event"
+	},
+	{
+		"id": "gen2200bc",
+		"year": -2200,
+		"region": "general",
+		"title": {
+			"en": "4.2-kiloyear event",
+			"pt": "Mudança Climática de 4200 bp"
+		},
+		"description": {
+			"en": "Placeholder description.",
+			"pt": "Descrição temporária."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		},
+		"tags": ["civilization"],
+		"connections": [
+			{"target": "", "type": "cultural", "label": "Influenced"}
+		],
+		"priority": 1,
+		"lane": 2,
+		"type": "event"
+	},
+	{
+		"year": -1200,
+		"region": "general",
+		"title": {
+				"en": "Bronze Age Collapse",
+				"pt": "Colapso da Idade do Bronze"
+			},
+		"description": {
+				"en": "Major Eastern Mediterranean civilizations fall; Sea Peoples invade.",
+				"pt": "Descrição temporária."
+			},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		},
+		"tags": ["civilization"],
+		"connections": [
+			{"target": "", "type": "cultural", "label": "Influenced"}
+		],
+		"priority": 1,
+		"lane": 2,
+		"type": "event"
+	},
+	{
+		"year": -300,
+		"region": "general",
+		"title": "Hellenistic Period",
+		"description": "Placeholder",
+		"map": true
+	},
+	{
+		"id": "gen1914",
+		"year": 1914,
+		"region": "general",
+		"title": "First World War",
+		"description": "1914–1918 global conflict.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "war"],
+		"connections": [
+		{ "target": "", "type": "cultural", "label": "Influenced" }
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "war"
+	},
+  
+	{
+		"id": "a3100bc",
+		"year": -3100,
+		"region": "africa",
+		"title": "Unification of Egypt",
+		"description": "Narmer unites Upper and Lower Egypt, founding the First Dynasty.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["civilization"],
+		"connections": [
+		{ "target": "", "type": "cultural", "label": "Influenced" }
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "civ"
+	},
+
+	{
+		"year": -6000,
+		"region": "mesopotamia",
+		"title": "Mesopotamian Religion",
+		"description": "Placeholder tooltip",
+		"tags": ["religion"],
+		"map": true
+	},
+	{
+		"id": "meso5000BC",
+		"year": -5000,
+		"region": "mesopotamia",
+		"title": "Foundation of Uruk",
+		"description": "The first urban settlements like Uruk emerge in Sumer.",
+		"tags": ["civilization"],
+		"connections": ["meso4000BC"],
+		"priority": 1,
+		"lane": 1,
+		"map": true
+	},
+	{
+		"id": "meso4000BC",
+		"year": -4000,
+		"region": "mesopotamia",
+		"title": "Temple Economy",
+		"description": "Tooltip placeholder",
+		"tags": ["politics"],
+		"connections": ["meso3800BC"],
+		"priority": 2,
+		"lane": 1
+	},
+	{
+		"id": "meso3800BC",
+		"year": -3800,
+		"region": "mesopotamia",
+		"title": "Record Keeping",
+		"description": "Tooltip placeholder",
+		"tags": ["science", "politics"],
+		"connections": ["meso3200BC"],
+		"priority": 2,
+		"lane": 2
+	},
+	{
+		"id": "meso3200BC",
+		"year": -3200,
+		"region": "mesopotamia",
+		"title": "Creation of Writing",
+		"description": "Tooltip placeholder",
+		"tags": ["science"],
+		"connections": [],
+		"priority": 1
+	},
+	{
+		"year": -2600,
+		"region": "mesopotamia",
+		"title": "Literature",
+		"description": "Tooltip placeholder",
+		"priority": 1,
+		"tags": ["culture"]
+	},
+	{
+		"year": -2100,
+		"region": "mesopotamia",
+		"title": "Epic of Gilgamesh",
+		"description": "Tooltip placeholder",
+		"priority": 1,
+		"tags": ["science", "culture", "text"],
+		"type": "text",
+		"icon": "🖹"
+	},
+	{
+		"year": -1700,
+		"region": "mesopotamia",
+		"title": "Atra-Hasis",
+		"description": "Tooltip placeholder",
+		"priority": 1,
+		"tags": ["religion", "text"]
+	},
+	{
+		"year": -1600,
+		"region": "mesopotamia",
+		"title": "Eridu Genesis",
+		"description": "Tooltip placeholder",
+		"priority": 1,
+		"tags": ["religion", "text"]
+	},
+	
+	{
+		"year": -10000,
+		"region": "levant",
+		"title": {
+				"en": "Natufian Culture",
+				"pt": "Cultura Natufiana"
+			},
+		"description": {
+				"en": "One of the first cultures to adopt a sedentary lifestyle before the full Neolithic package. Natufians inhabited the Levant and practiced intensive foraging and proto-farming.",
+				"pt": "Descrição temporária."
+			},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		},
+		"tags": ["civilization"],
+		"connections": [
+			{"target": "", "type": "cultural", "label": "Influenced"}
+		],
+		"priority": 1,
+		"lane": 2,
+		"type": "civ"
+	},
+	{
+		"year": -8000,
+		"region": "levant",
+		"title": "City of Jericho",
+		"description": "Jericho, one of the world's oldest cities, shows evidence of early walls and towers. Suggests complex social coordination and proto-urban life in the Levant.",
+		"priority": 1,
+		"tags": ["civilization"],
+		"map": true
+	},
+	{
+		"year": -1500,
+		"region": "levant",
+		"title": "Canaanite Religion",
+		"description": "Pantheon led by El, with Baal, Anat, Asherah, and others. Forms the religious backdrop for early Israelite theology and later monotheistic reform.",
+		"priority": 1,
+		"tags": ["religion"],
+		"map": true
+	},
+	{
+		"year": -1400,
+		"region": "levant",
+		"title": "Ugaritic Alphabet",
+		"description": "An early alphabetic script developed in the city of Ugarit. Distinct from cuneiform and precursor to later Phoenician script.",
+		"priority": 1,
+		"tags": ["technology"],
+		"map": true
+	},
+	{
+		"year": -1200,
+		"region": "levant",
+		"title": "Early Israelites",
+		"description": "Archaeological evidence of small, egalitarian hilltop villages with no pig bones and few luxury items — early markers of Israelite cultural distinctiveness.",
+		"priority": 1,
+		"tags": ["civilization"],
+		"map": true
+	},
+	{
+		"year": -900,
+		"region": "levant",
+		"title": "Yahwism",
+		"description": "Yahweh begins to be worshiped as a supreme or sole deity among the Israelites. Likely emerged from earlier henotheistic practices and polemics against Canaanite religion.",
+		"priority": 1,
+		"tags": ["religion"],
+		"map": true
+	},
+	{
+		"year": -586,
+		"region": "levant",
+		"title": "Destruction of Jerusalem",
+		"description": "Babylonian king Nebuchadnezzar II destroys the First Temple.",
+		"priority": 1,
+		"tags": ["civilization"],
+		"priority": 1,
+		"lane": 2
+	},
+	{
+		"year": -530,
+		"region": "levant",
+		"title": "Composition of the Torah",
+		"description": "Placeholder tooltip.",
+		"tags": ["religion"],
+		"priority": 1,
+		"lane": 2
+	},
+	{
+		"year": 33,
+		"region": "levant",
+		"title": "Crucifixion of Jesus",
+		"description": "Foundational moment for Christianity, taking place in Roman Judea.",
+		"priority": 1,
+		"tags": ["religion"],
+		"map": true
+	},
+  
+	{
+		"id": "i2000bc",
+		"year": -2000,
+		"region": "iran",
+		"title": "Avestan Period Begins",
+		"description": "Start of the early Indo-Iranian religious tradition, precursor to Zoroastrianism.",
+		"influenced_by": [],
+		"influences": ["i500bc"],
+		"priority": 2,
+		"tags": ["civilization"],
+		"map": false
+	},
+	{
+		"id": "i500bc",
+		"year": -550,
+		"region": "iran",
+		"title": "Achaemenid Empire",
+		"description": "Darius I rules over a vast empire stretching from Greece to India.",
+		"influenced_by": ["i2000bc"],
+		"influences": ["g430bc"],
+		"priority": 1,
+		"tags": ["civilization"],
+		"map": true
+	},
+
+	{
+		"year": -750,
+		"region": "easteurope",
+		"title": "Illiad and Odyssey",
+		"description": "Epic Greek poems attributed to Homer.",
+		"priority": 2,
+		"tags": ["culture"]
+	},  
+	{
+		"year": -700,
+		"region": "easteurope",
+		"title": "Rise of the Scythians",
+		"description": "Nomadic tribes dominate the Pontic steppe.",
+		"priority": 2,
+		"tags": ["civilization"],
+		"map": false
+	},
+	{
+		"id": "g430bc",
+		"year": -430,
+		"region": "easteurope",
+		"title": "Plague of Athens",
+		"description": "A deadly epidemic strikes Athens during the Peloponnesian War.",
+		"influenced_by": ["i500bc"],
+		"influences": [""],
+		"priority": 3,
+		"tags": ["disaster"],
+		"map": false
+	},
+	{
+		"id": "ee1453",
+		"year": 1453,
+		"region": "easteurope",
+		"title": "Fall of Constantinople",
+		"description": "Placeholder tooltip",
+		"priority": 1,
+		"tags": ["civilization"],
+		"map": false
+	},
+
+	{
+		"id": "we1667",
+		"year": -20,
+		"region": "westeurope",
+		"title": "Aeneid",
+		"description": "Epic poem by the Roman poet Virgil (70 BC – 19 BC)",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "culture", "text"],
+		"connections": [
+		{"target": "", "type": "", "label": ""}
+		],
+		"priority": 3,
+		"lane": 0
+	},
+	{
+		"id": "we1300",
+		"year": 1300,
+		"region": "westeurope",
+		"title": "Renaissance",
+		"description": "Tooltip placeholder",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["philosophy", "religion", "science", "politics", "culture", "general"],
+		"connections": [
+		{ "target": "", "type": "cultural", "label": "Influenced" },
+		{ "target": "", "type": "military", "label": "Conquered" }
+		],
+		"priority": 1,
+		"lane": 1
+	},
+	{
+		"year": 1637,
+		"region": "westeurope",
+		"title": "René Descartes",
+		"description": "French Philosopher, 1596 – 1650.",
+		"tags": ["philosophy","people", "france"],
+		"priority": 2,
+		"map": false
+	},
+	{
+		"id": "we1667",
+		"year": 1667,
+		"region": "westeurope",
+		"title": "Paradise Lost",
+		"description": "Epic poem by the English poet John Milton (1608–1674)",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "religion", "culture", "text"],
+		"connections": [
+		{"target": "", "type": "", "label": ""}
+		],
+		"priority": 3,
+		"lane": 0
+	},
+	{
+		"id": "we1680",
+		"year": 1680,
+		"region": "westeurope",
+		"title": "Enlightenment",
+		"description": "17th- to 18th-century European cultural movement.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "philosophy", "science", "politics"],
+		"connections": [
+		{ "target": "we1717", "type": "idea", "label": "Influenced" }
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "idea"
+	},
+
+	{
+		"year": 1688,
+		"region": "westeurope",
+		"title": "Glorious Revolution",
+		"description": "British revolution of 1688.",
+		"tags": ["politics", "britain"],
+		"priority": 3,
+		"lane": 2
+	},
+	{
+		"id": "we1717",
+		"year": 1717,
+		"region": "westeurope",
+		"title": "Freemasonry",
+		"description": "Group of fraternal organizations.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "group", "philosophy", "politics", "britain"],
+		"connections": [
+		{ "target": "a1775", "type": "idea", "label": "Influenced" },
+		{ "target": "we1789", "type": "idea", "label": "Influenced" }
+		],
+		"priority": 2,
+		"lane": 1,
+		"type": "group"
+	},
+	{
+		"id": "we1789",
+		"year": 1789,
+		"region": "westeurope",
+		"title": "French Revolution",
+		"description": "Revolution in France from 1789 to 1799.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "war", "philosophy", "politics", "france"],
+		"connections": [
+		{ "target": "", "type": "cultural", "label": "Influenced" }
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "war"
+	},
+	{
+		"id": "we1803",
+		"year": 1803,
+		"region": "westeurope",
+		"title": "Napoleonic Wars",
+		"description": "Period of relative world peace under British dominance between 1815 and 1914.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "war", "france"],
+		"connections": [
+		{ "target": "", "type": "cultural", "label": "Influenced" }
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "war"
+	},
+	{
+		"id": "we1815",
+		"year": 1815,
+		"region": "westeurope",
+		"title": "Pax Britannica",
+		"description": "Period of relative world peace under British dominance between 1815 and 1914.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "civilization", "politics", "britain"],
+		"connections": [
+		{ "target": "", "type": "cultural", "label": "Influenced" }
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "civ"
+	},
+
+	{
+		"year": 1758,
+		"region": "westeurope",
+		"title": "Emanuel Swedenborg",
+		"description": "Swedish polymath; scientist, engineer, astronomer, anatomist, Christian theologian, philosopher, and mystic, 1688 – 1772.",
+		"tags": ["religion"],
+		"priority": 3,
+		"lane": 2,
+		"map": true
+	},
+	{
+		"year": 1780,
+		"region": "westeurope",
+		"title": "Franz Mesmer",
+		"description": "German physician with an interest in astronomy, 1734 – 1815.",
+		"tags": ["religion"],
+		"priority": 3,
+		"lane": 2,
+		"map": true
+	},
+	{
+		"year": 1910,
+		"region": "westeurope",
+		"title": "Carl Jung",
+		"description": "Swiss psychiatrist, psychotherapist, and psychologist who founded the school of analytical psychology. 1875 – 1961.",
+		"priority": 3,
+		"tags": ["religion"],
+		"map": true
+	},
+
+	{
+		"id": "a1492",
+		"year": 1492,
+		"region": "america",
+		"title": "Discovery of America",
+		"description": "Tooltip Placeholder",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "civilization", "politics"],
+		"connections": [
+		{"target": "", "type": "", "label": ""}
+		],
+		"priority": 1,
+		"lane": 2,
+		"type": "event"
+	},	
+	{
+		"id": "a1775",
+		"year": 1775,
+		"region": "america",
+		"title": "American Revolution",
+		"description": "1765–1783 colonial rebellion forming the United States of America.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "civilization", "politics"],
+		"connections": [
+		{"target": "", "type": "", "label": ""}
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "war"
+	},
+	{
+		"id": "a1823",
+		"year": 1823,
+		"region": "america",
+		"title": "Monroe Doctrine",
+		"description": "1823 U.S. foreign policy on the Western Hemisphere.",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "civilization", "politics"],
+		"connections": [
+		{"target": "", "type": "", "label": ""}
+		],
+		"priority": 1,
+		"lane": 1,
+		"type": "idea"
+	},
+	{
+		"id": "a1910",
+		"year": 1910,
+		"region": "america",
+		"title": "Hollywood",
+		"description": "Placeholder tooltip",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "culture"],
+		"connections": [
+		{"target": "", "type": "", "label": ""}
+		],
+		"priority": 3,
+		"lane": 2,
+		"type": ""
+	},
+	{
+		"id": "a2025",
+		"year": 2025,
+		"region": "america",
+		"title": "This Graph",
+		"description": "Big brain nibba typa shit",
+		"image": "img/Placeholder.png",
+		"text": "Event Placeholder",
+		"tags": ["general", "culture"],
+		"connections": [
+		{"target": "", "type": "", "label": ""}
+		],
+		"priority": 3,
+		"lane": 2,
+		"type": ""
+	}
+]

@@ -1,0 +1,564 @@
+[
+	{
+		"region": "general",
+		"start": -10000,
+		"end": -5000,
+		"title": {
+			"en": "Stone Age",
+			"pt": "Idade da Pedra"
+		},
+		"description": {
+			"en": "12,000 BC — 5,000 BC",
+			"pt": "12.000 a.C. — 5.000 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": -5000,
+		"end": -3300,
+		"title": {
+			"en": "Copper Age",
+			"pt": "Idade do Cobre"
+		},
+		"description": {
+			"en": "5,000 BC — 3,300 BC",
+			"pt": "5.000 a.C. — 3.300 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": -3300,
+		"end": -2100,
+		"title": {
+			"en": "Early Bronze Age",
+			"pt": "Bronze Antigo"
+		},
+		"description": {
+			"en": "3,300 BC — 2,100 BC",
+			"pt": "3.300 a.C. — 2.100 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": -2100,
+		"end": -1500,
+		"title": {
+			"en": "Middle Bronze Age",
+			"pt": "Bronze Médio"
+		},
+		"description": {
+			"en": "2,100 BC — 1,500 BC",
+			"pt": "2.100 a.C. — 1.500 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": -1500,
+		"end": -1200,
+		"title": {
+			"en": "Late Bronze Age",
+			"pt": "Bronze Recente"
+		},
+		"description": {
+			"en": "1,500 BC — 1,200 BC",
+			"pt": "1.500 a.C. — 1.200 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": -1200,
+		"end": -800,
+		"title": {
+			"en": "Iron Age",
+			"pt": "Idade do Ferro"
+		},
+		"description": {
+			"en": "1,200 BC — 800 BC",
+			"pt": "1.200 a.C. — 800 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": -800,
+		"end": -300,
+		"title": {
+			"en": "Classical Antiquity",
+			"pt": "Antiguidade Clássica"
+		},
+		"description": {
+			"en": "800 BC — 300 BC",
+			"pt": "800 a.C. — 300 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": -300,
+		"end": -30,
+		"title": {
+			"en": "Hellenistic Period",
+			"pt": "Período Helenístico"
+		},
+		"description": {
+			"en": "300 BC — 30 BC",
+			"pt": "300 a.C. — 30 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": 500,
+		"end": 800,
+		"title": {
+			"en": "Late Antiquity",
+			"pt": "Antiguidade Tardia"
+		},
+		"description": {
+			"en": "500 AD — 800 AD",
+			"pt": "500 d.C. — 800 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": 800,
+		"end": 1000,
+		"title": {
+			"en": "Early Middle Ages",
+			"pt": "Alta Idade Média"
+		},
+		"description": {
+			"en": "800 AD — 1,000 AD",
+			"pt": "800 d.C. — 1.000 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": 1000,
+		"end": 1300,
+		"title": {
+			"en": "High Middle Ages",
+			"pt": "Baixa Idade Média"
+		},
+		"description": {
+			"en": "1,000 AD — 1,300 AD",
+			"pt": "1.000 d.C. — 1.300 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": 1300,
+		"end": 1500,
+		"title": {
+			"en": "Late Middle Ages",
+			"pt": "Idade Média Tardia"
+		},
+		"description": {
+			"en": "1,300 AD — 1,500 AD",
+			"pt": "1.300 d.C. — 1.500 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+		},
+	{
+		"region": "general",
+		"start": 1500,
+		"end": 1900,
+		"title": {
+			"en": "Early Modern Period",
+			"pt": "Idade Moderna"
+		},
+		"description": {
+			"en": "1,500 AD — 1,900 AD",
+			"pt": "1.500 d.C. — 1.900 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": 1900,
+		"end": 2100,
+		"title": {
+			"en": "Late Modern Period",
+			"pt": "Idade Contemporânea"
+		},
+		"description": {
+			"en": "1,900 AD — ???? AD",
+			"pt": "1.900 d.C. — ???? d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+  
+	{
+		"region": "africa",
+		"start": -10000,
+		"end": -3100,
+		"title": {
+			"en": "Pre-Historic Egypt",
+			"pt": "Egito Pré-Histórico"
+		},
+		"description": {
+			"en": "???? BC — 3,100 BC",
+			"pt": "???? a.C. — 3.100 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "africa",
+		"start": -3100,
+		"end": -2686,
+		"title": {
+			"en": "Early Dynastic Egypt",
+			"pt": "Época Tinita"
+		},
+		"description": {
+			"en": "3,100 BC - 2,686 BC",
+			"pt": "3.100 a.C. — 2.686 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "africa",
+		"start": -2686,
+		"end": -2181,
+		"title": {
+			"en": "Old Kingdom",
+			"pt": "Império Antigo"
+		},
+		"description": {
+			"en": "2,686 BC - 2,181 BC",
+			"pt": "2.686 a.C. — 2.181 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "africa",
+		"start": -2181,
+		"end": -2055,
+		"title": {
+			"en": "First Intermediate Period",
+			"pt": "Primeiro Período Intermédio"
+		},
+		"description": {
+			"en": "2,181 BC - 2,055 BC",
+			"pt": "2.181 a.C. — 2.055 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+  
+	{
+		"region": "mesopotamia",
+		"start": -6500,
+		"end": -4000,
+		"title": "Ubaid Culture",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -4000,
+		"end": -3100,
+		"title": "Uruk Period",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -2334,
+		"end": -2154,
+		"title": "Akkadian Empire",
+		"description": "c. 2334–2154 BC",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -1894,
+		"end": -1595,
+		"title": "Old Babylonian Period",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -911,
+		"end": -609,
+		"title": "Neo-Assyrian Empire",
+		"description": "A powerful Mesopotamian empire known for its military prowess.",
+		"image": "img/neoassyrian.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	
+	{
+		"region": "levant",
+		"start": -10000,
+		"end": -3300,
+		"title": {
+			"en": "Neolithic",
+			"pt": "Neolítico"
+		},
+		"description": {
+			"en": "12,000 BC — 3,300 BC",
+			"pt": "12.000 a.C. — 3.300 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -3300,
+		"end": -2000,
+		"title": {
+			"en": "Early Bronze Age",
+			"pt": "Bronze Antigo"
+		},
+		"description": {
+			"en": "3,300 BC — 2,000 BC",
+			"pt": "3.300 a.C. — 2.000 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -2000,
+		"end": -1200,
+		"title": {
+			"en": "Late Bronze Age",
+			"pt": "Bronze Recente"
+		},
+		"description": {
+			"en": "2,000 BC — 1,200 BC",
+			"pt": "2.000 a.C. — 1.200 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -597,
+		"end": -539,
+		"title": "Babylonian Exile",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -516,
+		"end": 70,
+		"title": "Second Temple Period",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -539,
+		"end": -332,
+		"title": "Persian Period",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -332,
+		"end": -140,
+		"title": "Greek Period",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -140,
+		"end": -37,
+		"title": "Hasmonean Period",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -37,
+		"end": 6,
+		"title": "Herodian Kingdom",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+  
+	{
+		"region": "iran",
+		"start": -1000,
+		"end": -550,
+		"title": "Avestan Period",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "iran",
+		"start": -550,
+		"end": -330,
+		"title": "Achaemenid Empire",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	
+	{
+		"region": "easteurope",
+		"start": -700,
+		"end": -300,
+		"title": "Scythian Era",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	
+	{
+		"region": "westeurope",
+		"start": -753,
+		"end": -509,
+		"title": "Roman Kingdom",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "westeurope",
+		"start": -509,
+		"end": -27,
+		"title": "Roman Republic",
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	}
+]

@@ -14,7 +14,6 @@
 	document.getElementById("language-select").addEventListener("change", (e) => {
 		currentLang = e.target.value
 		renderEvents(activeTags)
-		//updateStaticLabels()
 		updateLanguageTexts()
 	});
 
@@ -86,8 +85,8 @@
 
 	const regions = [
 		{id: "general",  label: {en: "General", pt: "Geral"}, start: -10000, end: 2100},
-		{id: "africa", label: {en: "Egypt & North Africa", pt: "Egito & Norte da África"},  start: -10000, end: 600},
-		{id: "mesopotamia",   label: {en: "Mesopotamia", pt: "Mesopotâmia"}, start: -10000, end: 600},
+		{id: "africa", label: {en: "Egypt & North Africa", pt: "Egito & Norte da África"},  start: -10000, end: 2100},
+		{id: "mesopotamia",   label: {en: "Mesopotamia", pt: "Mesopotâmia"}, start: -10000, end: 2100},
 		{id: "levant", label: {en: "Levant & Arabia", pt: "Levante & Arábia"}, start: -10000, end: 2100},
 		{id: "iran", label: {en: "Steppes & Iranian Plateau", pt: "Estepes & Planalto Iraniano"}, start: -5000, end: 2100},
 		{id: "easteurope", label: {en: "Eastern Europe & Anatolia", pt: "Europa Oriental & Anatólia"}, start: -3300, end: 2100},
@@ -251,14 +250,14 @@
 		});
 
 	function renderEvents(activeTags) {
-		g.selectAll(".event-group").remove();
+		g.selectAll(".event-group, .event-groups").remove();
 		const group = g.append("g").attr("class", "event-group");
 
 		const baseSizes = {
 			1: { width: 80, height: 16, fontSize: 6, strokeWidth: 1 },
 			2: { width: 50, height: 10, fontSize: 4, strokeWidth: 0.5 },
-			3: { width: 40, height: 8, fontSize: 2, strokeWidth: 0.5 },
-			4: { width: 40, height: 6, fontSize: 1, strokeWidth: 0.5 }
+			3: { width: 40, height: 8, fontSize: 3, strokeWidth: 0.5 },
+			4: { width: 40, height: 6, fontSize: 2, strokeWidth: 0.5 }
 		};
 
 		const zoomLevel = currentZoomLevel || 1;
@@ -334,6 +333,121 @@
 				sidebar.style("display", "block");
 		});
 
+		// GROUP RENDERING
+
+		const groupEvents = filtered.filter(e => e.type === "group" && e.start !== undefined && e.end !== undefined);
+
+		const groupG = g.append("g").attr("class", "event-groups");
+
+		groupG.selectAll("rect.group-event")
+			.data(groupEvents)
+			.enter()
+			.append("rect")
+			.attr("class", "group-event")
+			.attr("y", d => yearToY(d.start))
+			.attr("x", d => {
+				const childEvents = filtered.filter(ev =>
+					ev.group === d.id  // ← only select events explicitly linked to this group
+				);
+
+				const positions = childEvents.map(ev => {
+				const p = ev.priority || 1;
+				const w = baseSizes[p].width;
+				const lane = ev.lane !== undefined ? ev.lane : 1;
+				const totalLanes = 5;
+				const laneWidth = regionToX.bandwidth() / totalLanes;
+
+				return regionToX(ev.region) + lane * laneWidth + (laneWidth - w) / 2;
+				});
+
+				if (positions.length > 0) {
+					return Math.min(...positions) - 5; // left pad
+				} else {
+					return regionToX(d.region); // fallback
+				}
+			})
+		.attr("width", d => {
+			const childEvents = filtered.filter(ev =>
+				ev.group === d.id
+			);
+
+			const positions = childEvents.map(ev => {
+			const p = ev.priority || 1;
+			const w = baseSizes[p].width;
+			const lane = ev.lane !== undefined ? ev.lane : 1;
+			const totalLanes = 5;
+			const laneWidth = regionToX.bandwidth() / totalLanes;
+
+			const x = regionToX(ev.region) + lane * laneWidth + (laneWidth - w) / 2;
+				return { left: x, right: x + w };
+			});
+
+			if (positions.length > 0) {
+				const minX = Math.min(...positions.map(p => p.left)) - 5;
+				const maxX = Math.max(...positions.map(p => p.right)) + 5;
+				return maxX - minX;
+			} else {
+				return regionToX.bandwidth(); // fallback
+			}
+		})
+		.attr("height", d => yearToY(d.end) - yearToY(d.start))
+		.attr("fill", "none")
+		.attr("fill-opacity", "0.1")
+		.attr("stroke", "#000")
+		.attr("stroke-width", 0.5)
+		.on("mouseover", (event, d) => {
+			tooltip.html(`<strong>${translate(d.title)}</strong><br>${translate(d.description) || ''}`);
+			tooltip.style("display", "block");
+		})
+		.on("mousemove", (event) => {
+			tooltip.style("left", (event.pageX + 10) + "px")
+			.style("top", (event.pageY + 10) + "px");
+		})
+		.on("mouseout", () => {
+			tooltip.style("display", "none");
+		})
+		.on("click", (event, d) => {
+			d3.select("#sidebar-content").html(`<h2>${translate(d.title)}</h2>` +
+			(d.image ? `<img src="${d.image}" alt="${translate(d.title)}" />` : "") + `<p>${translate(d.text) || ''}</p>`);
+			sidebar.style("display", "block");
+		});
+
+		// Optional label
+		groupG.selectAll("text.group-label")
+		.data(groupEvents)
+		.enter()
+		.append("text")
+		.attr("class", "group-label")
+		.attr("x", d => {
+			const childEvents = filtered.filter(ev =>
+				ev.group === d.id
+			);
+
+			const positions = childEvents.map(ev => {
+				const p = ev.priority || 1;
+				const w = baseSizes[p].width;
+				const lane = ev.lane !== undefined ? ev.lane : 1;
+				const totalLanes = 5;
+				const laneWidth = regionToX.bandwidth() / totalLanes;
+
+				const x = regionToX(ev.region) + lane * laneWidth + (laneWidth - w) / 2;
+				return { left: x, right: x + w };
+			});
+
+			if (positions.length > 0) {
+				const minX = Math.min(...positions.map(p => p.left));
+				const maxX = Math.max(...positions.map(p => p.right));
+				return (minX + maxX) / 2;
+				} else {
+					return regionToX(d.region) + regionToX.bandwidth() / 2; // fallback
+				}
+		})
+		.attr("y", d => yearToY(d.start) + 8)
+		.attr("text-anchor", "middle")
+		.attr("font-size", "5px")
+		.attr("fill", "#555")
+		.text(d => translate(d.title));
+
 		events.append("rect")
 			.attr("width", d => {
 				const p = d.priority || 1;
@@ -405,7 +519,7 @@
 
 			d.connections.forEach(conn => {
 				const targetId = typeof conn === "string" ? conn : conn.target;
-				const label = typeof conn === "string" ? "" : (conn.label || "");
+				const label = typeof conn === "string" ? "" : translate(conn.label || "");
 				const type = typeof conn === "string" ? "" : (conn.type || "");
 
 				const target = eventPositions.get(targetId);
@@ -695,3 +809,15 @@ document.querySelectorAll('.age-select').forEach(btn => {
 	});
   }
 });
+
+	function sideToggle() {
+	var x = document.getElementById("side");
+	var b = document.getElementById("closebtn");
+	if (x.style.display === "none") {
+		x.style.display = "block";
+		b.className = "fa-solid fa-chevron-left";
+	} else {
+		x.style.display = "none";
+		b.className = "fa-solid fa-chevron-right"
+	}
+}

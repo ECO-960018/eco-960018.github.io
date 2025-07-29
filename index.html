@@ -11,24 +11,34 @@
 </head>
 <body>
 	<div class="navbox">
-
-		<img id="logo" src="img\Logo.png" alt="Logo">
+	
+		<div class="navbox-a">
+			<img id="logo" src="img\Logo.png" alt="Logo">
+		</div>
 		
 		<div class="navbox-b">
-		
-			<h1 class="title">UMA BREVE LINHA DO TEMPO DO PENSAMENTO OCIDENTAL</h1>
+			
+			<div class="titleb">
+				<h1 class="title">UMA BREVE LINHA DO TEMPO DO PENSAMENTO OCIDENTAL</h1>
+			</div>
 
 			<nav class="navbar">
 				<div class="lContainer">
-					<a class="tag-btn" data-tag="all" data-active="false">GERAL</a>
-					 <div class="dropdown">
-						  <button class="dropbtn">FILTROS <i class="fa-solid fa-caret-down"></i></button>
-						  <div class="dropdown-content">
+					<a class="tag-btn" data-tag="all" data-active="false">TODOS</a>
+					<div class="dropdown">
+						<button class="dropbtn">FILTROS <i class="fa-solid fa-caret-down"></i></button>
+						<div class="dropdown-content">
+							<a class="tag-btn" data-tag="general" data-active="false">GERAL</a>
+							<a class="tag-btn" data-tag="civilization" data-active="false">CIVILIZAÇÕES</a>
+							<a class="tag-btn" data-tag="science" data-active="false">CIÊNCIA & TECNOLOGIA</a>
+							<a class="tag-btn" data-tag="religion" data-active="false">RELIGIÃO</a>
 							<a class="tag-btn" data-tag="politics" data-active="false">POLÍTICA</a>
-							<a class="tag-btn" data-tag="civilization" data-active="false">CIV</a>
-							<a  class="tag-btn" data-tag="disaster" data-active="false">TECNOLOGIA</a>
-						  </div>
+							<a class="tag-btn" data-tag="economy" data-active="false">ECONOMIA</a>
+							<a class="tag-btn" data-tag="war" data-active="false">DISASTRES & CONFLITOS</a>
+							<a class="tag-btn" data-tag="text" data-active="false">TEXTOS</a>
+							<a class="tag-btn" data-tag="people" data-active="false">PESSOAS</a>
 						</div>
+					</div>
 				</div>
 				
 				<div class="rContainer">
@@ -37,34 +47,84 @@
 					<a href="#">[SOBRE]</a>
 					<a title="Mapa Interativo" href="mapindex.html"><i class="fa fa-map"></i></a>
 					
-					<select id="language-select">
-						<option value="pt">🇧🇷</option>
-						<option value="en">🇺🇸</option>
-					</select>
+					<div class="dropdown">
+					<button class="dropbtn"><i class="fa-solid fa-language"></i> <i class="fa-solid fa-caret-down"></i></button>
+						<div class="dropdown-content">
+							<div id="language-select">
+								<input type="radio" id="pt" name="lang" value="pt">
+								<label for="pt"><div class="option"><img src="img\pt.png"></div></label><br>
+								<input type="radio" id="en" name="lang" value="en">
+								<label for="en"><div class="option"><img src="img\en.png"></div></label>
+							</div>
+						</div>
+					</div>
 				</div>
 			</nav>
+			
+			<div class="navbarM">
+				<div class="dropdown">
+					<button class="dropbtn">FILTROS <i class="fa-solid fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a class="tag-btn" data-tag="all" data-active="false">TODOS</a>
+						<a class="tag-btn" data-tag="general" data-active="false">GERAL</a>
+						<a class="tag-btn" data-tag="civilization" data-active="false">CIVILIZAÇÕES</a>
+						<a class="tag-btn" data-tag="science" data-active="false">CIÊNCIA & TECNOLOGIA</a>
+						<a class="tag-btn" data-tag="religion" data-active="false">RELIGIÃO</a>
+						<a class="tag-btn" data-tag="politics" data-active="false">POLÍTICA</a>
+						<a class="tag-btn" data-tag="economy" data-active="false">ECONOMIA</a>
+						<a class="tag-btn" data-tag="war" data-active="false">DISASTRES & CONFLITOS</a>
+						<a class="tag-btn" data-tag="text" data-active="false">TEXTOS</a>
+						<a class="tag-btn" data-tag="people" data-active="false">PESSOAS</a>
+					</div>
+				</div>
+			
+				<div class="dropdown">
+					<button class="dropbtn">LINKS <i class="fa-solid fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<a href="gallery.html">[GALERIA]</a>
+						<a href="#">[GLOSSÁRIO]</a>
+						<a href="#">[SOBRE]</a>
+						<a title="Mapa Interativo" href="mapindex.html">MAPA</i></a>
+					</div>
+				</div>
+				
+				<div class="dropdown language">
+				<button class="dropbtn"><i class="fa-solid fa-language"></i> <i class="fa-solid fa-caret-down"></i></button>
+					<div class="dropdown-content">
+						<div id="language-select">
+							<input type="radio" id="pt" name="lang" value="pt">
+							<label for="pt"><div class="option"><img src="img\pt.png"></div></label><br>
+							<input type="radio" id="en" name="lang" value="en">
+							<label for="en"><div class="option"><img src="img\en.png"></div></label>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	
 	<div class="flexbox">
-	
-		<aside>
-			<div class="side">
-				<button data-year="-10000" class="age-select">Idade da Pedra</button>
-				<button data-year="-3300" class="age-select">Idade do Bronze</button>
-				<button data-year="-1200" class="age-select">Idade do Ferro</button>
-				<button data-year="-800" class="age-select">Idade Antiga</button>
-				<button data-year="600" class="age-select">Idade Média</button>
-				<button data-year="1500" class="age-select">Idade Moderna</button>
-			</div>
+		<div id="side">
+			<button data-year="-10000" class="age-select">Idade da Pedra</button>
+			<button data-year="-3300" class="age-select">Idade do Bronze</button>
+			<button data-year="-1200" class="age-select">Idade do Ferro</button>
+			<button data-year="-800" class="age-select">Idade Antiga</button>
+			<button data-year="600" class="age-select">Idade Média</button>
+			<button data-year="1500" class="age-select">Idade Moderna</button>
+
 			<div class="zoom-controls">
 				<button onclick="zoomBy(1.2)"><i class="fa fa-search-plus"></i></button>
 				<button onclick="zoomBy(0.8)"><i class="fa fa-search-minus"></i></button>
 				<button onclick="resetZoom()"><i class="fa fa-undo"></i></button>
 			</div>
-		</aside>
+		</div>
 	
 		<div id="wrapper">
+		
+		<div class="buttonc">
+			<a class="closebtn" onclick="sideToggle()"><i id="closebtn" class="fa-solid fa-chevron-left"></i></a>
+		</div>
+		
 			<svg id="timeline" width="100%" height="100%"></svg>
 			<div id="v-scrollbar" class="custom-scrollbar vertical"></div>
 			<div id="h-scrollbar" class="custom-scrollbar horizontal"></div>

@@ -110,14 +110,14 @@
 	{
 		"region": "general",
 		"start": -800,
-		"end": -300,
+		"end": 500,
 		"title": {
 			"en": "Classical Antiquity",
 			"pt": "Antiguidade Clássica"
 		},
 		"description": {
-			"en": "800 BC — 300 BC",
-			"pt": "800 a.C. — 300 a.C."
+			"en": "800 BC — 500 AD",
+			"pt": "800 a.C. — 500 d.C."
 		},
 		"image": "img/Placeholder.png",
 		"text": {
@@ -127,15 +127,15 @@
 	},
 	{
 		"region": "general",
-		"start": -300,
+		"start": -331,
 		"end": -30,
 		"title": {
 			"en": "Hellenistic Period",
 			"pt": "Período Helenístico"
 		},
 		"description": {
-			"en": "300 BC — 30 BC",
-			"pt": "300 a.C. — 30 a.C."
+			"en": "331 BC — 30 BC",
+			"pt": "331 a.C. — 30 a.C."
 		},
 		"image": "img/Placeholder.png",
 		"text": {
@@ -154,6 +154,24 @@
 		"description": {
 			"en": "500 AD — 800 AD",
 			"pt": "500 d.C. — 800 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "general",
+		"start": 750,
+		"end": 1258,
+		"title": {
+			"en": "Islamic Golden Age",
+			"pt": "Idade de Ouro Islâmica"
+		},
+		"description": {
+			"en": "750 AD — 1258 AD",
+			"pt": "750 d.C. — 1258 d.C."
 		},
 		"image": "img/Placeholder.png",
 		"text": {
@@ -251,6 +269,24 @@
 			"pt": "Texto em Português"
 		}
 	},
+	{
+		"region": "general",
+		"start": 1947,
+		"end": 1991,
+		"title": {
+			"en": "Cold War",
+			"pt": "Guerra Fria"
+		},
+		"description": {
+			"en": "1947 AD — 1991 AD",
+			"pt": "1947 d.C. — 1991 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
   
 	{
 		"region": "africa",
@@ -261,8 +297,8 @@
 			"pt": "Egito Pré-Histórico"
 		},
 		"description": {
-			"en": "???? BC — 3,100 BC",
-			"pt": "???? a.C. — 3.100 a.C."
+			"en": "300,000 BC — 3,100 BC",
+			"pt": "300.000 a.C. — 3.100 a.C."
 		},
 		"image": "img/Placeholder.png",
 		"text": {
@@ -279,7 +315,7 @@
 			"pt": "Época Tinita"
 		},
 		"description": {
-			"en": "3,100 BC - 2,686 BC",
+			"en": "3,100 BC — 2,686 BC",
 			"pt": "3.100 a.C. — 2.686 a.C."
 		},
 		"image": "img/Placeholder.png",
@@ -297,7 +333,7 @@
 			"pt": "Império Antigo"
 		},
 		"description": {
-			"en": "2,686 BC - 2,181 BC",
+			"en": "2,686 BC — 2,181 BC",
 			"pt": "2.686 a.C. — 2.181 a.C."
 		},
 		"image": "img/Placeholder.png",
@@ -315,7 +351,7 @@
 			"pt": "Primeiro Período Intermédio"
 		},
 		"description": {
-			"en": "2,181 BC - 2,055 BC",
+			"en": "2,181 BC — 2,055 BC",
 			"pt": "2.181 a.C. — 2.055 a.C."
 		},
 		"image": "img/Placeholder.png",
@@ -324,12 +360,37 @@
 			"pt": "Texto em Português"
 		}
 	},
-  
+
+	{
+		"region": "mesopotamia",
+		"start": -10000,
+		"end": -6500,
+		"title": {
+			"en": "Pre-Pottery Neolithic",
+			"pt": "Neolítico Pré-Cerâmico"
+		},
+		"description": {
+			"en": "10,000 BC — 6,500 BC",
+			"pt": "10.000 a.C. — 6.500 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},  
 	{
 		"region": "mesopotamia",
 		"start": -6500,
 		"end": -4000,
-		"title": "Ubaid Culture",
+		"title": {
+			"en": "Ubaid Period",
+			"pt": "Período de Ubaide"
+		},
+		"description": {
+			"en": "6,500 BC — 4,000 BC",
+			"pt": "6.500 a.C. — 4.000 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -340,7 +401,14 @@
 		"region": "mesopotamia",
 		"start": -4000,
 		"end": -3100,
-		"title": "Uruk Period",
+		"title": {
+			"en": "Uruk Period",
+			"pt": "Período de Uruque"
+		},
+		"description": {
+			"en": "4,000 BC — 3,100 BC",
+			"pt": "4.000 a.C. — 3.100 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -349,10 +417,16 @@
 	},
 	{
 		"region": "mesopotamia",
-		"start": -2334,
-		"end": -2154,
-		"title": "Akkadian Empire",
-		"description": "c. 2334–2154 BC",
+		"start": -3100,
+		"end": -2900,
+		"title": {
+			"en": "Jemdet Nasr Period",
+			"pt": "Período de Jemdet Nasr"
+		},
+		"description": {
+			"en": "3,100 BC — 2,900 BC",
+			"pt": "3.100 a.C. — 2.900 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -361,9 +435,106 @@
 	},
 	{
 		"region": "mesopotamia",
-		"start": -1894,
+		"start": -2900,
+		"end": -2350,
+		"title": {
+			"en": "Early Dynastic Period",
+			"pt": "Período Dinástico Arcaico"
+		},
+		"description": {
+			"en": "2,900 BC — 2,350 BC",
+			"pt": "2.900 a.C. — 2.350 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -2350,
+		"end": -2150,
+		"title": {
+			"en": "Akkadian Empire",
+			"pt": "Império Acádio"
+		},
+		"description": {
+			"en": "2,350 BC — 2,150 BC",
+			"pt": "2.350 a.C. — 2.150 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -2150,
+		"end": -2000,
+		"title": {
+			"en": "Neo-Sumerian Empire",
+			"pt": "Império Neossumério"
+		},
+		"description": {
+			"en": "2,112 BC — 2,004 BC",
+			"pt": "2.112 a.C. — 2.004 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -2000,
 		"end": -1595,
-		"title": "Old Babylonian Period",
+		"title": {
+			"en": "Old Babylonian Empire",
+			"pt": "Império Paleobabilônico"
+		},
+		"description": {
+			"en": "1,894 BC — 1,595 BC",
+			"pt": "1.894 a.C. — 1.595 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -1595,
+		"end": -1300,
+		"title": {
+			"en": "Kassite Dynasty",
+			"pt": "Dinastia Cassita"
+		},
+		"description": {
+			"en": "1,595 BC — 1,595 BC",
+			"pt": "1.595 a.C. — 1.595 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -1300,
+		"end": -911,
+		"title": {
+			"en": "Middle Assyrian Empire",
+			"pt": "Médio Império Assírio"
+		},
+		"description": {
+			"en": "1,363 BC — 912 BC",
+			"pt": "1.363 a.C. — 912 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -374,9 +545,304 @@
 		"region": "mesopotamia",
 		"start": -911,
 		"end": -609,
-		"title": "Neo-Assyrian Empire",
-		"description": "A powerful Mesopotamian empire known for its military prowess.",
-		"image": "img/neoassyrian.png",
+		"title": {
+			"en": "Neo-Assyrian Empire",
+			"pt": "Império Neoassírio"
+		},
+		"description": {
+			"en": "911 BC — 609 BC",
+			"pt": "911 a.C. — 609 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -609,
+		"end": -539,
+		"title": {
+			"en": "Neo-Babylonian Empire",
+			"pt": "Império Neobabilônico"
+		},
+		"description": {
+			"en": "626 BC — 539 BC",
+			"pt": "626 a.C. — 539 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -539,
+		"end": -331,
+		"title": {
+			"en": "Achaemenid Empire",
+			"pt": "Império Aquemênida"
+		},
+		"description": {
+			"en": "539 BC — 331 BC",
+			"pt": "539 a.C. — 331 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -331,
+		"end": -323,
+		"title": {
+			"en": "Macedonian Empire",
+			"pt": "Império Macedônico"
+		},
+		"description": {
+			"en": "331 BC — 323 BC",
+			"pt": "331 a.C. — 323 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -323,
+		"end": -141,
+		"title": {
+			"en": "Seleucid Empire",
+			"pt": "Império Selêucida"
+		},
+		"description": {
+			"en": "323 BC — 141 BC",
+			"pt": "323 a.C. — 141 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": -141,
+		"end": 224,
+		"title": {
+			"en": "Parthian Empire",
+			"pt": "Império Parta"
+		},
+		"description": {
+			"en": "141 BC — 224 AD",
+			"pt": "141 a.C. — 224 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 224,
+		"end": 636,
+		"title": {
+			"en": "Sassanian Empire",
+			"pt": "Império Sassânida"
+		},
+		"description": {
+			"en": "224 AD — 651 AD",
+			"pt": "224 d.C. — 651 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 636,
+		"end": 661,
+		"title": {
+			"en": "Rashidun Caliphate",
+			"pt": "Califado Rashidun"
+		},
+		"description": {
+			"en": "636 AD — 661 AD",
+			"pt": "636 d.C. — 661 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 661,
+		"end": 750,
+		"title": {
+			"en": "Umayyad Caliphate",
+			"pt": "Califado Omíada"
+		},
+		"description": {
+			"en": "661 AD — 750 AD",
+			"pt": "661 d.C. — 750 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 750,
+		"end": 1258,
+		"title": {
+			"en": "Abbasid Caliphate",
+			"pt": "Califado Abássida"
+		},
+		"description": {
+			"en": "750 AD — 1258 AD",
+			"pt": "750 d.C. — 1258 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	
+	{
+		"region": "mesopotamia",
+		"start": 1258,
+		"end": 1534,
+		"title": {
+			"en": "Turko-Mongol Rule",
+			"pt": "Período Turco-Mongol"
+		},
+		"description": {
+			"en": "1258 AD — 1534 AD",
+			"pt": "1258 d.C. — 1534 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 1534,
+		"end": 1920,
+		"title": {
+			"en": "Ottoman Empire",
+			"pt": "Império Otomano"
+		},
+		"description": {
+			"en": "1534 AD — 1920 AD",
+			"pt": "1534 d.C. — 1920 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 1920,
+		"end": 1932,
+		"title": {
+			"en": "Mandatory Iraq",
+			"pt": "Mandato Britânico da Mesopotâmia"
+		},
+		"description": {
+			"en": "1920 AD — 1932 AD",
+			"pt": "1920 d.C. — 1932 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 1932,
+		"end": 1958,
+		"title": {
+			"en": "Kingdom of Iraq",
+			"pt": "Reino do Iraque"
+		},
+		"description": {
+			"en": "1932 AD — 1958 AD",
+			"pt": "1932 d.C. — 1958 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 1958,
+		"end": 1968,
+		"title": {
+			"en": "Republic of Iraq",
+			"pt": "República do Iraque"
+		},
+		"description": {
+			"en": "1958 AD — 1968 AD",
+			"pt": "1958 d.C. — 1968 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 1968,
+		"end": 2003,
+		"title": {
+			"en": "Ba'athist Iraq",
+			"pt": "Iraque Baathista"
+		},
+		"description": {
+			"en": "1968 AD — 2003 AD",
+			"pt": "1968 d.C. — 2003 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "mesopotamia",
+		"start": 2003,
+		"end": 2100,
+		"title": {
+			"en": "Iraq Republic",
+			"pt": "República do Iraque"
+		},
+		"description": {
+			"en": "2004 AD — Today",
+			"pt": "2004 d.C. — Hoje"
+		},
+		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
 			"pt": "Texto em Português"
@@ -439,20 +905,16 @@
 	},
 	{
 		"region": "levant",
-		"start": -597,
+		"start": -586,
 		"end": -539,
-		"title": "Babylonian Exile",
-		"image": "img/Placeholder.png",
-		"text": {
-			"en": "English Text",
-			"pt": "Texto em Português"
-		}
-	},
-	{
-		"region": "levant",
-		"start": -516,
-		"end": 70,
-		"title": "Second Temple Period",
+		"title": {
+			"en": "Babylonian Exile",
+			"pt": "Exílio Babilônico"
+		},
+		"description": {
+			"en": "586 BC — 539 BC",
+			"pt": "586 a.C. — 539 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -463,7 +925,32 @@
 		"region": "levant",
 		"start": -539,
 		"end": -332,
-		"title": "Persian Period",
+		"title": {
+			"en": "Persian Period",
+			"pt": "Período Persa"
+		},
+		"description": {
+			"en": "539 BC — 332 BC",
+			"pt": "539 a.C. — 332 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "levant",
+		"start": -516,
+		"end": 70,
+		"title": {
+			"en": "Second Temple Period",
+			"pt": "Período do Segundo Templo"
+		},
+		"description": {
+			"en": "516 BC — 70 AD",
+			"pt": "516 a.C. — 70 d.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -474,7 +961,14 @@
 		"region": "levant",
 		"start": -332,
 		"end": -140,
-		"title": "Greek Period",
+		"title": {
+			"en": "Hellenistic Period",
+			"pt": "Período Helenístico"
+		},
+		"description": {
+			"en": "332 BC — 140 BC",
+			"pt": "332 a.C. — 140 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -485,7 +979,14 @@
 		"region": "levant",
 		"start": -140,
 		"end": -37,
-		"title": "Hasmonean Period",
+		"title": {
+			"en": "Hasmonean Kingdom",
+			"pt": "Reino Asmoneu"
+		},
+		"description": {
+			"en": "140 BC — 37 BC",
+			"pt": "140 a.C. — 37 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -496,7 +997,14 @@
 		"region": "levant",
 		"start": -37,
 		"end": 6,
-		"title": "Herodian Kingdom",
+		"title": {
+			"en": "Herodian Kingdom",
+			"pt": "Reino Herodiano"
+		},
+		"description": {
+			"en": "37 BC — 6 AD",
+			"pt": "37 a.C. — 6 d.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -526,12 +1034,144 @@
 			"pt": "Texto em Português"
 		}
 	},
-	
 	{
 		"region": "easteurope",
-		"start": -700,
+		"start": -3100,
+		"end": -2100,
+		"title": {
+			"en": "Cycladic Culture",
+			"pt": "Cultura Cicládica"
+		},
+		"description": {
+			"en": "3,100 BC — 1,000 BC",
+			"pt": "3.100 a.C. — 1.000 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "easteurope",
+		"start": -2100,
+		"end": -1500,
+		"title": {
+			"en": "Minoan Civilization",
+			"pt": "Civilização Minóica"
+		},
+		"description": {
+			"en": "3,100 BC — 1,100 BC",
+			"pt": "3.100 a.C. — 1.100 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "easteurope",
+		"start": -1500,
+		"end": -1050,
+		"title": {
+			"en": "Mycenean Civilization",
+			"pt": "Civilização Micênica"
+		},
+		"description": {
+			"en": "1,750 BC — 1,050 BC",
+			"pt": "1.750 a.C. — 1.050 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "easteurope",
+		"start": -1100,
+		"end": -800,
+		"title": {
+			"en": "Greek Dark Ages",
+			"pt": "Idade das Trevas Grega"
+		},
+		"description": {
+			"en": "1,100 BC — 800 BC",
+			"pt": "1.100 a.C. — 800 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "easteurope",
+		"start": -800,
+		"end": -500,
+		"title": {
+			"en": "Archaic Period",
+			"pt": "Período Arcáico"
+		},
+		"description": {
+			"en": "800 BC — 500 BC",
+			"pt": "800 a.C. — 500 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "easteurope",
+		"start": -500,
 		"end": -300,
-		"title": "Scythian Era",
+		"title": {
+			"en": "Classical Period",
+			"pt": "Período Clássico"
+		},
+		"description": {
+			"en": "500 BC — 300 BC",
+			"pt": "500 a.C. — 300 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "easteurope",
+		"start": -331,
+		"end": -30,
+		"title": {
+			"en": "Hellenistic Period",
+			"pt": "Período Helenístico"
+		},
+		"description": {
+			"en": "331 BC — 30 BC",
+			"pt": "331 a.C. — 30 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "easteurope",
+		"start": 395,
+		"end": 1453,
+		"title": {
+			"en": "Eastern Roman Empire",
+			"pt": "Império Romano do Oriente"
+		},
+		"description": {
+			"en": "395 AD — 1453 AD",
+			"pt": "395 d.C. — 1453 d.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -543,7 +1183,14 @@
 		"region": "westeurope",
 		"start": -753,
 		"end": -509,
-		"title": "Roman Kingdom",
+		"title": {
+			"en": "Roman Kingdom",
+			"pt": "Reino de Roma"
+		},
+		"description": {
+			"en": "753 BC — 509 BC",
+			"pt": "753 a.C. — 509 a.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",
@@ -554,7 +1201,50 @@
 		"region": "westeurope",
 		"start": -509,
 		"end": -27,
-		"title": "Roman Republic",
+		"title": {
+			"en": "Roman Republic",
+			"pt": "República de Roma"
+		},
+		"description": {
+			"en": "509 BC — 27 BC",
+			"pt": "509 a.C. — 27 a.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "westeurope",
+		"start": -27,
+		"end": 395,
+		"title": {
+			"en": "Roman Empire",
+			"pt": "Império Romano"
+		},
+		"description": {
+			"en": "27 BC — 395 AD",
+			"pt": "27 a.C. — 395 d.C."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English Text",
+			"pt": "Texto em Português"
+		}
+	},
+	{
+		"region": "westeurope",
+		"start": 395,
+		"end": 476,
+		"title": {
+			"en": "Western Roman Empire",
+			"pt": "Império Romano do Ocidente"
+		},
+		"description": {
+			"en": "395 AD — 476 AD",
+			"pt": "395 d.C. — 476 d.C."
+		},
 		"image": "img/Placeholder.png",
 		"text": {
 			"en": "English Text",

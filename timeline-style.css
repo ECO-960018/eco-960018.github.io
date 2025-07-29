@@ -2,7 +2,7 @@
 
 * {
 	box-sizing: border-box;
-	font-family: "League Spartan", sans-serif;
+	font-family: "League Spartan", "FontAwesome", sans-serif;
 	line-height: normal;
 }
 	
@@ -16,41 +16,22 @@ body {
 	font-family: sans-serif;
 	background: #fdfaf4;
 }
-/*
-nav {
-	width: auto;
-	height: 200px;
-	background-color: #333333;
-	font-weight: bold;
-	position: relative;
-}
-
-nav a {
-	text-align: center;
-	padding: 7px 12px 2px 12px;
-	color: #fff;
-	text-decoration: none;
-}
-	
-nav a:hover {
-	background-color: #e8c12c;
-	color: #333333;
-	border-radius: 10px;
-	position: relative;
-	bottom: 4px;
-}
-
-.navbox {
-	font-size: 30px;
-	width: calc(100vw - 220px);
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}*/
 
 .navbox {
 	display: flex;
 	background-color: #333;
+}
+
+.navbox-a {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+#logo {
+	width:200px;
+	height:200px;
+	float: left;
 }
 
 .navbox-b {
@@ -60,9 +41,13 @@ nav a:hover {
 	width: 100%;
 }
 
+.titleb {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
 .title {
-	margin-top: 0;
-	margin-bottom: 5vh;
 	color: white;
 	font-size: 3.1vw;
 }
@@ -72,8 +57,14 @@ nav a:hover {
 	background-color: #333;
 }
 
-.lContainer {float: left;}
-.rContainer {float: right;}
+.navbarM {
+	overflow: hidden;
+	background-color: #333;
+	display: none;
+}
+
+.lContainer {float: left; margin: auto;}
+.rContainer {float: right; margin: auto;}
 
 /* Links inside the navbar */
 .navbar a {
@@ -102,11 +93,9 @@ nav a:hover {
 	padding: 14px 16px;
 	background-color: inherit;
 	font-family: inherit;
-	margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
-.dropdown-content a:hover, .navbar a:hover, .dropdown:hover .dropbtn {
+.dropdown-content a:hover, .navbar a:hover, .dropdown:hover .dropbtn, .option:hover{
 	background-color: #e8c12c;
 	color: #333;
 	border-radius: 10px;
@@ -117,7 +106,6 @@ nav a:hover {
   display: none;
   position: absolute;
   background-color: #333;
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -143,36 +131,19 @@ nav a:hover {
 	color: #333333;
 	border-radius: 10px;
 	position: relative;
-	padding: 14px 16px;
+	padding: 14px;
 }
 
-/*.mapButton {
-	color: #fff;
-	padding: 8px 12px 2px 12px;
-	margin-right: 20px;
-}
-	
-.mapButton:hover {
-	background-color: #e8c12c;
-	color: #333333;
-	border-radius: 10px;
-	position: relative;
-	bottom: 4px;
-}*/
+#language-select {display: flex; flex-direction: column;}
+#language-select input {display: none;}
+#language-select input:checked .option {background-color: #e8c12c;}
+.option {padding: 6px 20px;}
 
-#language-select {
-	font-size: 30px;
-	background-color: #333;
-	border: none;
-	padding: 14px 16px;
-}
+#language-select input:checked + label .option {background-color: #e8c12c;}
 
-select#language-select option[value="pt"]   { background-image:url(pt.png);   }
-
-#logo {
-	width:200px;
-	height:200px;
-	float: left;
+#language-select label img{
+	width: 30px;
+	height: 30px;
 }
 
 .flexbox {
@@ -181,19 +152,26 @@ select#language-select option[value="pt"]   { background-image:url(pt.png);   }
 	width: 100%;
 }
 
-aside {
-	min-width: 152px;
-	background-color: #3c3c3a;
-	color: #fff;
+.buttonc {
+	position:relative;
+	margin-top: 5px;
+	float: left;
+	height: 0px;
 }
 
-.side {
-	position: sticky;
-	top:0;
+.buttonc a {
+	width: 100%;
+	color: white;
+	background-color: #333;
+	padding: 7px 10px 5px 5px;
+	border-radius: 0px 10px 10px 0px;
 }
 
-.side a {
-	text-decoration: none;
+#side {
+	justify-content: flex-start;
+	background-color: #333;
+	transition: 1.5s;
+	display: block;
 }
 
 .age-select {
@@ -289,28 +267,28 @@ svg:active {
 }
 
 .sidebar img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
+	max-width: 100%;
+	height: auto;
+	margin-top: 10px;
 }
 
 .sidebar button {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: #876c3d;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	background: none;
+	border: none;
+	font-size: 20px;
+	cursor: pointer;
+	color: #876c3d;
 }
 
 .zoom-controls {
-  position: fixed;
-  bottom: 20px;
-  left: 4px;
-  display: flex;
-  gap: 8px;
+	position: fixed;
+	bottom: 20px;
+	left: 4px;
+	display: flex;
+	gap: 8px;
 }
 
 .zoom-controls button {
@@ -327,11 +305,9 @@ svg:active {
 	color: #333333;}
 
 /*TAGS*/
-.event-type-test {
-  stroke-dasharray: 4 2;
-}
+.event-type-uncertain {stroke-dasharray: 4 2;}
 
-.event-type-person text { fill: #2ca02c; }
+.event-type-person {rx: 4px;}
 .event-type-text text { fill: #3366cc; }
 
 /*Connectors*/
@@ -345,13 +321,12 @@ svg:active {
 	opacity: 0.1;
 }
 
-.connection-type-military {
-  stroke-dasharray: 4 2;
-}
-
-.connection-type-cultural {
-  stroke: darkgreen;
-}
+.connection-type-general {stroke-dasharray: none;}
+.connection-type-uncertain {stroke-dasharray: 4 2;}
+.connection-type-author {stroke-dasharray: none;}
+.connection-type-influence {stroke-dasharray: 2 1;}
+.connection-type-military {stroke-dasharray: 4 2;}
+.connection-type-cultural {stroke-dasharray: 1 1;}
 
 .connection-path {
   cursor: pointer;
@@ -361,6 +336,13 @@ svg:active {
   stroke: #007acc;
   stroke-width: 2.5;
 }
+
+.group-event {
+  stroke-dasharray: 4 2;
+  stroke: #000;
+  rx: 4;
+}
+
 
 /*SCROLLBARS*/
 
@@ -383,4 +365,21 @@ svg:active {
   bottom: 10px;
   left: 0;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+	.navbar {display: none;}
+	.navbarM {display: block;}
+	.navbox-a{width: 100px;}
+	#logo {height: auto; width: auto;}
+	.title {font-size: 16px; padding: 10px 20px;}
+	
+	.dropdown .dropbtn {font-size: 16px; padding: 0px 10px;}
+	.language {float: right;}
+	
+	.age-select {width: 100px; height: 30px; font-size: 10px; padding: 0px;}
+	.zoom-controls {flex-direction: column;left: 30px;}
+	.zoom-controls button {font-size: 20px;}
+	.buttonc {margin-top: 1px;}
+	.buttonc a {font-size: 10px; padding: 6px 8px 5px 5px;}
 }

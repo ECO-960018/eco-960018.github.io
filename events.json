@@ -1,683 +1,2823 @@
 [
   {
-	"id": "test01",
+    "id": "test01",
     "year": -10000,
     "region": "africa",
     "title": "TEST 01",
     "description": "Tooltip placeholder",
-	"image": "img/Placeholder.png",
-	"text": "Event Placeholder",
-	"tags": ["civilization"],
-	"connections": [
-    { "target": "test02", "type": "cultural", "label": "Influenced" },
-    { "target": "test03", "type": "military", "label": "Conquered" }
-	],
-	"priority": 1,
-	"lane": 1,
-	"type": "civ"
+    "image": "img/Placeholder.png",
+    "text": "Event Placeholder",
+    "group": true,
+    "start": -10000,
+    "end": -7000,
+    "tags": [
+      "civilization"
+    ],
+    "connections": [
+      {
+        "target": "test03",
+        "type": "cultural",
+        "label": {
+          "en": "Influenced",
+          "pt": "Influenciou"
+        }
+      },
+      {
+        "target": "test02",
+        "type": "military",
+        "label": {
+          "en": "Conquered",
+          "pt": "Conquistou"
+        }
+      }
+    ],
+    "priority": 1,
+    "lane": 1,
+    "type": "uncertain"
   },
-  
   {
     "id": "test02",
-	"year": -9000,
+    "year": -9000,
     "region": "africa",
     "title": "TEST 02",
     "description": "Priority 2",
-	"image": "img/Placeholder.png",
-	"text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-	"tags": ["civilization"],
-	"priority": 2,
-	"lane": 2,
-	"type": "war",
-	"icon": "⚔"
+    "image": "img/Placeholder.png",
+    "text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "group": true,
+    "tags": [
+      "civilization"
+    ],
+    "priority": 2,
+    "lane": 2,
+    "type": "war"
   },
-  
   {
-	"id": "test03",
+    "id": "test03",
     "year": -8000,
     "region": "africa",
     "title": "TEST 03",
     "description": "Priority 3",
-	"image": "img/Placeholder.png",
-	"text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-	"tags": ["civilization"],
-	"priority": 3,
+    "image": "img/Placeholder.png",
+    "text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "group": true,
+    "tags": [
+      "people"
+    ],
+    "connections": [
+      {
+        "target": "test04",
+        "type": "author",
+        "label": {
+          "en": "Created",
+          "pt": "Criou"
+        }
+      }
+    ],
+    "priority": 3,
     "lane": 0,
-	"type": "person"
+    "type": "person"
   },
-  
   {
+    "id": "test04",
     "year": -7000,
     "region": "africa",
     "title": "TEST 04",
     "description": "Priority 4",
-	"image": "img/Placeholder.png",
-	"text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-	"priority": 4,
-	"tags": ["civilization"],
-    "map": true
+    "image": "img/Placeholder.png",
+    "text": "Event Placeholder<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "priority": 4,
+    "group": true,
+    "tags": [
+      "civilization"
+    ]
   },
-  
-	{
-		"id": "gen10000bc",
-		"year": -10000,
-		"region": "general",
-		"title": {
-			"en": "Neolithic Revolution",
-			"pt": "Revolução do Neolítico"
-		},
-		"description": {
-			"en": "Placeholder description.",
-			"pt": "Descrição temporária."
-		},
-		"image": "img/Placeholder.png",
-		"text": {
-			"en": "English Text",
-			"pt": "Texto em Português"
-		},
-		"tags": ["civilization"],
-		"connections": [
-			{"target": "", "type": "cultural", "label": "Influenced"}
-		],
-		"priority": 1,
-		"lane": 2,
-		"type": "event"
-	},
-	{
-		"id": "gen2200bc",
-		"year": -2200,
-		"region": "general",
-		"title": {
-			"en": "4.2-kiloyear event",
-			"pt": "Mudança Climática de 4200 bp"
-		},
-		"description": {
-			"en": "Placeholder description.",
-			"pt": "Descrição temporária."
-		},
-		"image": "img/Placeholder.png",
-		"text": {
-			"en": "English Text",
-			"pt": "Texto em Português"
-		},
-		"tags": ["civilization"],
-		"connections": [
-			{"target": "", "type": "cultural", "label": "Influenced"}
-		],
-		"priority": 1,
-		"lane": 2,
-		"type": "event"
-	},
-	{
-		"year": -1200,
-		"region": "general",
-		"title": {
-				"en": "Bronze Age Collapse",
-				"pt": "Colapso da Idade do Bronze"
-			},
-		"description": {
-				"en": "Major Eastern Mediterranean civilizations fall; Sea Peoples invade.",
-				"pt": "Descrição temporária."
-			},
-		"image": "img/Placeholder.png",
-		"text": {
-			"en": "English Text",
-			"pt": "Texto em Português"
-		},
-		"tags": ["civilization"],
-		"connections": [
-			{"target": "", "type": "cultural", "label": "Influenced"}
-		],
-		"priority": 1,
-		"lane": 2,
-		"type": "event"
-	},
-	{
-		"year": -300,
-		"region": "general",
-		"title": "Hellenistic Period",
-		"description": "Placeholder",
-		"map": true
-	},
-	{
-		"id": "gen1914",
-		"year": 1914,
-		"region": "general",
-		"title": "First World War",
-		"description": "1914–1918 global conflict.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "war"],
-		"connections": [
-		{ "target": "", "type": "cultural", "label": "Influenced" }
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "war"
-	},
-  
-	{
-		"id": "a3100bc",
-		"year": -3100,
-		"region": "africa",
-		"title": "Unification of Egypt",
-		"description": "Narmer unites Upper and Lower Egypt, founding the First Dynasty.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["civilization"],
-		"connections": [
-		{ "target": "", "type": "cultural", "label": "Influenced" }
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "civ"
-	},
-
-	{
-		"year": -6000,
-		"region": "mesopotamia",
-		"title": "Mesopotamian Religion",
-		"description": "Placeholder tooltip",
-		"tags": ["religion"],
-		"map": true
-	},
-	{
-		"id": "meso5000BC",
-		"year": -5000,
-		"region": "mesopotamia",
-		"title": "Foundation of Uruk",
-		"description": "The first urban settlements like Uruk emerge in Sumer.",
-		"tags": ["civilization"],
-		"connections": ["meso4000BC"],
-		"priority": 1,
-		"lane": 1,
-		"map": true
-	},
-	{
-		"id": "meso4000BC",
-		"year": -4000,
-		"region": "mesopotamia",
-		"title": "Temple Economy",
-		"description": "Tooltip placeholder",
-		"tags": ["politics"],
-		"connections": ["meso3800BC"],
-		"priority": 2,
-		"lane": 1
-	},
-	{
-		"id": "meso3800BC",
-		"year": -3800,
-		"region": "mesopotamia",
-		"title": "Record Keeping",
-		"description": "Tooltip placeholder",
-		"tags": ["science", "politics"],
-		"connections": ["meso3200BC"],
-		"priority": 2,
-		"lane": 2
-	},
-	{
-		"id": "meso3200BC",
-		"year": -3200,
-		"region": "mesopotamia",
-		"title": "Creation of Writing",
-		"description": "Tooltip placeholder",
-		"tags": ["science"],
-		"connections": [],
-		"priority": 1
-	},
-	{
-		"year": -2600,
-		"region": "mesopotamia",
-		"title": "Literature",
-		"description": "Tooltip placeholder",
-		"priority": 1,
-		"tags": ["culture"]
-	},
-	{
-		"year": -2100,
-		"region": "mesopotamia",
-		"title": "Epic of Gilgamesh",
-		"description": "Tooltip placeholder",
-		"priority": 1,
-		"tags": ["science", "culture", "text"],
-		"type": "text",
-		"icon": "🖹"
-	},
-	{
-		"year": -1700,
-		"region": "mesopotamia",
-		"title": "Atra-Hasis",
-		"description": "Tooltip placeholder",
-		"priority": 1,
-		"tags": ["religion", "text"]
-	},
-	{
-		"year": -1600,
-		"region": "mesopotamia",
-		"title": "Eridu Genesis",
-		"description": "Tooltip placeholder",
-		"priority": 1,
-		"tags": ["religion", "text"]
-	},
-	
-	{
-		"year": -10000,
-		"region": "levant",
-		"title": {
-				"en": "Natufian Culture",
-				"pt": "Cultura Natufiana"
-			},
-		"description": {
-				"en": "One of the first cultures to adopt a sedentary lifestyle before the full Neolithic package. Natufians inhabited the Levant and practiced intensive foraging and proto-farming.",
-				"pt": "Descrição temporária."
-			},
-		"image": "img/Placeholder.png",
-		"text": {
-			"en": "English Text",
-			"pt": "Texto em Português"
-		},
-		"tags": ["civilization"],
-		"connections": [
-			{"target": "", "type": "cultural", "label": "Influenced"}
-		],
-		"priority": 1,
-		"lane": 2,
-		"type": "civ"
-	},
-	{
-		"year": -8000,
-		"region": "levant",
-		"title": "City of Jericho",
-		"description": "Jericho, one of the world's oldest cities, shows evidence of early walls and towers. Suggests complex social coordination and proto-urban life in the Levant.",
-		"priority": 1,
-		"tags": ["civilization"],
-		"map": true
-	},
-	{
-		"year": -1500,
-		"region": "levant",
-		"title": "Canaanite Religion",
-		"description": "Pantheon led by El, with Baal, Anat, Asherah, and others. Forms the religious backdrop for early Israelite theology and later monotheistic reform.",
-		"priority": 1,
-		"tags": ["religion"],
-		"map": true
-	},
-	{
-		"year": -1400,
-		"region": "levant",
-		"title": "Ugaritic Alphabet",
-		"description": "An early alphabetic script developed in the city of Ugarit. Distinct from cuneiform and precursor to later Phoenician script.",
-		"priority": 1,
-		"tags": ["technology"],
-		"map": true
-	},
-	{
-		"year": -1200,
-		"region": "levant",
-		"title": "Early Israelites",
-		"description": "Archaeological evidence of small, egalitarian hilltop villages with no pig bones and few luxury items — early markers of Israelite cultural distinctiveness.",
-		"priority": 1,
-		"tags": ["civilization"],
-		"map": true
-	},
-	{
-		"year": -900,
-		"region": "levant",
-		"title": "Yahwism",
-		"description": "Yahweh begins to be worshiped as a supreme or sole deity among the Israelites. Likely emerged from earlier henotheistic practices and polemics against Canaanite religion.",
-		"priority": 1,
-		"tags": ["religion"],
-		"map": true
-	},
-	{
-		"year": -586,
-		"region": "levant",
-		"title": "Destruction of Jerusalem",
-		"description": "Babylonian king Nebuchadnezzar II destroys the First Temple.",
-		"priority": 1,
-		"tags": ["civilization"],
-		"priority": 1,
-		"lane": 2
-	},
-	{
-		"year": -530,
-		"region": "levant",
-		"title": "Composition of the Torah",
-		"description": "Placeholder tooltip.",
-		"tags": ["religion"],
-		"priority": 1,
-		"lane": 2
-	},
-	{
-		"year": 33,
-		"region": "levant",
-		"title": "Crucifixion of Jesus",
-		"description": "Foundational moment for Christianity, taking place in Roman Judea.",
-		"priority": 1,
-		"tags": ["religion"],
-		"map": true
-	},
-  
-	{
-		"id": "i2000bc",
-		"year": -2000,
-		"region": "iran",
-		"title": "Avestan Period Begins",
-		"description": "Start of the early Indo-Iranian religious tradition, precursor to Zoroastrianism.",
-		"influenced_by": [],
-		"influences": ["i500bc"],
-		"priority": 2,
-		"tags": ["civilization"],
-		"map": false
-	},
-	{
-		"id": "i500bc",
-		"year": -550,
-		"region": "iran",
-		"title": "Achaemenid Empire",
-		"description": "Darius I rules over a vast empire stretching from Greece to India.",
-		"influenced_by": ["i2000bc"],
-		"influences": ["g430bc"],
-		"priority": 1,
-		"tags": ["civilization"],
-		"map": true
-	},
-
-	{
-		"year": -750,
-		"region": "easteurope",
-		"title": "Illiad and Odyssey",
-		"description": "Epic Greek poems attributed to Homer.",
-		"priority": 2,
-		"tags": ["culture"]
-	},  
-	{
-		"year": -700,
-		"region": "easteurope",
-		"title": "Rise of the Scythians",
-		"description": "Nomadic tribes dominate the Pontic steppe.",
-		"priority": 2,
-		"tags": ["civilization"],
-		"map": false
-	},
-	{
-		"id": "g430bc",
-		"year": -430,
-		"region": "easteurope",
-		"title": "Plague of Athens",
-		"description": "A deadly epidemic strikes Athens during the Peloponnesian War.",
-		"influenced_by": ["i500bc"],
-		"influences": [""],
-		"priority": 3,
-		"tags": ["disaster"],
-		"map": false
-	},
-	{
-		"id": "ee1453",
-		"year": 1453,
-		"region": "easteurope",
-		"title": "Fall of Constantinople",
-		"description": "Placeholder tooltip",
-		"priority": 1,
-		"tags": ["civilization"],
-		"map": false
-	},
-
-	{
-		"id": "we1667",
-		"year": -20,
-		"region": "westeurope",
-		"title": "Aeneid",
-		"description": "Epic poem by the Roman poet Virgil (70 BC – 19 BC)",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "culture", "text"],
-		"connections": [
-		{"target": "", "type": "", "label": ""}
-		],
-		"priority": 3,
-		"lane": 0
-	},
-	{
-		"id": "we1300",
-		"year": 1300,
-		"region": "westeurope",
-		"title": "Renaissance",
-		"description": "Tooltip placeholder",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["philosophy", "religion", "science", "politics", "culture", "general"],
-		"connections": [
-		{ "target": "", "type": "cultural", "label": "Influenced" },
-		{ "target": "", "type": "military", "label": "Conquered" }
-		],
-		"priority": 1,
-		"lane": 1
-	},
-	{
-		"year": 1637,
-		"region": "westeurope",
-		"title": "René Descartes",
-		"description": "French Philosopher, 1596 – 1650.",
-		"tags": ["philosophy","people", "france"],
-		"priority": 2,
-		"map": false
-	},
-	{
-		"id": "we1667",
-		"year": 1667,
-		"region": "westeurope",
-		"title": "Paradise Lost",
-		"description": "Epic poem by the English poet John Milton (1608–1674)",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "religion", "culture", "text"],
-		"connections": [
-		{"target": "", "type": "", "label": ""}
-		],
-		"priority": 3,
-		"lane": 0
-	},
-	{
-		"id": "we1680",
-		"year": 1680,
-		"region": "westeurope",
-		"title": "Enlightenment",
-		"description": "17th- to 18th-century European cultural movement.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "philosophy", "science", "politics"],
-		"connections": [
-		{ "target": "we1717", "type": "idea", "label": "Influenced" }
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "idea"
-	},
-
-	{
-		"year": 1688,
-		"region": "westeurope",
-		"title": "Glorious Revolution",
-		"description": "British revolution of 1688.",
-		"tags": ["politics", "britain"],
-		"priority": 3,
-		"lane": 2
-	},
-	{
-		"id": "we1717",
-		"year": 1717,
-		"region": "westeurope",
-		"title": "Freemasonry",
-		"description": "Group of fraternal organizations.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "group", "philosophy", "politics", "britain"],
-		"connections": [
-		{ "target": "a1775", "type": "idea", "label": "Influenced" },
-		{ "target": "we1789", "type": "idea", "label": "Influenced" }
-		],
-		"priority": 2,
-		"lane": 1,
-		"type": "group"
-	},
-	{
-		"id": "we1789",
-		"year": 1789,
-		"region": "westeurope",
-		"title": "French Revolution",
-		"description": "Revolution in France from 1789 to 1799.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "war", "philosophy", "politics", "france"],
-		"connections": [
-		{ "target": "", "type": "cultural", "label": "Influenced" }
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "war"
-	},
-	{
-		"id": "we1803",
-		"year": 1803,
-		"region": "westeurope",
-		"title": "Napoleonic Wars",
-		"description": "Period of relative world peace under British dominance between 1815 and 1914.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "war", "france"],
-		"connections": [
-		{ "target": "", "type": "cultural", "label": "Influenced" }
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "war"
-	},
-	{
-		"id": "we1815",
-		"year": 1815,
-		"region": "westeurope",
-		"title": "Pax Britannica",
-		"description": "Period of relative world peace under British dominance between 1815 and 1914.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "civilization", "politics", "britain"],
-		"connections": [
-		{ "target": "", "type": "cultural", "label": "Influenced" }
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "civ"
-	},
-
-	{
-		"year": 1758,
-		"region": "westeurope",
-		"title": "Emanuel Swedenborg",
-		"description": "Swedish polymath; scientist, engineer, astronomer, anatomist, Christian theologian, philosopher, and mystic, 1688 – 1772.",
-		"tags": ["religion"],
-		"priority": 3,
-		"lane": 2,
-		"map": true
-	},
-	{
-		"year": 1780,
-		"region": "westeurope",
-		"title": "Franz Mesmer",
-		"description": "German physician with an interest in astronomy, 1734 – 1815.",
-		"tags": ["religion"],
-		"priority": 3,
-		"lane": 2,
-		"map": true
-	},
-	{
-		"year": 1910,
-		"region": "westeurope",
-		"title": "Carl Jung",
-		"description": "Swiss psychiatrist, psychotherapist, and psychologist who founded the school of analytical psychology. 1875 – 1961.",
-		"priority": 3,
-		"tags": ["religion"],
-		"map": true
-	},
-
-	{
-		"id": "a1492",
-		"year": 1492,
-		"region": "america",
-		"title": "Discovery of America",
-		"description": "Tooltip Placeholder",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "civilization", "politics"],
-		"connections": [
-		{"target": "", "type": "", "label": ""}
-		],
-		"priority": 1,
-		"lane": 2,
-		"type": "event"
-	},	
-	{
-		"id": "a1775",
-		"year": 1775,
-		"region": "america",
-		"title": "American Revolution",
-		"description": "1765–1783 colonial rebellion forming the United States of America.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "civilization", "politics"],
-		"connections": [
-		{"target": "", "type": "", "label": ""}
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "war"
-	},
-	{
-		"id": "a1823",
-		"year": 1823,
-		"region": "america",
-		"title": "Monroe Doctrine",
-		"description": "1823 U.S. foreign policy on the Western Hemisphere.",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "civilization", "politics"],
-		"connections": [
-		{"target": "", "type": "", "label": ""}
-		],
-		"priority": 1,
-		"lane": 1,
-		"type": "idea"
-	},
-	{
-		"id": "a1910",
-		"year": 1910,
-		"region": "america",
-		"title": "Hollywood",
-		"description": "Placeholder tooltip",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "culture"],
-		"connections": [
-		{"target": "", "type": "", "label": ""}
-		],
-		"priority": 3,
-		"lane": 2,
-		"type": ""
-	},
-	{
-		"id": "a2025",
-		"year": 2025,
-		"region": "america",
-		"title": "This Graph",
-		"description": "Big brain nibba typa shit",
-		"image": "img/Placeholder.png",
-		"text": "Event Placeholder",
-		"tags": ["general", "culture"],
-		"connections": [
-		{"target": "", "type": "", "label": ""}
-		],
-		"priority": 3,
-		"lane": 2,
-		"type": ""
-	}
+  {
+    "id": "gen10000bc",
+    "year": -10000,
+    "region": "general",
+    "title": {
+      "en": "Neolithic Revolution",
+      "pt": "Revolução do Neolítico"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English Text",
+      "pt": "Texto em Português"
+    },
+    "tags": [
+      "civilization"
+    ],
+    "connections": [
+      {
+        "target": "",
+        "type": "cultural",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ],
+    "priority": 1,
+    "lane": 2,
+    "type": "event"
+  },
+  {
+    "id": "gen2200bc",
+    "year": -2200,
+    "region": "general",
+    "title": {
+      "en": "4.2-kiloyear event",
+      "pt": "Mudança Climática de 4200 bp"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English Text",
+      "pt": "Texto em Português"
+    },
+    "tags": [
+      "civilization"
+    ],
+    "connections": [
+      {
+        "target": "",
+        "type": "cultural",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ],
+    "priority": 1,
+    "lane": 2,
+    "type": "event"
+  },
+  {
+    "id": "general-1200",
+    "year": -1200,
+    "region": "general",
+    "title": {
+      "en": "Bronze Age Collapse",
+      "pt": "Colapso da Idade do Bronze"
+    },
+    "description": {
+      "en": "Major Eastern Mediterranean civilizations fall; Sea Peoples invade.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English Text",
+      "pt": "Texto em Português"
+    },
+    "tags": [
+      "civilization"
+    ],
+    "connections": [
+      {
+        "target": "",
+        "type": "cultural",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ],
+    "priority": 1,
+    "lane": 2,
+    "type": "event"
+  },
+  {
+    "id": "general-331",
+    "year": -331,
+    "region": "general",
+    "title": {
+      "en": "Hellenistic Period",
+      "pt": "Período Helenístico"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "general1914",
+    "year": 1914,
+    "region": "general",
+    "title": {
+      "en": "First World War",
+      "pt": "Primeira Guerra Mundial"
+    },
+    "description": {
+      "en": "1914–1918 global conflict.",
+      "pt": "Conflito global entre 1914-1918."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "general1939",
+    "year": 1939,
+    "region": "general",
+    "title": {
+      "en": "Second World War",
+      "pt": "Segunda Guerra Mundial"
+    },
+    "description": {
+      "en": "1939–1945 global conflict.",
+      "pt": "Conflito global entre 1939-1945."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "africa-3100",
+    "year": -3100,
+    "region": "africa",
+    "title": {
+      "en": "Unification of Egypt",
+      "pt": "Unificação do Egito"
+    },
+    "description": {
+      "en": "Narmer unites Upper and Lower Egypt, founding the First Dynasty.",
+      "pt": "Narmer une o Alto e Baixo Egito, fundando a Primeira Dinastia"
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-6000",
+    "year": -6000,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Mesopotamian Religion",
+      "pt": "Religião Mesopotâmica"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-5000",
+    "year": -5000,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Foundation of Uruk",
+      "pt": "Fundação de Uruque"
+    },
+    "description": {
+      "en": "The first urban settlements like Uruk emerge in Sumer.",
+      "pt": "Os primeiros assentamentos urbanos como Uruque emergem na Suméria."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "mesopotamia-4000",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-4000",
+    "year": -4000,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Temple Economy",
+      "pt": "Economia de Templo"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "event",
+    "priority": 2,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "mesopotamia-3800",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-3800",
+    "year": -3800,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Record Keeping",
+      "pt": "Manutenção de Registros"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general"
+    ],
+    "type": "event",
+    "priority": 2,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "mesopotamia-3200",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-3200",
+    "year": -3200,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Creation of Writing",
+      "pt": "Criação da Escrita"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "science",
+      "politics",
+      "economy"
+    ],
+    "type": "technology",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "mesopotamia-2600",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-2600",
+    "year": -2600,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Literature",
+      "pt": "Literatura"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "culture"
+    ],
+    "type": "technology",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-2100",
+    "year": -2100,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Epic of Gilgamesh",
+      "pt": "Épico de Gilgamesh"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "culture",
+      "text"
+    ],
+    "type": "text",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-1700",
+    "year": -1700,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Atra-Hasis",
+      "pt": "Atra-Hasis"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia-1600",
+    "year": -1600,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Eridu Genesis",
+      "pt": "Gênesis de Eridu"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia762",
+    "year": 762,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Foundation of Baghdad",
+      "pt": "Fundação de Bagdá"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "mesopotamia2003",
+    "year": 2003,
+    "region": "mesopotamia",
+    "title": {
+      "en": "Second Gulf War",
+      "pt": "Segunda Guerra do Golfo"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-10000",
+    "year": -10000,
+    "region": "levant",
+    "title": {
+      "en": "Natufian Culture",
+      "pt": "Cultura Natufiana"
+    },
+    "description": {
+      "en": "One of the first cultures to adopt a sedentary lifestyle before the full Neolithic package. Natufians inhabited the Levant and practiced intensive foraging and proto-farming.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English Text",
+      "pt": "Texto em Português"
+    },
+    "tags": [
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "",
+        "type": "cultural",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-8000",
+    "year": -8000,
+    "region": "levant",
+    "title": {
+      "en": "City of Jericho",
+      "pt": "Cidade de Jericó"
+    },
+    "description": {
+      "en": "Jericho, one of the world's oldest cities, shows evidence of early walls and towers. Suggests complex social coordination and proto-urban life in the Levant.",
+      "pt": "Jericó, uma das cidades mais antigas do mundo, exibe evidência de muralhas e torres primitivas."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "civilization"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-1500",
+    "year": -1500,
+    "region": "levant",
+    "title": {
+      "en": "Canaanite Religion",
+      "pt": "Religião Cananeia"
+    },
+    "description": {
+      "en": "Pantheon led by El, with Baal, Anat, Asherah, and others. Forms the religious backdrop for early Israelite theology and later monotheistic reform.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion"
+    ],
+    "type": "concept",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-1400",
+    "year": -1400,
+    "region": "levant",
+    "title": {
+      "en": "Ugaritic Alphabet",
+      "pt": "Alfabeto Ugarítico"
+    },
+    "description": {
+      "en": "An early alphabetic script developed in the city of Ugarit. Distinct from cuneiform and precursor to later Phoenician script.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "science"
+    ],
+    "type": "technology",
+    "priority": 2,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "levant-1390",
+        "type": "general",
+        "label": {
+          "en": "Written in",
+          "pt": "Escrito em"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-1200",
+    "year": -1200,
+    "region": "levant",
+    "title": {
+      "en": "Early Israelites",
+      "pt": "Primeiros Israelitas"
+    },
+    "description": {
+      "en": "Archaeological evidence of small, egalitarian hilltop villages with no pig bones and few luxury items — early markers of Israelite cultural distinctiveness.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-900",
+    "year": -900,
+    "region": "levant",
+    "title": {
+      "en": "Yahwism",
+      "pt": "Javismo"
+    },
+    "description": {
+      "en": "Yahweh begins to be worshiped as a supreme or sole deity among the Israelites. Likely emerged from earlier henotheistic practices and polemics against Canaanite religion.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion"
+    ],
+    "type": "idea",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-586",
+    "year": -586,
+    "region": "levant",
+    "title": {
+      "en": "Siege of Jerusalem",
+      "pt": "Cerco a Jerusalém"
+    },
+    "description": {
+      "en": "Babylonian king Nebuchadnezzar II destroys the First Temple.",
+      "pt": "Cerco a Jerusalém por Nabucodonosor II da Babilônia, resultando na destruição do Primeiro Templo."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-530",
+    "year": -530,
+    "region": "levant",
+    "title": {
+      "en": "Composition of the Torah",
+      "pt": "Composição da Torá"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-4",
+    "year": -4,
+    "region": "levant",
+    "title": {
+      "en": "Jesus",
+      "pt": "Jesus"
+    },
+    "description": {
+      "en": "Cool dude.",
+      "pt": "Líder judáico e principal figura do Cristianismo, 4 a.C. - 33 d.C."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion",
+      "people"
+    ],
+    "type": "person",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant33",
+    "year": 33,
+    "region": "levant",
+    "title": {
+      "en": "Crucifixion of Jesus",
+      "pt": "Crucificação de Jesus"
+    },
+    "description": {
+      "en": "Foundational moment for Christianity, taking place in Roman Judea.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant70",
+    "year": 70,
+    "region": "levant",
+    "title": {
+      "en": "Destruction of Jerusalem",
+      "pt": "Destruição de Jerusalém"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "iran-2000",
+    "year": -2000,
+    "region": "iran",
+    "title": {
+      "en": "Avestan Period Begins",
+      "pt": "Início do Período Avéstico"
+    },
+    "description": {
+      "en": "Start of the early Indo-Iranian religious tradition, precursor to Zoroastrianism.",
+      "pt": "Início da tradição religiosa Indo-Iraniana, precussora do Zoroastrianismo."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization",
+      "religion"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "iran-550",
+    "year": -550,
+    "region": "iran",
+    "title": {
+      "en": "Achaemenid Empire",
+      "pt": "Império Aquemênida"
+    },
+    "description": {
+      "en": "Darius I rules over a vast empire stretching from Greece to India.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-750",
+    "year": -750,
+    "region": "easteurope",
+    "title": {
+      "en": "Illiad and Odyssey",
+      "pt": "Ilíada & Odisséia"
+    },
+    "description": {
+      "en": "Epic Greek poems attributed to Homer.",
+      "pt": "Poemas épicos gregos atribuídos a Homero."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "culture",
+      "text"
+    ],
+    "type": "text",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-700",
+    "year": -700,
+    "region": "easteurope",
+    "title": {
+      "en": "Rise of the Scythians",
+      "pt": "Ascenção dos Citas"
+    },
+    "description": {
+      "en": "Nomadic tribes dominate the Pontic steppe.",
+      "pt": "Tribos nômades dominam a estepe pôntica."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-431",
+    "year": -431,
+    "region": "easteurope",
+    "title": {
+      "en": "Peloponnesian War",
+      "pt": "Guerra do Peloponeso"
+    },
+    "description": {
+      "en": "Second Peloponnesian War, between Athens and Sparta (431–404 BC).",
+      "pt": "Segunda Guerra do Peloponeso, entre Atenas e Esparta (431–404 a.C.)."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-430",
+    "year": -430,
+    "region": "easteurope",
+    "title": {
+      "en": "Plague of Athens",
+      "pt": "Peste de Atenas"
+    },
+    "description": {
+      "en": "A deadly epidemic strikes Athens during the Peloponnesian War.",
+      "pt": "Uma epidemia mortal atinge Atenas durante a Guerra do Peloponeso."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 2,
+    "lane": 0,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-400",
+    "year": -400,
+    "region": "easteurope",
+    "title": {
+      "en": "Plato",
+      "pt": "Platão"
+    },
+    "description": {
+      "en": "Greek philosopher (c. 427 – 348 BC).",
+      "pt": "Filósofo grego (c. 427 – 348 a.C.)."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "philosophy",
+      "people"
+    ],
+    "type": "person",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "easteurope-387",
+        "type": "general",
+        "label": {
+          "en": "Founded by",
+          "pt": "Fundado por"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-387",
+    "year": -387,
+    "region": "easteurope",
+    "title": {
+      "en": "Academy",
+      "pt": "Academia"
+    },
+    "description": {
+      "en": "Ancient philosophical center founded by Plato.",
+      "pt": "Antigo centro filosófico fundado por Platão."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "philosophy",
+      "group"
+    ],
+    "type": "group",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-330",
+    "year": -330,
+    "region": "easteurope",
+    "title": {
+      "en": "Alexander the Great",
+      "pt": "Alexandre, o Grande"
+    },
+    "description": {
+      "en": "King of Macedon from 336 to 323 BC. Founder of the Macedonian Empire.",
+      "pt": "Rei da Macedônia de 336 até 323 a.C. Fundou o Império Macedônico."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization",
+      "war",
+      "people"
+    ],
+    "type": "person",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope1453",
+    "year": 1453,
+    "region": "easteurope",
+    "title": {
+      "en": "Fall of Constantinople",
+      "pt": "Queda de Constantinopla"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope-20",
+    "year": -20,
+    "region": "westeurope",
+    "title": {
+      "en": "Aeneid",
+      "pt": "Eneida"
+    },
+    "description": {
+      "en": "Epic poem by the Roman poet Virgil (70 BC – 19 BC)",
+      "pt": "Poema épico do poeta romano Virgílio (70 a.C. – 19 a.C.)"
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "culture",
+      "text"
+    ],
+    "type": "text",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1300",
+    "year": 1300,
+    "region": "westeurope",
+    "title": {
+      "en": "Renaissance",
+      "pt": "Renascença"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "philosophy",
+      "religion",
+      "science",
+      "politics",
+      "culture"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1637",
+    "year": 1637,
+    "region": "westeurope",
+    "title": {
+      "en": "René Descartes",
+      "pt": "René Descartes"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "philosophy",
+      "people"
+    ],
+    "type": "person",
+    "priority": 2,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "general",
+        "label": {
+          "en": "Null",
+          "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1667",
+    "year": 1667,
+    "region": "westeurope",
+    "title": {
+      "en": "Paradise Lost",
+      "pt": "Paraíso Perdido"
+    },
+    "description": {
+      "en": "Epic poem by the English poet John Milton (1608–1674)",
+      "pt": "Poema épico do autor inglês John Milton (1608–1674)."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion",
+      "culture",
+      "text"
+    ],
+    "type": "text",
+    "priority": 3,
+    "lane": 0,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1680",
+    "year": 1680,
+    "region": "westeurope",
+    "title": {
+      "en": "Enlightenment",
+      "pt": "Iluminismo"
+    },
+    "description": {
+      "en": "17th- to 18th-century European cultural movement.",
+      "pt": "Movimento cultural europeu dos séculos 17 e 18."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "philosophy",
+      "science",
+      "politics"
+    ],
+    "type": "idea",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "westeurope1717",
+        "type": "general",
+        "label": {
+          "en": "Influenced",
+          "pt": "Influenciou"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1688",
+    "year": 1688,
+    "region": "westeurope",
+    "title": {
+      "en": "Glorious Revolution",
+      "pt": "Revolução Gloriosa"
+    },
+    "description": {
+      "en": "British revolution of 1688.",
+      "pt": "Revolução britânica de 1688."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general"
+    ],
+    "type": "event",
+    "priority": 3,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1717",
+    "year": 1717,
+    "region": "westeurope",
+    "title": {
+      "en": "Freemasonry",
+      "pt": "Maçonaria"
+    },
+    "description": {
+      "en": "Group of fraternal organizations.",
+      "pt": "Grupo de organizações fraternais"
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "group",
+      "philosophy",
+      "politics"
+    ],
+    "type": "group",
+    "priority": 2,
+    "lane": 1,
+    "connections": [
+      {
+        "target": "america1775",
+        "type": "idea",
+        "label": {
+          "en": "Organized",
+          "pt": "Organizou"
+        }
+      },
+      {
+        "target": "westeurope1789",
+        "type": "idea",
+        "label": {
+          "en": "Organized",
+          "pt": "Organizou"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1789",
+    "year": 1789,
+    "region": "westeurope",
+    "title": {
+      "en": "French Revolution",
+      "pt": "Revolução Francesa"
+    },
+    "description": {
+      "en": "Revolution in France from 1789 to 1799.",
+      "pt": "Revolução na França entre 1789 e 1799."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war",
+      "philosophy",
+      "politics"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1803",
+    "year": 1803,
+    "region": "westeurope",
+    "title": {
+      "en": "Napoleonic Wars",
+      "pt": "Guerras Napoleônicas"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1815",
+    "year": 1815,
+    "region": "westeurope",
+    "title": {
+      "en": "Pax Britannica",
+      "pt": "Pax Britannica"
+    },
+    "description": {
+      "en": "Period of relative world peace under British dominance between 1815 and 1914.",
+      "pt": "Período de relativa paz mundial sob o domínio britânico entre 1815 e 1914."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization",
+      "politics"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1758",
+    "year": 1758,
+    "region": "westeurope",
+    "title": {
+      "en": "Emanuel Swedenborg",
+      "pt": "Emanuel Swedenborg"
+    },
+    "description": {
+      "en": "Swedish polymath; scientist, engineer, astronomer, anatomist, Christian theologian, philosopher, and mystic, 1688 – 1772.",
+      "pt": "Polímata sueco; cientista, engenheiro, astrônomo, anatomista, teólogo Cristão, folósofo e místico, 1688 – 1772."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion",
+      "philosophy",
+      "person"
+    ],
+    "type": "person",
+    "priority": 3,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1780",
+    "year": 1780,
+    "region": "westeurope",
+    "title": {
+      "en": "Franz Mesmer",
+      "pt": "Franz Mesmer"
+    },
+    "description": {
+      "en": "German physician with an interest in astronomy, 1734 – 1815.",
+      "pt": "Médico alemão com um interesse em astronomia, 1734 – 1815."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "religion",
+      "esotericism",
+      "person"
+    ],
+    "type": "person",
+    "priority": 3,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1910",
+    "year": 1910,
+    "region": "westeurope",
+    "title": {
+      "en": "Carl Jung",
+      "pt": "Carl Jung"
+    },
+    "description": {
+      "en": "Swiss psychiatrist, psychotherapist, and psychologist who founded the school of analytical psychology. 1875 – 1961.",
+      "pt": "Psiquiatra, psicoterapeuta e psicólogo suíço que fundou a escola de psicologia analítica (1875 – 1961)."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "person",
+      "science",
+      "esotericism",
+      "religion"
+    ],
+    "type": "person",
+    "priority": 3,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "westeurope1916",
+    "year": 1916,
+    "region": "westeurope",
+    "title": {
+      "en": "Sykes–Picot Agreement",
+      "pt": "Acordo Sykes–Picot"
+    },
+    "description": {
+      "en": "Secret 1916 agreement between the United Kingdom and France.",
+      "pt": "Acordo secreto entre Reino Unido e França de 1916."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "politics",
+      "civilization"
+    ],
+    "type": "general",
+    "priority": 2,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "america1492",
+    "year": 1492,
+    "region": "america",
+    "title": {
+      "en": "Discovery of America",
+      "pt": "Descoberta da América"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "event",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "america1775",
+    "year": 1775,
+    "region": "america",
+    "title": {
+      "en": "American Revolution",
+      "pt": "Revolução Americana"
+    },
+    "description": {
+      "en": "1765–1783 colonial rebellion forming the United States of America.",
+      "pt": "Rebelião colonial entre 1765 e 1783 que formou os Estados Unidos da América."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "war",
+      "civilization"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "america1823",
+    "year": 1823,
+    "region": "america",
+    "title": {
+      "en": "Monroe Doctrine",
+      "pt": "Doutrina de Monroe"
+    },
+    "description": {
+      "en": "1823 U.S. foreign policy on the Western Hemisphere.",
+      "pt": "Política externa de 1823 dos EUA sobre o Hemisfério Ocidental"
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "politics"
+    ],
+    "type": "idea",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "america1910",
+    "year": 1910,
+    "region": "america",
+    "title": {
+      "en": "Hollywood",
+      "pt": "Hollywood"
+    },
+    "description": {
+      "en": "Placeholder description.",
+      "pt": "Descrição temporária."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "culture",
+      "group"
+    ],
+    "type": "group",
+    "priority": 3,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "america2025",
+    "year": 2025,
+    "region": "america",
+    "title": {
+      "en": "This Graph",
+      "pt": "Este gráfico"
+    },
+    "description": {
+      "en": "Big brain nibba typa shit.",
+      "pt": "Coisa de doido."
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "science",
+      "culture",
+      "text"
+    ],
+    "type": "text",
+    "priority": 3,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "null",
+        "type": "null",
+        "label": {
+          "en": "Null",
+          "pt": "Null"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-1274",
+    "year": -1274,
+    "region": "levant",
+    "title": {
+      "en": "Battle of Kadesh",
+      "pt": "Batalha de Cadexe"
+    },
+    "description": {
+      "en": "1274 BC battle between Egyptians and Hittites in the city of Kadesh.",
+      "pt": "Batalha de 1274 a.C. entre egípcios e hititas na cidade de Cadexe."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-1390",
+    "year": -1390,
+    "region": "levant",
+    "title": {
+      "en": "Baal Cycle",
+      "pt": "Ciclo de Baal"
+    },
+    "description": {
+      "en": "Ugaritic text about the Canaanite god Ba'al, a storm god associated with fertility, c. 1,500–1,300 BC.",
+      "pt": "Texto ugarítico sobre o deus cananeu Ba'al, deus da tempestade associado com fertilidade, cerca de 1.500–1.300 a.C."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "Levant-1190",
+    "year": -1190,
+    "region": "levant",
+    "title": {
+      "en": "Destruction of Ugarit",
+      "pt": "Destruição de Ugarite"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization",
+      "war"
+    ],
+    "type": "war",
+    "priority": 2,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-1175",
+    "year": -1175,
+    "region": "levant",
+    "title": {
+      "en": "Philistine Settlement",
+      "pt": "Assentamento dos Filisteus"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope-1200",
+    "year": -1200,
+    "region": "easteurope",
+    "title": {
+      "en": "Sea Peoples",
+      "pt": "Povos do Mar"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "uncertain",
+    "priority": 1,
+    "lane": 1,
+    "connections": [
+      {
+        "target": "levant-1175",
+        "type": "general",
+        "label": {
+          "en": "Probable origin",
+          "pt": "Origem provável"
+        }
+      },
+      {
+        "target": "general-1200",
+        "type": "general",
+        "label": {
+          "en": "Causes",
+          "pt": "Causa"
+        }
+      }
+    ]
+  },
+  {
+    "id": "prophets",
+    "year": -750,
+    "region": "levant",
+    "title": {
+      "en": "Prophets",
+      "pt": "Profetas"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "start": -758,
+    "end": -725,
+    "tags": [
+      "religion",
+      "text"
+    ],
+    "type": "group",
+    "priority": 2,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-750",
+    "year": -750,
+    "region": "levant",
+    "title": {
+      "en": "Amos",
+      "pt": "Amós"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "group": "prophets",
+    "tags": [
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 2,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-740",
+    "year": -740,
+    "region": "levant",
+    "title": {
+      "en": "Hosea",
+      "pt": "Oseias"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "group": "prophets",
+    "tags": [
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 2,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-730",
+    "year": -730,
+    "region": "levant",
+    "title": {
+      "en": "Micah",
+      "pt": "Miqueias"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "group": "prophets",
+    "tags": [
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 2,
+    "lane": 4,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-740b",
+    "year": -740,
+    "region": "levant",
+    "title": {
+      "en": "Proto-Isaiah",
+      "pt": "Proto-Isaias"
+    },
+    "description": {
+      "en": "First part of the Book of Isaiah, chapters 1-39, composed in pre-exilic Judah. Records the words of the 8th-century prophet Isaiah.",
+      "pt": "Primeira parte do Livro de Isaías, capítulos 1-39, composto em Judá pré-exílio. Registra as palavras do profeta do século 8 a.C. Isaías."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 2,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "levant-540",
+        "type": "general",
+        "label": {
+          "en": "Added to",
+          "pt": "Adicionado"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-540",
+    "year": -560,
+    "region": "levant",
+    "title": {
+      "en": "Deutero-Isaiah",
+      "pt": "Deutero-Isaias"
+    },
+    "description": {
+      "en": "Second part of the Book of Isaiah, chapters 40-55, composed during the Babylonian Exile by an anonymous author.",
+      "pt": "Segunda parte do Livro de Isaías, capítulos 40-55, composto durante o Exílio Babilônico por um autor anônimo."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 2,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "levant-520",
+        "type": "general",
+        "label": {
+          "en": "Added to",
+          "pt": "Adicionado"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-520",
+    "year": -520,
+    "region": "levant",
+    "title": {
+      "en": "Trito-Isaiah",
+      "pt": "Trito-Isaias"
+    },
+    "description": {
+      "en": "Third part of the Book of Isaiah, chapters 56-66, composed after the return from the Babylonian Exile by an anonymous author.",
+      "pt": "Segunda parte do Livro de Isaías, capítulos 40-55, composto após o retorno do Exílio Babilônico por um autor anônimo."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "religion",
+      "text"
+    ],
+    "type": "text",
+    "priority": 2,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-1000",
+    "year": -1000,
+    "region": "levant",
+    "title": {
+      "en": "United Monarchy of Israel and Judah",
+      "pt": "Reino Unido de Israel e Judá"
+    },
+    "description": {
+      "en": "Hypothesized Israelite kingdom ruled by the legendary kings Saul, David and Solomon, 10th century BC.",
+      "pt": "Suposto reino israelita governado pelos lendários reis Saul, Davi e Salomão, século 10 a.C."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization",
+      "uncertain"
+    ],
+    "type": "uncertain",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "levant-930a",
+        "type": "uncertain",
+        "label": {
+          "en": "Divided into",
+          "pt": "Dividido em"
+        }
+      },
+      {
+        "target": "levant-930b",
+        "type": "uncertain",
+        "label": {
+          "en": "Divided into",
+          "pt": "Dividido em"
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-960",
+    "year": -960,
+    "region": "levant",
+    "title": {
+      "en": "Solomon's Temple",
+      "pt": "Templo de Salomão"
+    },
+    "description": {
+      "en": "First Temple of Jerusalem, built by king Solomon in the 10th century BC, according to tradition.",
+      "pt": "Primeiro templo de Jerusalém, construído pelo rei Salomão no século 10 a.C., de acordo com a tradição."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization",
+      "religion",
+      "group"
+    ],
+    "type": "uncertain",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-930a",
+    "year": -930,
+    "region": "levant",
+    "title": {
+      "en": "Kingdom of Israel",
+      "pt": "Reino de Israel"
+    },
+    "description": {
+      "en": "Israelite kingdom centered in the capital Samaria, c. 930 BCE – c. 720 BC.",
+      "pt": "Reino israelita centrado na capital Samaria, c. 930 BCE – c. 720 a.C."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 1,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-930b",
+    "year": -930,
+    "region": "levant",
+    "title": {
+      "en": "Kingdom of Judah",
+      "pt": "Reino de Judá"
+    },
+    "description": {
+      "en": "Israelite Kingdom centered in the capital Jerusalem, c. 930 – c. 587 BC.",
+      "pt": "Reino israelita centrado na capital Jerusalém, c. 930 – c. 587 a.C."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 3,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "levant-722",
+    "year": -722,
+    "region": "levant",
+    "title": {
+      "en": "Destruction of Israel",
+      "pt": "Destruição de Israel"
+    },
+    "description": {
+      "en": "Siege and conquest of the Kingdom of Israel by Sargon II of Assyria, c. 722 BC.",
+      "pt": "Cerco e conquista do Reino de Israel por Sargão II da Assíria, c. 722 a.C."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "civilization",
+      "war"
+    ],
+    "type": "war",
+    "priority": 1,
+    "lane": 1,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "easteurope520",
+    "year": 520,
+    "region": "easteurope",
+    "title": {
+      "en": "Pseudo-Dionysius the Areopagite",
+      "pt": "Pseudo-Dionísio, o Areopagita"
+    },
+    "description": {
+      "en": "Greek author, Christian theologian and Neoplatonic philosopher of the late 5th to early 6th century.",
+      "pt": "Autor grego, teólogo cristão e filósofo neo-platônico do final do século 5, começo do século 6 d.C."
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [
+      "general",
+      "religion",
+      "philosophy",
+      "people"
+    ],
+    "type": "person",
+    "priority": 1,
+    "lane": 2,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
+        }
+      }
+    ]
+  }
 ]

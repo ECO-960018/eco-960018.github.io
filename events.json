@@ -33,6 +33,7 @@
     ],
     "priority": 1,
     "lane": 1,
+	"expandedView": "alphabets",
     "type": "uncertain"
   },
   {
@@ -298,6 +299,33 @@
     ]
   },
   {
+    "id": "africa-3250",
+    "year": -3250,
+    "region": "africa",
+    "title": {
+      "en": "Egyptian Hierogliphs",
+      "pt": "Hieróglifos Egípcios"
+    },
+    "description": {
+      "en": "Narmer unites Upper and Lower Egypt, founding the First Dynasty.",
+      "pt": "Narmer une o Alto e Baixo Egito, fundando a Primeira Dinastia"
+    },
+    "image": "img/Placeholder.png",
+    "text": {
+      "en": "English text.",
+      "pt": "Texto em português."
+    },
+    "tags": [
+      "general",
+      "civilization"
+    ],
+    "type": "civ",
+    "priority": 1,
+    "lane": 2,
+	"expandedView": "alphabets",
+    "connections": [{"target": "null", "type": "general", "label": {"en": "Null", "pt": "Nulo"}}]
+  },
+  {
     "id": "africa-3100",
     "year": -3100,
     "region": "africa",
@@ -321,16 +349,7 @@
     "type": "civ",
     "priority": 1,
     "lane": 2,
-    "connections": [
-      {
-        "target": "null",
-        "type": "general",
-        "label": {
-          "en": "Null",
-          "pt": "Nulo"
-        }
-      }
-    ]
+    "connections": [{"target": "null", "type": "general", "label": {"en": "Null", "pt": "Nulo"}}]
   },
   {
     "id": "mesopotamia-6000",
@@ -1177,42 +1196,52 @@
       }
     ]
   },
-  {
-    "id": "easteurope-750",
-    "year": -750,
-    "region": "easteurope",
-    "title": {
-      "en": "Illiad and Odyssey",
-      "pt": "Ilíada & Odisséia"
-    },
-    "description": {
-      "en": "Epic Greek poems attributed to Homer.",
-      "pt": "Poemas épicos gregos atribuídos a Homero."
-    },
-    "image": "img/Placeholder.png",
-    "text": {
-      "en": "English text.",
-      "pt": "Texto em português."
-    },
-    "tags": [
-      "general",
-      "culture",
-      "text"
-    ],
-    "type": "text",
-    "priority": 1,
-    "lane": 2,
-    "connections": [
-      {
-        "target": "null",
-        "type": "general",
-        "label": {
-          "en": "Null",
-          "pt": "Nulo"
-        }
-      }
-    ]
-  },
+	{
+		"id": "easteurope-800",
+		"year": -800,
+		"region": "easteurope",
+		"title": {
+			"en": "Greek Alphabet",
+			"pt": "Alfabeto Grego"
+		},
+		"description": {
+			"en": "Placeholder tooltip.",
+			"pt": "Descrição temporária."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English text.",
+			"pt": "Texto em português."
+		},
+		"tags": ["general","culture","science"],
+		"type": "text",
+		"priority": 1,
+		"lane": 2,
+		"connections": [{"target": "null", "type": "general", "label": {"en": "Null", "pt": "Nulo"}}]
+	},
+	{
+		"id": "easteurope-750",
+		"year": -750,
+		"region": "easteurope",
+		"title": {
+			"en": "Illiad and Odyssey",
+			"pt": "Ilíada & Odisséia"
+		},
+		"description": {
+			"en": "Epic Greek poems attributed to Homer.",
+			"pt": "Poemas épicos gregos atribuídos a Homero."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English text.",
+			"pt": "Texto em português."
+		},
+		"tags": ["general","culture","text"],
+		"type": "text",
+		"priority": 1,
+		"lane": 2,
+		"connections": [{"target": "null", "type": "general", "label": {"en": "Null", "pt": "Nulo"}}]
+	},
   {
     "id": "easteurope-700",
     "year": -700,
@@ -1235,7 +1264,7 @@
       "civilization"
     ],
     "type": "civ",
-    "priority": 1,
+    "priority": 4,
     "lane": 2,
     "connections": [
       {
@@ -1244,6 +1273,296 @@
         "label": {
           "en": "Null",
           "pt": "Nulo"
+        }
+      }
+    ]
+  },
+  
+  {
+		"id": "greekphil",
+		"year": -700,
+		"region": "easteurope",
+		"title": {
+			"en": "Pre-Socratics",
+			"pt": "Pré-Socráticos"
+		},
+		"description": {
+			"en": "Placeholder tooltip.",
+			"pt": "Descrição temporária."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English text.",
+			"pt": "Texto em português."
+		},
+		"tags": ["general", "philosophy"],
+		"type": "group",
+		"expandedView": "greekphil",
+		"priority": 2,
+		"lane": 1,
+		"connections": [{"target": "", "type": "general", "label": {"en": "Founder", "pt": "Fundador"}}]
+	},
+  
+	{
+		"id": "greekphil-600",
+		"year": -600,
+		"region": "easteurope",
+		"title": {
+			"en": "Thales of Miletus",
+			"pt": "Tales de Mileto"
+		},
+		"description": {
+			"en": "Placeholder tooltip.",
+			"pt": "Descrição temporária."
+		},
+		"image": "img/Placeholder.png",
+		"text": {
+			"en": "English text.",
+			"pt": "Texto em português."
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 1,
+		"connections": [{"target": "greekphil-600b", "type": "general", "label": {"en": "Founder", "pt": "Fundador"}},
+						{"target": "greekphil-550", "type": "general", "label": {"en": "Master", "pt": "Mestre"}}]
+	},
+	{
+		"id": "greekphil-600b",
+		"year": -600,
+		"region": "easteurope",
+		"title": {
+			"en": "Milesian School",
+			"pt": "Escola de Mileto"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "groups"],
+		"type": "group",
+		"priority": 2,
+		"lane": 2,
+		"connections": [{"target": "greekphil-550", "type": "general", "label": {"en": "Member", "pt": "Membro"}}]
+	},
+	{
+		"id": "greekphil-550",
+		"year": -550,
+		"region": "easteurope",
+		"title": {
+			"en": "Anaximander",
+			"pt": "Anaximandro"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 1,
+		"connections": [{"target": "greekphil-545", "type": "general", "label": {"en": "Master", "pt": "Mestre"}},
+						{"target": "greekphil-530a", "type": "general", "label": {"en": "Master", "pt": "Mestre"}}]
+	},
+	{
+		"id": "greekphil-545",
+		"year": -545,
+		"region": "easteurope",
+			"title": {
+			"en": "Anaximenes",
+		"pt": "Anaxímenes"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 2,
+		"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+	},
+	{
+		"id": "greekphil-530a",
+		"year": -530,
+		"region": "easteurope",
+		"title": {
+			"en": "Pythagoras",
+			"pt": "Pitágoras"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 2,
+		"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+	},
+	{
+		"id": "greekphil-530b",
+		"year": -530,
+		"region": "easteurope",
+		"title": {
+			"en": "Xenophanes",
+			"pt": "Xenófanes"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 3,
+		"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+	},
+	{
+		"id": "greekphil-500a",
+		"year": -500,
+		"region": "easteurope",
+		"title": {
+			"en": "Heraclitus",
+			"pt": "Heráclito"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 0,
+		"connections": [{"target": "greekphil-500c", "type": "general", "label": {"en": "", "pt": ""}}]
+	},
+	{
+		"id": "greekphil-500c",
+		"year": -500,
+		"region": "easteurope",
+		"title": {
+			"en": "Logos",
+			"pt": "Logos"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "religion"],
+		"type": "idea",
+		"priority": 1,
+		"lane": 2,
+		"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+	},
+	{
+		"id": "greekphil-500b",
+		"year": -500,
+		"region": "easteurope",
+		"title": {
+			"en": "Parmenides",
+			"pt": "Parmênides"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 4,
+		"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+	},
+	{
+		"id": "greekphil-450",
+		"year": -450,
+		"region": "easteurope",
+		"title": {
+			"en": "Anaxagoras",
+			"pt": "Anaxágoras"
+		},
+		"description": {
+			"en": "",
+			"pt": ""
+		},
+		"img": "",
+		"text": {
+			"en": "",
+			"pt": ""
+		},
+		"tags": ["philosophy", "people"],
+		"type": "person",
+		"priority": 2,
+		"lane": 3,
+		"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+	},
+  {
+    "id": "greekphil-420a",
+    "year": -420,
+    "region": "easteurope",
+    "title": {
+      "en": "Socrates",
+      "pt": "Sócrates"
+    },
+    "description": {
+      "en": "",
+      "pt": ""
+    },
+    "img": "",
+    "text": {
+      "en": "",
+      "pt": ""
+    },
+    "tags": [],
+    "type": "",
+    "priority": 1,
+    "lane": 1,
+    "connections": [
+      {
+        "target": "",
+        "type": "",
+        "label": {
+          "en": "",
+          "pt": ""
         }
       }
     ]
@@ -1270,8 +1589,8 @@
       "war"
     ],
     "type": "war",
-    "priority": 1,
-    "lane": 2,
+    "priority": 3,
+    "lane": 1,
     "connections": [
       {
         "target": "null",
@@ -1305,7 +1624,7 @@
       "war"
     ],
     "type": "war",
-    "priority": 2,
+    "priority": 4,
     "lane": 0,
     "connections": [
       {
@@ -1427,6 +1746,43 @@
       }
     ]
   },
+	{
+		"id": "easteurope520",
+		"year": 520,
+		"region": "easteurope",
+		"title": {
+		  "en": "Pseudo-Dionysius the Areopagite",
+		  "pt": "Pseudo-Dionísio, o Areopagita"
+		},
+		"description": {
+		  "en": "Greek author, Christian theologian and Neoplatonic philosopher of the late 5th to early 6th century.",
+		  "pt": "Autor grego, teólogo cristão e filósofo neo-platônico do final do século 5, começo do século 6 d.C."
+		},
+		"img": "",
+		"text": {
+		  "en": "",
+		  "pt": ""
+		},
+		"tags": [
+		  "general",
+		  "religion",
+		  "philosophy",
+		  "people"
+		],
+		"type": "person",
+		"priority": 1,
+		"lane": 2,
+		"connections": [
+		  {
+			"target": "",
+			"type": "",
+			"label": {
+			  "en": "",
+			  "pt": ""
+			}
+		  }
+		]
+	},
   {
     "id": "easteurope1453",
     "year": 1453,
@@ -2772,43 +3128,6 @@
     "type": "war",
     "priority": 1,
     "lane": 1,
-    "connections": [
-      {
-        "target": "",
-        "type": "",
-        "label": {
-          "en": "",
-          "pt": ""
-        }
-      }
-    ]
-  },
-  {
-    "id": "easteurope520",
-    "year": 520,
-    "region": "easteurope",
-    "title": {
-      "en": "Pseudo-Dionysius the Areopagite",
-      "pt": "Pseudo-Dionísio, o Areopagita"
-    },
-    "description": {
-      "en": "Greek author, Christian theologian and Neoplatonic philosopher of the late 5th to early 6th century.",
-      "pt": "Autor grego, teólogo cristão e filósofo neo-platônico do final do século 5, começo do século 6 d.C."
-    },
-    "img": "",
-    "text": {
-      "en": "",
-      "pt": ""
-    },
-    "tags": [
-      "general",
-      "religion",
-      "philosophy",
-      "people"
-    ],
-    "type": "person",
-    "priority": 1,
-    "lane": 2,
     "connections": [
       {
         "target": "",

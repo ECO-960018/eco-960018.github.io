@@ -1,0 +1,482 @@
+{
+	"greekphil": {
+		"events": [
+			{
+				"id": "greekphil-600",
+				"year": -600,
+				"region": "easteurope",
+				"title": {"en": "Thales of Miletus", "pt": "Tales de Mileto"},
+				"description": {"en": "Placeholder tooltip.", "pt": "Descrição temporária."},
+				"image": "img/Placeholder.png",
+				"text": {"en": "English text.", "pt": "Texto em português."},
+				"lane": 1,
+				"priority": 1,
+				"connections": [{"target": "greekphil-600b", "type": "general", "label": {"en": "Founder", "pt": "Fundador"}},
+								{"target": "greekphil-560", "type": "general", "label": {"en": "Master", "pt": "Mestre"}}]
+			},
+			{
+				"id": "greekphil-600b",
+				"year": -600,
+				"region": "easteurope",
+				"title": {"en": "Milesian School", "pt": "Escola de Mileto"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"lane": 2,
+				"priority": 1,
+				"connections": [{"target": "greekphil-560", "type": "general", "label": {"en": "Member", "pt": "Membro"}}]
+			},
+			{
+				"id": "greekphil-560",
+				"year": -560,
+				"region": "easteurope",
+				"title": {"en": "Anaximander", "pt": "Anaximandro"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"lane": 1,
+				"priority": 1,
+				"connections": [{"target": "greekphil-525", "type": "general", "label": {"en": "Master", "pt": "Mestre"}},
+								{"target": "greekphil-530a", "type": "general", "label": {"en": "Master", "pt": "Mestre"}}]
+			},
+			{
+				"id": "greekphil-525",
+				"year": -525,
+				"region": "easteurope",
+				"title": {"en": "Anaximenes", "pt": "Anaxímenes"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"lane": 2,
+				"priority": 1,
+				"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+			}
+		]
+	},
+
+	"alphabets": {
+		"events": [
+		
+			{
+				"id": "alpha-sumer",
+				"year": -3500,
+				"region": "general",
+				"title": {"en": "Sumerian Cuneiform", "pt": "Cuneiforme Sumério"},
+				"description": {"en": "2900 BC - 1700 BC", "pt": "2900 a.C. - 1700 a.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 0,
+				"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-hiero",
+				"year": -3250,
+				"region": "general",
+				"title": {"en": "Egyptian Hieroglyphs", "pt": "Hieróglifos Egípcios"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 1,
+				"connections": [
+					{"target": "alpha-sinai", "type": "general", "label": {"en": "", "pt": ""}},
+					{"target": "alpha-hiera", "type": "general", "label": {"en": "", "pt": ""}}
+				]
+			},
+			{
+				"id": "alpha-hiera",
+				"year": -3200,
+				"region": "general",
+				"title": {"en": "Hieratic", "pt": "Hierático"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 8,
+				"connections": [{"target": "alpha-demo", "type": "general", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-demo",
+				"year": -650,
+				"region": "general",
+				"title": {"en": "Demotic", "pt": "Demótico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 8,
+				"connections": [{"target": "alpha-mero", "type": "general", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-mero",
+				"year": -300,
+				"region": "general",
+				"title": {"en": "Meroitic", "pt": "Meroítico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 8,
+				"connections": [{"target": "alpha-copt", "type": "general", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-copt",
+				"year": 300,
+				"region": "general",
+				"title": {"en": "Coptic", "pt": "Copta"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"lane": 8,
+				"connections": [{"target": "", "type": "general", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-sinai",
+				"year": -1850,
+				"region": "general",
+				"title": {"en": "Proto-Sinaitic Script", "pt": "Escrita Proto-Sinaítica"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 1,
+				"connections": [
+					{"target": "alpha-ugarit", "type": "general", "label": {"en": "", "pt": ""}},
+					{"target": "alpha-sarab", "type": "general", "label": {"en": "", "pt": ""}},
+					{"target": "alpha-phoenician", "type": "general", "label": {"en": "", "pt": ""}}
+				]
+			},
+			{
+				"id": "alpha-ugarit",
+				"year": -1400,
+				"region": "general",
+				"title": {"en": "Ugaritic", "pt": "Ugarítico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 0,
+				"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-sarab",
+				"year": -900,
+				"region": "general",
+				"title": {"en": "Ancient South Arabian", "pt": "Árabe Meridional"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 1,
+				"connections": [{"target": "alpha-geez", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-geez",
+				"year": -500,
+				"region": "general",
+				"title": {"en": "Ge'ez", "pt": "Ge'ez"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 1,
+				"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-phoenician",
+				"year": -1050,
+				"region": "general",
+				"title": {"en": "Phoenician", "pt": "Fenício"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 3,
+				"connections": [
+				{"target": "alpha-phebrew", "type": "", "label": {"en": "", "pt": ""}},
+				{"target": "alpha-aramaic", "type": "", "label": {"en": "", "pt": ""}},
+				{"target": "alpha-greek", "type": "", "points": [{"x": 1580, "y": 1280}]},
+				{"target": "alpha-berber", "type": "", "label": {"en": "", "pt": ""}}
+				]
+			},
+			{
+				"id": "alpha-phebrew",
+				"year": -1000,
+				"region": "general",
+				"title": {"en": "Paleo-Hebrew", "pt": "Paleo-Hebreu"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 2,
+				"connections": [{"target": "alpha-samaritan", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-samaritan",
+				"year": -600,
+				"region": "general",
+				"title": {"en": "Samaritan", "pt": "Samaritano"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"lane": 2,
+				"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-berber",
+				"year": -1000,
+				"region": "general",
+				"title": {"en": "Libyco-Berber", "pt": "Líbico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 4,
+				"connections": [{"target": "alpha-tuareg", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-tuareg",
+				"year": -600,
+				"region": "general",
+				"title": {"en": "Tifinagh", "pt": "Tifinague"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 4,
+				"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-greek",
+				"year": -800,
+				"region": "general",
+				"title": {"en": "Greek", "pt": "Grego"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 7,
+				"connections": [{"target": "alpha-etruscan", "type": "", "label": {"en": "", "pt": ""}},
+								{"target": "alpha-copt", "type": "", "label": {"en": "", "pt": ""}},
+								{"target": "alpha-goth", "type": "", "label": {"en": "", "pt": ""}},
+								{"target": "alpha-armenian", "points": [{"x": 1580, "y": 1980},{"x": 1780, "y": 1980}]},
+								{"target": "alpha-georgian", "points": [{"x": 1580, "y": 1980},{"x": 1380, "y": 1980}]},
+								{"target": "alpha-cyrillic", "type": "", "label": {"en": "", "pt": ""}}
+							]
+			},
+			{
+				"id": "alpha-etruscan",
+				"year": -700,
+				"region": "general",
+				"title": {"en": "Etruscan", "pt": "Etrusco"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 6,
+				"connections": [{"target": "alpha-latin", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-latin",
+				"year": -700,
+				"region": "general",
+				"title": {"en": "Latin", "pt": "Latim"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 5,
+				"connections": [{"target": "", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-goth",
+				"year": 300,
+				"region": "general",
+				"title": {"en": "Gothic", "pt": "Gótico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 6
+			},
+			{
+				"id": "alpha-armenian",
+				"year": 405,
+				"region": "general",
+				"title": {"en": "Armenian", "pt": "Armênio"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 8
+			},
+			{
+				"id": "alpha-georgian",
+				"year": 430,
+				"region": "general",
+				"title": {"en": "Georgian", "pt": "Georgiano"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 6
+			},
+			{
+				"id": "alpha-cyrillic",
+				"year": 940,
+				"region": "general",
+				"title": {"en": "Cyrillic", "pt": "Cirílico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 7
+			},
+			{
+				"id": "alpha-aramaic",
+				"year": -800,
+				"region": "general",
+				"title": {"en": "Aramaic", "pt": "Aramaico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 3,
+				"connections": [
+					{"target": "alpha-hebrew", "points": [{"x": 780, "y": 1600},{"x": 380, "y": 1600}]},
+					{"target": "alpha-brahmi", "type": "", "points": [{"x": 780, "y": 1600},{"x": 580, "y": 1600}]},
+					{"target": "alpha-pahlavi", "type": "", "label": {"en": "", "pt": ""}},
+					{"target": "alpha-nabatean", "points": [{"x": 780, "y": 1600},{"x": 980, "y": 1600}]},
+					{"target": "alpha-syriac", "points": [{"x": 780, "y": 1600},{"x": 1180, "y": 1600}]}
+				]
+			},
+			{
+				"id": "alpha-hebrew",
+				"year": -300,
+				"region": "general",
+				"title": {"en": "Hebrew", "pt": "Hebráico"},
+				"description": {"en": "", "pt": ""},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 1
+			},
+			{
+				"id": "alpha-brahmi",
+				"year": -300,
+				"region": "general",
+				"title": {"en": "Brahmi", "pt": "Brami"},
+				"description": {"en": "300 BC - 500 BC", "pt": "300 a.C. - 500 a.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 2,
+				"connections": [{"target": "alpha-deva", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-deva",
+				"year": 800,
+				"region": "general",
+				"title": {"en": "Devanagari", "pt": "Devanágari"},
+				"description": {"en": "800 AD - Present", "pt": "800 d.C. - Presente"},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 2
+			},
+			{
+				"id": "alpha-pahlavi",
+				"year": -200,
+				"region": "general",
+				"title": {"en": "Pahlavi", "pt": "Pálavi"},
+				"description": {"en": "200 BC - xxx BC", "pt": "200 a.C. - xxx a.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 3,
+				"connections": [{"target": "alpha-avestan", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-avestan",
+				"year": 400,
+				"region": "general",
+				"title": {"en": "Avestan", "pt": "Avéstico"},
+				"description": {"en": "400 AD - xxx AD", "pt": "400 d.C. - xxx d.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 3
+			},
+			{
+				"id": "alpha-nabatean",
+				"year": -200,
+				"region": "general",
+				"title": {"en": "Nabatean", "pt": "Nabateu"},
+				"description": {"en": "200 BC - xxx BC", "pt": "200 a.C. - xxx a.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 4,
+				"connections": [{"target": "alpha-arab", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-arab",
+				"year": 400,
+				"region": "general",
+				"title": {"en": "Arabic", "pt": "Árabe"},
+				"description": {"en": "400 BC - Present", "pt": "400 a.C. - Presente"},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 4
+			},
+			{
+				"id": "alpha-syriac",
+				"year": 100,
+				"region": "general",
+				"title": {"en": "Syriac", "pt": "Siríaco"},
+				"description": {"en": "100 AD - Present", "pt": "100 d.C. - Presente"},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "green",
+				"lane": 5,
+				"connections": [{"target": "alpha-sogdian", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-sogdian",
+				"year": 200,
+				"region": "general",
+				"title": {"en": "Sogdian", "pt": "Sogdiano"},
+				"description": {"en": "200 AD - xxx AD", "pt": "200 d.C. - xxx d.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 5,
+				"connections": [{"target": "alpha-uyghur", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-uyghur",
+				"year": 700,
+				"region": "general",
+				"title": {"en": "Old Uyghur", "pt": "Uigur"},
+				"description": {"en": "700 AD - xxx AD", "pt": "700 d.C. - xxx d.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"type": "red",
+				"lane": 5,
+				"connections": [{"target": "alpha-mongol", "type": "", "label": {"en": "", "pt": ""}}]
+			},
+			{
+				"id": "alpha-mongol",
+				"year": 1204,
+				"region": "general",
+				"title": {"en": "Mongolian", "pt": "Mongol"},
+				"description": {"en": "1204 AD - 1946 AD", "pt": "1204 d.C. - 1946 d.C."},
+				"img": "",
+				"text": {"en": "", "pt": ""},
+				"lane": 5
+			}
+		]
+	}
+}

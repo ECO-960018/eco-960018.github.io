@@ -303,6 +303,29 @@
 				d3.selectAll(".connection-path")
 					.classed("connection-highlight", conn => conn.source === d.id || conn.target === d.id)
 					.classed("connection-dimmed", conn => conn.source !== d.id && conn.target !== d.id);
+					
+				const connectedIds = new Set();
+
+				// 1. Outgoing connections from the hovered event
+				if (d.connections) {
+				  d.connections.forEach(conn => {
+					const targetId = typeof conn === "string" ? conn : conn.target;
+					if (targetId) connectedIds.add(targetId);
+				  });
+				}
+
+				// 2. Incoming connections to the hovered event
+				filtered.forEach(ev => {
+				  if (!ev.connections) return;
+				  ev.connections.forEach(conn => {
+					const targetId = typeof conn === "string" ? conn : conn.target;
+					if (targetId === d.id) connectedIds.add(ev.id);
+				  });
+				});
+
+				d3.selectAll(".event")
+				  .classed("connected-highlight", ev => connectedIds.has(ev.id));
+
 			})
 			
 			.on("mousemove", function(event) {
@@ -326,12 +349,16 @@
 					d3.selectAll(".connection-path")
 					.classed("connection-highlight", false)
 					.classed("connection-dimmed", false);
+					
+					d3.selectAll(".event")
+					.classed("connected-highlight", false);
+
 			})
 		.on("click", function(event, d) {
-			d3.select("#sidebar-content").html(`<h2>${translate(d.title)}</h2>` +
-				(d.image ? `<img src="${d.image}" alt="${translate(d.title)}" />` : "") + `<p>${translate(d.text) || ''}</p>`);
-				sidebar.style("display", "block");
+			updateSidebar(d);
+			sidebar.style("display", "block");
 		});
+
 
 		// GROUP RENDERING
 
@@ -820,4 +847,353 @@ document.querySelectorAll('.age-select').forEach(btn => {
 		x.style.display = "none";
 		b.className = "fa-solid fa-chevron-right"
 	}
+}
+
+ // Charts //
+
+	let allGraphs = {};
+
+	fetch("graphs.json")
+	  .then(res => res.json())
+	  .then(data => {
+		allGraphs = data;
+	});
+
+
+	function updateSidebar(d) {
+		const container = d3.select("#sidebar-content");
+		container.html("");  // Clear previous content
+
+		container.append("h2").text(translate(d.title));
+
+		if (d.image) {
+			container.append("img")
+				.attr("src", d.image)
+				.attr("alt", translate(d.title));
+		}
+
+		container.append("p").text(translate(d.text) || "");
+
+		if (d.expandedView) {
+			container.append("button")
+				.attr("id", "open-subgraph")
+				.text("Explore Related Events")
+				.attr("class", "subgraph-btn")
+				.on("click", () => {
+			  openSubgraphModal(d.expandedView); // CHANGED
+			  console.log("Button click detected");
+			});
+		}
+	}
+
+	function openSubgraphModal(graphId) {
+		if (!allGraphs[graphId]) return;
+		document.getElementById("modal-overlay").style.display = "flex";
+		renderMiniGraph(graphId);
+	}
+
+	document.getElementById("modal-close").addEventListener("click", () => {
+		document.getElementById("modal-overlay").style.display = "none";
+		d3.select("#mini-graph").selectAll("*").remove();  // clean up
+	});
+
+	function renderMiniGraph(graphId) {
+		d3.select("#mini-graph").selectAll("*").remove();
+
+		const graphData = allGraphs[graphId];
+		if (!graphData) return;
+
+		const events = graphData.events;
+		const baseSizes = {
+			1: { width: 160, height: 30, fontSize: 16, strokeWidth: 1 },
+			2: { width: 80, height: 16, fontSize: 6, strokeWidth: 1 },
+			3: { width: 40, height: 8, fontSize: 3, strokeWidth: 0.5 },
+			4: { width: 40, height: 6, fontSize: 2, strokeWidth: 0.5 }
+		};
+
+		const years = events.map(e => e.year);
+		const minYear = Math.min(...years) - 10;
+		const maxYear = Math.max(...years) + 10;
+
+		const minPixelsPerYear = 0.5;
+		const maxPixelsPerYear = 6;
+		
+		const yearSpan = maxYear - minYear;
+		let pixelsPerYear = 600 / yearSpan;
+
+		pixelsPerYear = Math.max(minPixelsPerYear, Math.min(maxPixelsPerYear, pixelsPerYear));
+
+		const yOffset = 50;
+		const svgHeight = yOffset + yearSpan * pixelsPerYear + 50;
+
+		const yearToY = d3.scaleLinear()
+		  .domain([minYear, maxYear])
+		  .range([yOffset, yOffset + yearSpan * pixelsPerYear]);
+			
+
+		const svg = d3.select("#mini-graph")
+			.append("svg")
+			.attr("width", "100%")
+			.attr("height", svgHeight)
+			.call(d3.zoom().on("zoom", event => {
+				g.attr("transform", event.transform);
+			}));
+
+const g = svg.append("g")
+  .attr("class", "mini-event-group")
+  .attr("transform", "translate(40,0)"); // shift right so year labels are visible
+
+  // Add year lines
+  const yearStep = 50;
+  for (let y = Math.ceil(minYear / yearStep) * yearStep; y <= maxYear; y += yearStep) {
+    g.append("line")
+      .attr("x1", 50)
+      .attr("x2", 2000)
+      .attr("y1", yearToY(y))
+      .attr("y2", yearToY(y))
+	  .attr("stroke-opacity", 0.5)
+	  .attr("class", "year-line");
+
+    g.append("text")
+      .attr("x", 5)
+      .attr("y", yearToY(y))
+	  .attr("class", "year-label")
+      .text(y);
+  }
+
+  const totalLanes = 10;
+
+  const eventPositions = new Map();
+
+  const eventGroups = g.selectAll("g.mini-event")
+    .data(events)
+    .enter()
+    .append("g")
+	.attr("class", d => `event-type-${d.type} mini-event`)
+    .attr("transform", d => {
+      const p = d.priority || 1;
+      const h = baseSizes[p].height;
+      const y = yearToY(d.year) - h / 2;
+
+      const lane = d.lane !== undefined ? d.lane : 2;
+      const w = baseSizes[p].width;
+      const laneWidth = 200;
+	  const x = 100 + lane * laneWidth;
+
+      eventPositions.set(d.id, {
+        x, y, width: w, height: h,
+        cx: x + w / 2,
+        cy: y + h / 2
+      });
+
+      return `translate(${x},${y})`;
+    });
+
+  // Rectangles
+  eventGroups.append("rect")
+    .attr("width", d => baseSizes[d.priority || 1].width)
+    .attr("height", d => baseSizes[d.priority || 1].height)
+    .attr("fill", "#fff")
+    .attr("stroke", d => accentColors[d.region] || "#999")
+    .attr("stroke-width", d => baseSizes[d.priority || 1].strokeWidth);
+
+  // Labels
+  eventGroups.append("text")
+    .attr("x", d => (baseSizes[d.priority || 1].width / 2))
+    .attr("y", d => (baseSizes[d.priority || 1].height / 2))
+    .attr("text-anchor", "middle")
+	.attr("dominant-baseline", "middle")
+    .attr("fill", "#000")
+    .attr("font-size", d => baseSizes[d.priority || 1].fontSize)
+    .text(d => translate(d.title));
+
+	svg.append("defs").append("marker")
+		.attr("id", "arrowhead")
+		.attr("viewBox", "0 -5 10 10")
+		.attr("refX", 10)
+		.attr("refY", 0)
+		.attr("markerWidth", 6)
+		.attr("markerHeight", 6)
+		.attr("orient", "auto")
+		.attr("markerUnits", "strokeWidth")
+		.append("path")
+			.attr("d", "M0,-5L10,0L0,5");
+
+
+  // Connections
+const connectionGroup = g.insert("g", ".mini-event").attr("class", "connections");
+
+events.forEach(d => {
+  if (!d.connections) return;
+  const source = eventPositions.get(d.id);
+  if (!source) return;
+
+  d.connections.forEach(conn => {
+    const targetId = typeof conn === "string" ? conn : conn.target;
+    const label = typeof conn === "string" ? "" : translate(conn.label || "");
+    const type = typeof conn === "string" ? "" : (conn.type || "");
+    const target = eventPositions.get(targetId);
+    if (!target) return;
+
+    let path, pathArrow;
+
+    if (typeof conn === "object" && Array.isArray(conn.points)) {
+      // === Use multi-point path ===
+      const points = [];
+      points.push({ x: source.cx, y: source.cy });
+      conn.points.forEach(p => points.push(p));
+      points.push({ x: target.cx, y: target.cy });
+
+      // Cut off final segment for arrowhead
+      const arrowLength = 8;
+      const penultimate = points[points.length - 2];
+      const final = points[points.length - 1];
+
+      const line = d3.line()
+		.x(p => p.x)
+		.y(p => p.y)
+		
+
+      // Define rectangle boundary at target
+		const targetWidth = baseSizes[target.priority || 1].width;
+		const targetHeight = baseSizes[target.priority || 1].height;
+		const boxPadding = 1;  // Slight offset to avoid visual collision
+
+		// Direction of connection (angle)
+		const dx = final.x - penultimate.x;
+		const dy = final.y - penultimate.y;
+		const angle = Math.atan2(dy, dx);
+		const horizontal = Math.abs(dx) > Math.abs(dy);
+
+		// Determine final endpoint at the edge of the rectangle
+		const rx = targetWidth / 2 + boxPadding;
+		const ry = targetHeight / 2 + boxPadding;
+
+		// Normalize direction
+		const norm = Math.sqrt((dx * dx) / (rx * rx) + (dy * dy) / (ry * ry));
+		const offsetX = (dx / norm);
+		const offsetY = (dy / norm);
+
+		// Compute cut point (just outside the box)
+		const cutX = target.cx - offsetX;
+		const cutY = target.cy - offsetY;
+		
+		const endX = horizontal ? (dx > 0 ? target.x : target.x + target.width) : target.cx;
+		const endY = horizontal ? target.cy : (dy > 0 ? target.y : target.y + target.height);
+
+		// Create smooth path that ends before hitting the box
+		const pointsMain = [...points.slice(0, -1), { x: cutX, y: cutY }];
+		path = line(pointsMain);
+
+		// Arrow goes from the cutoff point to the edge
+		pathArrow = `M${cutX},${cutY} L${endX},${endY}`;
+    } else {
+      // === Use curved path fallback ===
+      const dx = target.cx - source.cx;
+      const dy = target.cy - source.cy;
+      const horizontal = Math.abs(dx) > Math.abs(dy);
+
+      const startX = horizontal ? (dx > 0 ? source.x + source.width : source.x) : source.cx;
+      const startY = horizontal ? source.cy : (dy > 0 ? source.y + source.height : source.y);
+      const endX = horizontal ? (dx > 0 ? target.x : target.x + target.width) : target.cx;
+      const endY = horizontal ? target.cy : (dy > 0 ? target.y : target.y + target.height);
+
+      const curvature = 0.2;
+      const cx1 = horizontal ? startX + dx * curvature : startX;
+      const cy1 = horizontal ? startY : startY + dy * curvature;
+      const cx2 = horizontal ? endX - dx * curvature : endX;
+      const cy2 = horizontal ? endY : endY - dy * curvature;
+
+      const arrowLength = 8;
+      const angle = Math.atan2(endY - cy2, endX - cx2);
+      const tailX = endX - arrowLength * Math.cos(angle);
+      const tailY = endY - arrowLength * Math.sin(angle);
+
+      path = `M${startX},${startY} C${cx1},${cy1} ${cx2},${cy2} ${tailX},${tailY}`;
+      pathArrow = `M${tailX},${tailY} L${endX},${endY}`;
+    }
+
+    // Main path
+    connectionGroup.append("path")
+      .attr("d", path)
+      .attr("fill", "none")
+      .attr("stroke", "#333")
+      .attr("stroke-width", 1)
+      .attr("class", `connection-path connection-from-${d.id} connection-to-${targetId}`)
+      .datum({ source: d.id, target: targetId, label });
+
+    // Arrowhead path
+    connectionGroup.append("path")
+      .attr("d", pathArrow)
+      .attr("fill", "none")
+      .attr("stroke", "#333")
+      .attr("stroke-width", 1)
+      .attr("marker-end", "url(#arrowhead)")
+      .attr("class", `connection-path connection-from-${d.id} connection-to-${targetId}`)
+      .datum({ source: d.id, target: targetId, label });
+  });
+});
+
+
+  // Hover logic
+  g.selectAll("g.mini-event")
+    .on("mouseover", function(event, d) {
+      d3.select(this).select("rect")
+        .attr("fill", accentColors[d.region])
+        .attr("stroke-width", 2);
+
+		d3.select(this).select("text").attr("fill", "#fff");
+
+		const connectedIds = new Set();
+
+		// Outgoing connections from d
+		if (d.connections) {
+			d.connections.forEach(conn => {
+				const targetId = typeof conn === "string" ? conn : conn.target;
+				if (targetId) connectedIds.add(targetId);
+			});
+		}
+
+		// Incoming connections to d
+		events.forEach(ev => {
+			if (!ev.connections) return;
+			ev.connections.forEach(conn => {
+				const targetId = typeof conn === "string" ? conn : conn.target;
+				if (targetId === d.id) connectedIds.add(ev.id);
+			});
+		});
+
+		// Highlight connections
+		g.selectAll(".connection-path")
+		.classed("connection-highlight", conn => conn.source === d.id || conn.target === d.id)
+		.classed("connection-dimmed", conn => conn.source !== d.id && conn.target !== d.id);
+
+		// Highlight connected events
+		g.selectAll("g.mini-event")
+		.classed("connected-highlight", ev => connectedIds.has(ev.id));
+		
+		tooltip.html(`<strong>${translate(d.title)}</strong><br>${translate(d.description) || ''}`);
+		tooltip.style("display", "block");
+    })
+	.on("mousemove", (event) => {
+		tooltip.style("left", (event.pageX + 10) + "px")
+				.style("top", (event.pageY + 10) + "px");
+		})
+    .on("mouseout", function(event, d) {
+      d3.select(this).select("rect")
+        .attr("fill", "#fff")
+        .attr("stroke", accentColors[d.region])
+        .attr("stroke-width", baseSizes[d.priority || 1].strokeWidth);
+
+        d3.select(this).select("text").attr("fill", "#000");
+
+		g.selectAll(".connection-path")
+			.classed("connection-highlight", false)
+			.classed("connection-dimmed", false);
+
+		g.selectAll("g.mini-event")
+			.classed("connected-highlight", false);
+		
+		tooltip.style("display", "none");
+    });
 }

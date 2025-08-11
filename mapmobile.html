@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Map D3</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="mapstyle.css">
+</head>
+<body>
+
+  <div id="toolbox">
+    <input type="range" id="year-slider" min="-3500" max="500" value="-3500" class="slider"/>
+    <div id="year-description">Topographic Map</div>
+  </div>
+
+  <svg viewBox="0 0 1145 780" id="map"></svg>
+
+  <div id="tooltip" class="tooltip"></div>
+
+  <div id="sidebar" class="sidebar">
+    <button id="closeSidebar">✖</button>
+    <div id="sidebar-content"></div>
+  </div>
+
+<script>
+const svg = d3.select("#map");
+const g = svg.append("g");
+const baseLayer = g.append("g").attr("id", "base-layer");
+const topoLayer = g.append("g").attr("id", "topo-layer");
+const regionLayer = g.append("g").attr("id", "region-layer");
+const tooltip = d3.select("#tooltip");
+const sidebar = d3.select("#sidebar");
+let regionData = {};
+let validYears = [];
+let topoNames = [];
+let searchableNames = [];
+
+const yearDescriptions = {
+  "-3300": "The world at the dawn of civilization\n3.300 BC - 2.100 BC",
+  "-2100": "Middle Bronze Age\n2.100 BC - 1.500 BC",
+  "-1500": "Late Bronze Age\n1.500 BC - 1.200 BC",
+  "-1200": "The Iron Age before the rise of the Assyrian Empire\n1.200 BC - 1.000 BC",
+  "-600": "Classical Antiquity\n800 BC - 300 BC",
+  "-300": "Hellenistic Period\n300 BC - 30 BC",
+  "100": "The Roman Empire's greatest extent\nc. AD 117 ",
+  "500": "The world after the fall of the Western Roman Empire\nc. AD 500"
+};
+
+fetch("regions.json")
+  .then(res => res.json())
+  .then(data => {
+    regionData = data;
+    validYears = Object.keys(data).filter(key => !isNaN(key)).map(Number).sort((a, b) => a - b);
+    drawBaseMap();
+    drawTopo();
+    drawPoliticalRegions(0);
+  });
+
+function drawBaseMap() {
+  const baseRegions = regionData["base"];
+  for (let id in baseRegions) {
+    const region = baseRegions[id];
+    baseLayer.append("path")
+      .attr("class", "base")
+      .attr("id", `base-${id}`)
+      .attr("d", region.path)
+      .style("fill", region.color);
+  }
+}
+
+function drawTopo() {
+  const topography = regionData["topography"];
+  for (let id in topography) {
+    const topo = topography[id];
+    topoLayer.append("path")
+      .attr("class", `topo ${topo.class}`)
+      .attr("id", `topo-${id}`)
+      .attr("d", topo.path)
+      .attr("data-name", topo.name)
+      .on("mouseover", function(event) {
+        tooltip.html(topo.name || "Unnamed feature");
+        tooltip.style("display", "block");
+      })
+      .on("mousemove", (event) => {
+        tooltip.style("left", (event.pageX + 10) + "px").style("top", (event.pageY + 10) + "px");
+      })
+      .on("mouseout", () => tooltip.style("display", "none"))
+      .on("click", () => {
+        d3.select("#sidebar-content").html(
+          `<h2>${topo.name || "Unnamed Feature"}</h2>` +
+          `<p>${topo.sidebar?.text || "No information available."}</p>` +
+          (topo.sidebar?.image ? `<img src="${topo.sidebar.image}" alt="${topo.name || "Image"}" />` : "")
+        );
+        sidebar.style("display", "block");
+      });
+    if (topo.name) topoNames.push(topo.name);
+  }
+}
+
+function drawPoliticalRegions(year) {
+  const regions = regionData[year];
+  for (let id in regions) {
+    const region = regions[id];
+    regionLayer.append("path")
+      .attr("class", region.class)
+      .attr("id", id)
+      .attr("d", region.path)
+      .attr("data-name", region.name)
+      .style("fill", region.color)
+      .on("mouseover", function(event) {
+        tooltip.html(region.tooltip || region.name || "Unnamed region");
+        tooltip.style("display", "block");
+      })
+      .on("mousemove", (event) => {
+        tooltip.style("left", (event.pageX + 10) + "px").style("top", (event.pageY + 10) + "px");
+      })
+      .on("mouseout", () => tooltip.style("display", "none"))
+      .on("click", () => {
+        d3.select("#sidebar-content").html(
+          `<h2>${region.name || "Unnamed Region"}</h2>` +
+          (region.sidebar?.image ? `<img src="${region.sidebar.image}" alt="${region.name || "Image"}" />` : "") +
+          `<p>${region.sidebar?.text || "No information available."}</p>`
+        );
+        sidebar.style("display", "block");
+      });
+    if (region.name && !searchableNames.includes(region.name)) searchableNames.push(region.name);
+  }
+}
+
+document.getElementById("closeSidebar").onclick = () => sidebar.style("display", "none");
+
+// == SLIDER ==
+
+const slider = document.getElementById("year-slider");
+const yearDescription = document.getElementById("year-description");
+slider.addEventListener("input", () => {
+  const rawYear = parseInt(slider.value);
+  const firstYear = validYears[0];
+  if (rawYear < firstYear) {
+    baseMap();
+  } else {
+    let closestYear = validYears.reduce((prev, curr) =>
+      Math.abs(curr - rawYear) < Math.abs(prev - rawYear) ? curr : prev
+    );
+    slider.value = closestYear;
+    yearDescription.textContent = yearDescriptions[closestYear] || `Year: ${closestYear}`;
+    updateMap(closestYear);
+    document.title = `Map - ${closestYear}`;
+  }
+});
+
+function updateMap(year) {
+  regionLayer.selectAll("*").remove();
+  searchableNames = [...topoNames]; // Reset to only static topo names
+  drawPoliticalRegions(year);
+  d3.selectAll(".topo").classed("topo2", true);
+}
+
+function baseMap() {
+  regionLayer.selectAll("*").remove();
+  d3.selectAll(".topo").classed("topo2", false);
+  yearDescription.textContent = "Topographic Map";
+}
+
+const zoom = d3.zoom()
+  .scaleExtent([0.5, 20])
+  .on("zoom", zoomed);
+  
+  svg.call(zoom);
+  
+  function zoomed(event) {
+    const {transform} = event;
+    g.attr("transform", transform);
+    g.attr("stroke-width", 1 / transform.k);
+  }
+
+function resetZoom() {
+  svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity);
+}
+
+// == SEARCH ==
+
+function performSearch() {
+  const query = document.getElementById("search-box").value.toLowerCase().trim();
+  if (!query) return;
+  d3.selectAll("path").classed("highlighted", false);
+  let matchFound = false;
+
+  d3.selectAll("path").each(function() {
+    const el = d3.select(this);
+    const name = (el.attr("data-name") || "").toLowerCase();
+    if (name.includes(query)) {
+      el.classed("highlighted", true);
+      matchFound = true;
+      const bbox = this.getBBox();
+      svg.transition().duration(750).call(
+        zoom.transform,
+        d3.zoomIdentity.translate(svg.attr("width") / 2 - bbox.x - bbox.width / 2, svg.attr("height") / 2 - bbox.y - bbox.height / 2).scale(2)
+      );
+    }
+  });
+
+  if (!matchFound) alert("No match found.");
+}
+
+document.getElementById("search-box").addEventListener("keypress", e => {
+  if (e.key === "Enter") performSearch();
+});
+
+let selectedSuggestionIndex = -1;
+function navigateSuggestions(e) {
+  const suggestions = document.querySelectorAll('#suggestions div');
+  if (!suggestions.length) return;
+
+  if (e.key === 'ArrowDown') {
+    selectedSuggestionIndex = (selectedSuggestionIndex + 1) % suggestions.length;
+  } else if (e.key === 'ArrowUp') {
+    selectedSuggestionIndex = (selectedSuggestionIndex - 1 + suggestions.length) % suggestions.length;
+  } else if (e.key === 'Enter') {
+    if (selectedSuggestionIndex >= 0 && selectedSuggestionIndex < suggestions.length) {
+      suggestions[selectedSuggestionIndex].click();
+      e.preventDefault();
+    }
+  } else if (e.key === 'Escape') {
+    selectedSuggestionIndex = -1;
+    document.getElementById('suggestions').style.display = 'none';
+  }
+
+  suggestions.forEach((el, i) => {
+    el.style.backgroundColor = i === selectedSuggestionIndex ? '#eee' : '#fff';
+  });
+}
+
+function clearSearch() {
+  document.getElementById('search-box').value = '';
+  document.getElementById('suggestions').style.display = 'none';
+  d3.selectAll("path").classed("highlighted", false);
+}
+
+function showSuggestions() {
+  const input = document.getElementById("search-box");
+  const suggestions = document.getElementById("suggestions");
+  const query = input.value.toLowerCase();
+  selectedSuggestionIndex = -1;
+  if (!query) return suggestions.style.display = "none";
+
+  const matches = searchableNames.filter(name => name.toLowerCase().includes(query)).slice(0, 10);
+  if (matches.length === 0) return suggestions.style.display = "none";
+
+  suggestions.innerHTML = matches.map(m => `<div style="padding:4px; cursor:pointer;" onclick="document.getElementById('search-box').value='${m}'; performSearch(); suggestions.style.display='none';">${m}</div>`).join("");
+  suggestions.style.display = "block";
+}
+
+</script>
+</body>
+</html>

@@ -39,9 +39,13 @@
 							<a class="tag-btn" data-tag="people" data-active="false">PESSOAS</a>
 						</div>
 					</div>
+					
+					<button onclick="openSubgraphModal('greekphil')">Test Modal</button>
 				</div>
 				
 				<div class="rContainer">
+				<button onclick="openSubgraphModal('alphabets')">Test Modal</button>
+
 					<a href="gallery.html">[GALERIA]</a>
 					<a href="#">[GLOSSÁRIO]</a>
 					<a href="#">[SOBRE]</a>
@@ -93,9 +97,9 @@
 					<div class="dropdown-content">
 						<div id="language-select">
 							<input type="radio" id="pt" name="lang" value="pt">
-							<label for="pt"><div class="option"><img src="img\pt.png"></div></label><br>
+							<label for="pt"><div class="option"><img alt="PT-BR" src="img\pt.png"></div></label><br>
 							<input type="radio" id="en" name="lang" value="en">
-							<label for="en"><div class="option"><img src="img\en.png"></div></label>
+							<label for="en"><div class="option"><img alt="EN-US" src="img\en.png"></div></label>
 						</div>
 					</div>
 				</div>
@@ -133,10 +137,17 @@
 		<div class="tooltip" id="tooltip"></div>
   
 		<div class="sidebar" id="sidebar">
-			<button onclick="document.getElementById('sidebar').style.display='none'">✖</button>
+			<button id="sidebarClose" onclick="document.getElementById('sidebar').style.display='none'">✖</button>
 			<div id="sidebar-content"></div>
 		</div>
 
+	</div>
+	
+	<div id="modal-overlay" style="display:none;">
+		<div id="modal-content">
+			<button id="modal-close">×</button>
+			<div id="mini-graph"></div>
+		</div>
 	</div>
 	
 	<script src="script.js"></script>
